@@ -1,0 +1,58 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover:hover {
+  scale: 1.02;
+}
+
+.hero {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 20px;
+
+  box-shadow: var(--shadow);
+
+  text-align: center;
+}
+
+.hero h1 {
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: auto;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+.hero-content {
+  padding: 12px 15px;
+  border-radius: 10px;
+  background: #172554;
+  width: 300px;
+}
+
+.landing ul {
+  margin-left: 20px;
+
+  color: var(--text-light);
+
+  line-height: 2;
+}
+.energia {
+  width: 100%;
+}

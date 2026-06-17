@@ -1,0 +1,731 @@
+/* ==================================================
+   PÁGINA ODS
+================================================== */
+
+.ods-page {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero-ods {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+  color: white;
+
+  padding: 45px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hero-ods h1 {
+  color: white;
+
+  margin-bottom: 15px;
+
+  font-size: 2rem;
+}
+
+.hero-ods p {
+  color: rgba(255, 255, 255, 0.92);
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   TARJETAS GENERALES
+================================================== */
+
+.card {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+
+  color: #1e293b;
+}
+
+.card p {
+  color: #475569;
+
+  line-height: 1.8;
+}
+
+/* ==================================================
+   GRID ODS
+================================================== */
+
+.ods-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+}
+
+/* ==================================================
+   TARJETAS ODS
+================================================== */
+
+.ods-card {
+  padding: 25px;
+
+  border-radius: 20px;
+
+  color: white;
+
+  transition: 0.3s;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  min-height: 320px;
+}
+
+.ods-card:hover {
+  transform: translateY(-6px);
+}
+
+.ods-card h2 {
+  color: white;
+
+  margin-bottom: 10px;
+}
+
+.ods-card h3 {
+  margin-bottom: 15px;
+
+  font-size: 1.1rem;
+}
+
+.ods-card p {
+  color: white;
+
+  opacity: 0.95;
+
+  line-height: 1.7;
+}
+
+/* ==================================================
+   COLORES OFICIALES ODS
+================================================== */
+
+.ods-7 {
+  background: #fcc30b;
+
+  color: #222;
+}
+
+.ods-7 h2,
+.ods-7 h3,
+.ods-7 p {
+  color: #222;
+}
+
+.ods-13 {
+  background: #3f7e44;
+}
+
+.ods-9 {
+  background: #fd6925;
+}
+
+.ods-12 {
+  background: #bf8b2e;
+}
+
+/* ==================================================
+   DIAGRAMA
+================================================== */
+
+.ods-diagrama {
+  margin-top: 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+.nodo {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  font-weight: 600;
+
+  color: #334155;
+
+  transition: 0.3s;
+}
+
+.nodo:hover {
+  transform: scale(1.03);
+}
+
+.centro {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+
+  color: white;
+
+  padding: 35px;
+
+  border-radius: 50%;
+
+  width: 180px;
+
+  height: 180px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.35);
+}
+
+/* ==================================================
+   BARRAS
+================================================== */
+
+.barra-item {
+  margin-bottom: 25px;
+
+  display: grid;
+
+  grid-template-columns: 90px 1fr 60px;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.barra-item span {
+  font-weight: 600;
+
+  color: #334155;
+}
+
+.progress {
+  height: 18px;
+
+  background: #e2e8f0;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+
+  border-radius: 30px;
+
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+/* ==================================================
+   CONCLUSIÓN
+================================================== */
+
+.conclusion {
+  border-left: 6px solid #2563eb;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 900px) {
+  .hero-ods {
+    padding: 30px;
+  }
+
+  .hero-ods h1 {
+    font-size: 1.6rem;
+  }
+
+  .ods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ods-diagrama {
+    grid-template-columns: 1fr;
+  }
+
+  .centro {
+    width: 150px;
+    height: 150px;
+  }
+
+  .barra-item {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+  /* =====================================
+   IMPACTOS ESPERADOS
+===================================== */
+
+  .impactos-grid {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 20px;
+  }
+
+  .impacto-card {
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+  }
+
+  .impacto-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .impacto-icono {
+    font-size: 2.5rem;
+
+    margin-bottom: 15px;
+  }
+
+  .impacto-card h3 {
+    color: #1e293b;
+
+    margin-bottom: 15px;
+  }
+
+  .impacto-card ul {
+    padding-left: 20px;
+
+    color: #475569;
+
+    line-height: 1.8;
+  }
+
+  .impacto-card li {
+    margin-bottom: 8px;
+  }
+}
+/* =====================================
+   IMPACTOS ESPERADOS
+===================================== */
+
+.impactos-grid {
+  margin-top: 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 20px;
+}
+
+.impacto-card {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  transition: 0.3s;
+}
+
+.impacto-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.impacto-icono {
+  font-size: 2.5rem;
+
+  margin-bottom: 15px;
+}
+
+.impacto-card h3 {
+  color: #1e293b;
+
+  margin-bottom: 15px;
+}
+
+.impacto-card ul {
+  padding-left: 20px;
+
+  color: #475569;
+
+  line-height: 1.8;
+}
+
+.impacto-card li {
+  margin-bottom: 8px;
+}
+/* =====================================
+   DESAFÍOS DEL SECTOR
+===================================== */
+
+.acordeon-desafios {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* =====================================
+   ITEM
+===================================== */
+
+.desafio-item {
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  background: white;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+.desafio-item:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.desafio-header {
+  width: 100%;
+
+  background: #f8fafc;
+
+  border: none;
+
+  padding: 22px 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+
+  color: #1e293b;
+
+  transition: 0.3s;
+}
+
+.desafio-header:hover {
+  background: #eef2ff;
+}
+
+.desafio-header span:first-child {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* =====================================
+   ICONO +
+===================================== */
+
+.icono {
+  font-size: 1.5rem;
+
+  transition: 0.3s;
+}
+
+.desafio-item.active .icono {
+  transform: rotate(45deg);
+}
+
+/* =====================================
+   CONTENIDO
+===================================== */
+
+.desafio-content {
+  display: none;
+
+  padding: 30px;
+}
+
+.desafio-item.active .desafio-content {
+  display: block;
+}
+
+/* =====================================
+   DESAFÍO
+===================================== */
+
+.desafio-box {
+  background: #f8fafc;
+
+  border-left: 5px solid #2563eb;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+}
+
+.desafio-box h4 {
+  margin-bottom: 10px;
+
+  color: #1e293b;
+}
+
+.desafio-box p {
+  color: #475569;
+
+  line-height: 1.8;
+}
+
+/* =====================================
+   IMPACTOS
+===================================== */
+
+.impactos-box h4 {
+  margin-bottom: 20px;
+
+  color: #1e293b;
+}
+
+.impactos-mini-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+.impacto-mini {
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 15px;
+
+  padding: 18px;
+
+  display: flex;
+
+  gap: 15px;
+
+  transition: 0.3s;
+}
+
+.impacto-mini:hover {
+  transform: translateY(-3px);
+
+  border-color: #2563eb;
+
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.12);
+}
+
+.impacto-mini span {
+  font-size: 2rem;
+}
+
+.impacto-mini strong {
+  display: block;
+
+  color: #1e293b;
+
+  margin-bottom: 6px;
+}
+
+.impacto-mini p {
+  color: #64748b;
+
+  line-height: 1.6;
+
+  font-size: 0.95rem;
+}
+
+/* =====================================
+   ODS RELACIONADO
+===================================== */
+
+.ods-box {
+  background: linear-gradient(135deg, #eff6ff, #f8fafc);
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.ods-box span {
+  font-size: 0.9rem;
+
+  color: #64748b;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.ods-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  width: fit-content;
+
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  background: #2563eb;
+
+  color: white;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.ods-link:hover {
+  background: #1d4ed8;
+
+  transform: translateY(-2px);
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .desafio-content {
+    padding: 20px;
+  }
+
+  .impactos-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .desafio-header {
+    font-size: 0.95rem;
+  }
+}
+/* =====================================
+   CONCLUSIÓN
+===================================== */
+
+.conclusion-card {
+  margin-top: 30px;
+}
+
+.conclusion-card p {
+  line-height: 1.9;
+
+  color: #475569;
+
+  margin-bottom: 18px;
+
+  text-align: justify;
+}
+
+.reflexion-destacada {
+  margin-top: 25px;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+
+  border-left: 6px solid #2563eb;
+}
+
+.reflexion-destacada span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+
+  color: #1e3a8a;
+
+  font-size: 1.05rem;
+}
+
+.reflexion-destacada p {
+  margin: 0;
+
+  color: #1e293b;
+
+  font-style: italic;
+}

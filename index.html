@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creación de Empresas I</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <link rel="stylesheet" href="css/integrantes.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+      <aside class="sidebar">
+        <!-- LOGO -->
+
+        <div class="logo-container">
+          <div class="sector-info">
+            <h5 class="subtitulo">Sector de la Economía</h5>
+            <h5 class="titulo-proyecto">Energía Eléctrica - Energía Solar</h5>
+          </div>
+          <h6 class="universidad">
+            Corporación Unificada Nacional de Educación Superior CUN
+          </h6>
+        </div>
+
+        <!-- MENÚ -->
+
+        <nav>
+          <ul>
+            <!-- INICIO -->
+
+            <li>
+              <a
+                class="menu-link"
+                onclick="cargarPagina('pages/inicio.html', 'inicio.css', this)"
+              >
+                🏠 Inicio
+              </a>
+            </li>
+
+            <!-- INTEGRANTES -->
+
+            <li>
+              <a
+                class="menu-link"
+                onclick="
+                  cargarPagina(
+                    'pages/integrantes.html',
+                    'integrantes.css',
+                    this,
+                  )
+                "
+              >
+                👥 Integrantes
+              </a>
+            </li>
+
+            <!-- ACTIVIDAD 2 -->
+
+            <li class="menu-item">
+              <div class="menu-header" onclick="toggleMenu('actividad2', this)">
+                <span> 📋 Actividad Semana 2 </span>
+
+                <span>▼</span>
+              </div>
+
+              <ul id="actividad2" class="submenu">
+                <li>
+                  <a
+                    class="menu-link"
+                    onclick="
+                      cargarPagina(
+                        'pages/actividad2/ods.html',
+                        'actividad2/ods.css',
+                        this,
+                      )
+                    "
+                  >
+                    ODS
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="menu-link"
+                    onclick="
+                      cargarPagina(
+                        'pages/actividad2/dinamicaSector.html',
+                        'actividad2/dinamica.css',
+                        this,
+                      )
+                    "
+                  >
+                    Dinámica del Sector
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="menu-link"
+                    onclick="
+                      cargarPagina(
+                        'pages/actividad2/pestel.html',
+                        'actividad2/pestel.css',
+                        this,
+                      )
+                    "
+                  >
+                    PESTEL
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- ACTIVIDAD 3 -->
+
+            <li class="menu-item">
+              <div class="menu-header" onclick="toggleMenu('actividad3')">
+                <span> 📋 Actividad Semana 3 </span>
+
+                <span>▼</span>
+              </div>
+
+              <ul id="actividad3" class="submenu">
+                <li>
+                  <a onclick="cargarPagina('pages/actividad3/actividad3.html')">
+                    Resumen
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    onclick="cargarPagina('pages/actividad3/mapaEmpatia.html')"
+                  >
+                    Mapa de Empatía
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    onclick="
+                      cargarPagina('pages/actividad3/arbolProblemas.html')
+                    "
+                  >
+                    Árbol de Problemas
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    onclick="
+                      cargarPagina('pages/actividad3/arbolObjetivos.html')
+                    "
+                  >
+                    Árbol de Objetivos
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- ACTIVIDAD 4 -->
+
+            <li class="menu-item">
+              <div class="menu-header" onclick="toggleMenu('actividad4')">
+                <span> 📋 Actividad Semana 4 </span>
+
+                <span>▼</span>
+              </div>
+
+              <ul id="actividad4" class="submenu">
+                <li>
+                  <a onclick="cargarPagina('pages/actividad4/actividad4.html')">
+                    Resumen
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    onclick="cargarPagina('pages/actividad4/ideaNegocio.html')"
+                  >
+                    Idea de Negocio
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- =====================================
+             CONTENIDO DINÁMICO
+        ====================================== -->
+
+      <main id="contenido" class="content">
+        <!--
+                Aquí se cargan todas las páginas
+                mediante JavaScript
+            -->
+      </main>
+    </div>
+
+    <!-- JS -->
+
+    <script src="code.js"></script>
+  </body>
+</html>
