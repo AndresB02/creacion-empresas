@@ -45,7 +45,18 @@ function cargarPagina(ruta, css = null, elemento = null) {
     })
     .then((html) => {
       document.getElementById("contenido").innerHTML = html;
-      cargarCSS(css);
+
+      if (css) {
+        cargarCSS(css);
+      }
+
+      document.querySelectorAll(".menu-link").forEach((link) => {
+        link.classList.remove("active");
+      });
+
+      if (elemento) {
+        elemento.classList.add("active");
+      }
     })
     .catch((error) => {
       // Si hay error, cargamos la página de "proximamente"
