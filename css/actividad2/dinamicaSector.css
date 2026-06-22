@@ -1,416 +1,511 @@
-/* ==========================================
-   CONTENEDOR GENERAL
-========================================== */
-
-.dinamica-page {
-  max-width: 1300px;
-  margin: auto;
-  padding: 40px;
+:root {
+  --primary-blue: #004a99;
+  --accent-sun: #f39c12;
+  --bg-light: #f8f9fa;
+  --text-dark: #333;
 }
-
-/* ==========================================
-   HERO
-========================================== */
-
-.hero-dinamica {
-  text-align: center;
-  padding: 80px 40px;
-  border-radius: 24px;
-  margin-bottom: 60px;
-
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-
+.hero-content-dinamica {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
   color: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-.badge-investigacion {
-  display: inline-block;
-
-  padding: 8px 18px;
-
-  border-radius: 50px;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.hero-dinamica h1 {
-  margin-top: 20px;
-  margin-bottom: 15px;
-
-  font-size: 3rem;
-}
-
-.hero-dinamica h2 {
-  color: #cbd5e1;
-
-  margin-bottom: 25px;
-
-  font-size: 1.4rem;
-}
-
-.hero-dinamica p {
-  max-width: 900px;
-  margin: auto;
-
-  line-height: 1.8;
-}
-
-/* ==========================================
-   SECCIONES
-========================================== */
-
-.dinamica-page section {
-  margin-bottom: 70px;
-}
-
-.dinamica-page section h2 {
-  margin-bottom: 25px;
-
+.hero-content-dinamica h1 {
   font-size: 2rem;
-
-  color: #0f172a;
 }
-
-/* ==========================================
-   PREGUNTA
-========================================== */
-
-.pregunta-card {
+.hero-content-dinamica p {
+  font-size: 18px;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 20px;
+}
+.hero-stat {
+  background-color: white;
+  color: black;
+  padding: 20px 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.hero-stat span {
+  font-size: 25px;
+}
+.hero-stat p {
+  font-size: 16px;
+}
+.enfoque-investigacion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 40px;
   background: white;
-
   padding: 30px;
-
-  border-left: 6px solid #f59e0b;
-
-  border-radius: 18px;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
-
-.pregunta-card p {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-/* ==========================================
-   OBJETIVO
-========================================== */
-
-.objetivo-investigacion p {
-  background: #f8fafc;
-
-  padding: 25px;
-
-  border-radius: 18px;
-
-  line-height: 1.8;
-}
-
-/* ==========================================
-   METODOLOGÍA
-========================================== */
-
-.metodologia-grid {
+.enfoque-grid {
+  padding-top: 20px;
   display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
 }
-
-.metodo-card {
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 18px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+.enfoque-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
-.metodo-card h3 {
-  margin-bottom: 15px;
+.estado-sector {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.metodo-card ul {
-  padding-left: 20px;
-}
-
-.metodo-card li {
-  margin-bottom: 10px;
-}
-
-/* ==========================================
-   ESTADO DEL SECTOR
-========================================== */
-
 .estado-grid {
   display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  padding-top: 5px;
 }
-
 .estado-card {
-  padding: 30px;
-
+  padding: 25px;
   border-radius: 20px;
-
-  color: white;
-
-  min-height: 280px;
+  color: white !important;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  min-height: 320px;
 }
-
 .fortalezas {
-  background: linear-gradient(135deg, #22c55e, #16a34a);
+  background: #bf8b2e;
 }
-
 .debilidades {
-  background: linear-gradient(135deg, #ef4444, #dc2626);
+  background: #fd6925;
 }
-
 .tendencias {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  background: #3f7e44;
 }
-
 .retos {
-  background: linear-gradient(135deg, #f59e0b, #d97706);
+  background: #fcc30b;
 }
-
+.retos h3 {
+  color: #222 !important;
+}
+.retos ul {
+  color: #222 !important;
+}
 .estado-card h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: white;
 }
-
 .estado-card ul {
-  padding-left: 20px;
+  padding-inline-start: 20px;
+  font-size: 18px;
+  line-height: 1.5;
 }
-
-.estado-card li {
+.estado-card:hover {
+  transform: translateY(-6px);
+}
+.indicadores-sector {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  margin-top: 40px;
+}
+.indicadores-sector h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+.indicadores-sector h3 {
   margin-bottom: 10px;
+  color: #34495e;
 }
-
+.evidencia-card {
+  margin-top: 40px;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px; /* Aumentado para evitar que se peguen */
+  margin: 30px 0;
+}
+.kpi-card {
+  padding: 30px;
+  border-radius: 12px;
+  background: #fdfdfd;
+  border: 1px solid #e1e1e1;
+}
+.barra {
+  height: 16px; /* Un poco más gruesas */
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin: 12px 0 20px 0; /* Más aire arriba y abajo */
+}
+/* 1. Asegura que el contenedor de la barra tenga un fondo visible */
+.barra {
+  width: 100%; /* Asegura que ocupe todo el espacio disponible */
+  height: 20px; /* Dale altura suficiente */
+  background-color: #e0e0e0; /* Color gris de fondo */
+  border-radius: 10px;
+  overflow: hidden; /* Importante para que el color de adentro no se salga */
+  margin: 8px 0;
+}
+/* 2. Asegura que la barra de relleno tenga estilo */
+.barra-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 1s ease-in-out; /* Opcional: animación suave */
+}
+/* 3. Colores específicos para cada tipo */
+.barra-2023 {
+  width: 13%;
+  background-color: #95a5a6;
+} /* 246 MW */
+.barra-2024 {
+  width: 100%;
+  background-color: #f39c12;
+} /* 1.871 MW */
+.hidraulica {
+  width: 55.48%;
+  background-color: #3498db;
+}
+.termica {
+  width: 26.11%;
+  background-color: #e74c3c;
+}
+.renovable {
+  width: 18.42%;
+  background-color: #27ae60;
+}
+.interpretacion {
+  margin-top: 40px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  color: white;
+}
+.interpretacion h2 {
+  color: white;
+}
+.interpretacion-box p {
+  padding-bottom: 15px;
+  line-height: 1.5;
+}
 /* ==========================================
    HALLAZGOS
 ========================================== */
 
 .hallazgos {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.hallazgo {
+  margin-top: 40px;
   background: white;
-
   padding: 30px;
-
   border-radius: 20px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
-
-.hallazgo h3 {
-  color: #0f172a;
-
-  margin-bottom: 15px;
+.hallazgos h2 {
+  padding-bottom: 18px;
 }
-
-.hallazgo p {
+.section-intro-hallazgos {
+  color: #64748b;
   line-height: 1.8;
+  padding-bottom: 25px;
 }
-
-.hallazgo a {
-  color: #2563eb;
+.hallazgo-item {
+  background: #fff;
+  border-radius: 18px;
+  margin-bottom: 1.2rem;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.hallazgo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+.hallazgo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1.3rem 1.6rem;
+  background: #ffffff;
+}
+.hallazgo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.hallazgo-title span:first-child {
+  font-size: 1.5rem;
+}
+.hallazgo-title h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.1rem;
+}
+.hallazgo-arrow {
+  color: #64748b;
+  transition: 0.3s;
+}
+.hallazgo-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.8rem;
+  transition:
+    max-height 0.45s ease,
+    padding 0.45s ease;
+}
+.hallazgo-item.active .hallazgo-content {
+  max-height: 2000px;
+  padding: 1.5rem 1.8rem 2rem;
+}
+.hallazgo-item.active .hallazgo-arrow {
+  transform: rotate(180deg);
+}
+.hallazgo-content h4 {
+  color: #0f766e;
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+.hallazgo-content p {
+  color: #475569;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+.hallazgo-content a {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  left: 90%;
+  right: 0;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #0f766e;
   font-weight: 600;
+  text-decoration: none;
 }
-
-.interpretacion {
-  margin-top: 20px;
-
-  background: #eff6ff;
-
-  padding: 20px;
-
-  border-left: 5px solid #3b82f6;
-
-  border-radius: 12px;
+.hallazgo-content a:hover {
+  text-decoration: underline;
 }
-
-/* ==========================================
-   TIMELINE
-========================================== */
-
-.timeline {
+/* Contenedor General */
+.factores {
+  margin-top: 40px;
+}
+.factores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+/* Tarjeta Flip */
+.factor-card {
+  width: 100%;
+  height: 350px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.factor-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
-
-  gap: 18px;
-
+  justify-content: center;
   align-items: center;
-}
-
-.timeline div {
-  background: white;
-
-  padding: 15px 30px;
-
-  border-radius: 50px;
-
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* ==========================================
-   IMPACTOS
-========================================== */
-
-.impactos-grid {
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-  gap: 25px;
-}
-
-.impacto-card {
-  background: white;
-
-  padding: 25px;
-
-  border-radius: 18px;
-
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
   text-align: center;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
-
-.impacto-card h3 {
-  margin-bottom: 15px;
+.card-front {
+  background: #ffffff;
 }
-
-/* ==========================================
-   PROBLEMA
-========================================== */
-
-.problema-card {
-  background: #fef2f2;
-
-  border-left: 6px solid #dc2626;
-
+.factor-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.card-back {
+  background: linear-gradient(
+    135deg,
+    #2c3e50 0%,
+    #4ca1af 100%
+  ); /* Fondo con degradado profesional */
+  color: #ffffff; /* Texto blanco para que resalte sobre el fondo oscuro */
+  transform: rotateY(180deg);
+  text-align: left;
+  padding: 25px;
+  overflow-y: auto; /* Permite scroll si el texto es muy largo */
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: block;
+}
+/* Estilo para los títulos dentro del dorso */
+.card-back h3 {
+  color: #ffcc00; /* Un color de acento (amarillo/dorado) para el título */
+  margin-top: 0;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+/* Estilo para los subtítulos */
+.card-back h4 {
+  color: #ffffff;
+  margin: 15px 0 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* Estilo para los párrafos */
+.card-back p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+/* Estilo para las listas */
+.card-back ul {
+  text-align: left;
+  width: 100%;
+  padding-left: 20px; /* Ajusta este valor para mover la lista a la derecha */
+  margin: 10px 0;
+}
+/* Estilo para el enlace de la fuente */
+.card-back a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: background 0.3s;
+}
+.card-back a:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+/* Contenedor principal */
+.situacion-oportunidad {
+  margin-top: 40px;
+  background: white;
   padding: 30px;
-
-  border-radius: 18px;
-
-  line-height: 1.9;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
-
-/* ==========================================
-   TABLA
-========================================== */
-
+.situacion-oportunidad h2 {
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+/* Cajas de texto (Situación y Oportunidad) */
+.situacion-box,
+.oportunidad-box {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-left: 5px solid #4ca1af;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* Tabla de Causa -> Efecto */
+.causa-efecto {
+  margin: 40px 0;
+  overflow-x: auto; /* Para que sea responsiva en móviles */
+}
+.causa-efecto h3 {
+  padding-bottom: 15px;
+}
 .causa-efecto table {
   width: 100%;
-
   border-collapse: collapse;
-
+  background: white;
+  border-radius: 10px;
   overflow: hidden;
-
-  border-radius: 20px;
-
-  background: white;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .causa-efecto th {
-  background: #0f172a;
-
+  background-color: #2c3e50;
   color: white;
-
-  padding: 18px;
+  padding: 15px;
+  text-align: left;
 }
-
 .causa-efecto td {
-  padding: 18px;
-
-  border-bottom: 1px solid #e5e7eb;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
 }
-
 .causa-efecto tr:hover {
-  background: #f8fafc;
+  background-color: #f1f7f8;
 }
-
-/* ==========================================
-   OPORTUNIDAD
-========================================== */
-
-.oportunidad-card {
-  background: linear-gradient(135deg, #ecfdf5, #dcfce7);
-
-  padding: 35px;
-
-  border-radius: 20px;
-
-  border-left: 6px solid #22c55e;
-
-  line-height: 1.9;
+/* Tipografía */
+.situacion-box h3,
+.causa-efecto h3,
+.oportunidad-box h3 {
+  color: #4ca1af;
+  margin-top: 0;
 }
-
-/* ==========================================
-   CONCLUSION
-========================================== */
-
-.conclusion {
-  background: #f8fafc;
-
-  padding: 40px;
-
-  border-radius: 20px;
-}
-
-.conclusion p {
-  line-height: 1.9;
-}
-
-/* ==========================================
-   REFERENCIAS
-========================================== */
-
-.referencias ol {
+/*     CONCLUCIONES       */
+.cierre {
+  margin-top: 40px;
   background: white;
-
-  padding: 30px 40px;
-
+  padding: 30px;
   border-radius: 20px;
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
 }
-
-.referencias li {
-  margin-bottom: 18px;
+.conclusion,
+.referencias {
+  padding: 40px 50px;
+  width: 650px;
+  height: 100%;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-
-.referencias a {
-  color: #2563eb;
+.referencias ul {
+  padding-inline-start: 20px;
+  line-height: 2;
+  color: white !important;
 }
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width: 768px) {
-  .dinamica-page {
-    padding: 20px;
-  }
-
-  .hero-dinamica h1 {
-    font-size: 2rem;
-  }
-
-  .hero-dinamica h2 {
-    font-size: 1.1rem;
-  }
+.referencias ul li a {
+  color: white !important;
+  text-decoration: none;
+}
+.referencias ul li a:hover {
+  color: white !important;
+  text-decoration: underline;
 }

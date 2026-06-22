@@ -89,11 +89,16 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("click", (e) => {
-  const header = e.target.closest(".desafio-header");
+  const header = e.target.closest(".desafio-header, .hallazgo-header");
 
   if (!header) return;
 
   const item = header.parentElement;
 
   item.classList.toggle("active");
+});
+document.querySelectorAll(".factor-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    card.querySelector(".card-inner").classList.toggle("is-flipped");
+  });
 });
