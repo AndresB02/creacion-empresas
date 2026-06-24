@@ -44,24 +44,34 @@
 
 .card {
   background: white;
-
   padding: 30px;
-
   border-radius: 20px;
-
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
 .card h2 {
   margin-bottom: 15px;
-
   color: #1e293b;
 }
 
 .card p {
   color: #475569;
-
   line-height: 1.8;
+}
+.impactos-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+.impactos-content .impactos-box h4 {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.impactos-content .impactos-box ul {
+  padding-inline-start: 40px;
 }
 
 /* ==================================================
@@ -140,118 +150,6 @@
 
 .ods-9 {
   background: #fd6925;
-}
-
-.ods-12 {
-  background: #bf8b2e;
-}
-
-/* ==================================================
-   DIAGRAMA
-================================================== */
-
-.ods-diagrama {
-  margin-top: 35px;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 20px;
-
-  align-items: center;
-
-  text-align: center;
-}
-
-.nodo {
-  background: #f8fafc;
-
-  border: 1px solid #e2e8f0;
-
-  padding: 20px;
-
-  border-radius: 15px;
-
-  font-weight: 600;
-
-  color: #334155;
-
-  transition: 0.3s;
-}
-
-.nodo:hover {
-  transform: scale(1.03);
-}
-
-.centro {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-
-  color: white;
-
-  padding: 35px;
-
-  border-radius: 50%;
-
-  width: 180px;
-
-  height: 180px;
-
-  margin: auto;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  text-align: center;
-
-  font-size: 1.1rem;
-
-  font-weight: 700;
-
-  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.35);
-}
-
-/* ==================================================
-   BARRAS
-================================================== */
-
-.barra-item {
-  margin-bottom: 25px;
-
-  display: grid;
-
-  grid-template-columns: 90px 1fr 60px;
-
-  gap: 15px;
-
-  align-items: center;
-}
-
-.barra-item span {
-  font-weight: 600;
-
-  color: #334155;
-}
-
-.progress {
-  height: 18px;
-
-  background: #e2e8f0;
-
-  border-radius: 30px;
-
-  overflow: hidden;
-}
-
-.progress div {
-  height: 100%;
-
-  border-radius: 30px;
-
-  background: linear-gradient(90deg, #2563eb, #60a5fa);
 }
 
 /* ==================================================
