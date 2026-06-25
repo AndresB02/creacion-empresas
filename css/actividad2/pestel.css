@@ -1,0 +1,157 @@
+/* ==========================================
+   PESTEL ACORDEÓN
+========================================== */
+.pestel-container {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+.pestel-container h2 {
+  padding-bottom: 15px;
+}
+.pestel-acordeon {
+  margin-top: 2rem;
+}
+
+.pestel-item {
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.pestel-header {
+  width: 100%;
+  border: none;
+  background: white;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.2rem 1.5rem;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.pestel-header:hover {
+  background: #f8fafc;
+}
+
+.pestel-header span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.pestel-header .icono {
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.pestel-content {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.pestel-item.active .pestel-content {
+  max-height: 1200px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.pestel-item.active .icono {
+  transform: rotate(45deg);
+}
+
+.pestel-content h4 {
+  color: #0f766e;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pestel-content p {
+  line-height: 1.7;
+  color: #475569;
+}
+
+.pestel-content ul {
+  padding-left: 1.2rem;
+}
+
+.pestel-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Badge */
+
+.impacto {
+  margin-top: 1rem;
+  display: inline-block;
+
+  padding: 0.6rem 1rem;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+}
+
+.oportunidad {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.advertencia {
+  background: #fef3c7;
+  color: #92400e;
+}
+/* CONCLUSION PESTEL */
+.conclusion-pestel {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+.conclusion-pestel h3 {
+  padding-bottom: 15px;
+}
+/*  REFRENCIAS */
+.reflexion-destacada {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border-left: 6px solid #2563eb;
+}
+
+.reflexion-destacada span {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #1e3a8a;
+  font-size: 1.05rem;
+}
+
+.reflexion-destacada ul {
+  margin: 0;
+  color: #1e293b;
+  font-style: italic;
+  list-style: none;
+}
+.reflexion-destacada ul li {
+  padding-bottom: 15px;
+}
+.reflexion-destacada ul a {
+  margin: 0;
+  color: #1e3a8a;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}

@@ -89,13 +89,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("click", (e) => {
-  const header = e.target.closest(".desafio-header, .hallazgo-header");
+  const header = e.target.closest(
+    ".desafio-header, .hallazgo-header, .pestel-header",
+  );
 
   if (!header) return;
 
   const item = header.parentElement;
+  const contenedor = item.parentElement;
 
-  item.classList.toggle("active");
+  const estabaAbierto = item.classList.contains("active");
+
+  contenedor.querySelectorAll(".active").forEach((el) => {
+    el.classList.remove("active");
+  });
+
+  if (!estabaAbierto) {
+    item.classList.add("active");
+  }
 });
 document.querySelectorAll(".factor-card").forEach((card) => {
   card.addEventListener("click", () => {
