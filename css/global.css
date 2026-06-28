@@ -431,29 +431,6 @@ body {
   color: #1e40af;
 }
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .content {
-    padding: 25px;
-  }
-
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
 /* =====================================
    PROXIMAMENTE
 ===================================== */
@@ -580,16 +557,132 @@ body {
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.08);
 }
 
-/* =====================================
-   RESPONSIVE
-===================================== */
+/* ==================================================
+   RESPONSIVE GENERAL
+================================================== */
 
-@media (max-width: 768px) {
-  .proximamente-card {
+@media (max-width: 992px) {
+  .sidebar {
+    position: relative;
+
+    width: 100%;
+
+    height: auto;
+
+    padding: 20px;
+
+    overflow: visible;
+  }
+
+  .content {
+    margin-left: 0;
+
+    width: 100%;
+
     padding: 30px;
   }
 
-  .proximamente-card h2 {
-    font-size: 1.6rem;
+  .container {
+    flex-direction: column;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    padding: 18px;
+  }
+
+  .logo-container {
+    padding: 18px 0;
+  }
+
+  .titulo-proyecto {
+    font-size: 0.95rem;
+  }
+
+  .universidad {
+    font-size: 0.72rem;
+  }
+
+  .menu-header {
+    padding: 10px 14px;
+  }
+
+  .submenu a {
+    padding: 10px 14px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 1.7rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .table {
+    display: block;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+  }
+}
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 15px;
+  }
+
+  .logo-box {
+    height: 70px;
+  }
+
+  .titulo-proyecto {
+    font-size: 0.85rem;
+  }
+
+  .subtitulo {
+    font-size: 0.65rem;
+  }
+
+  .universidad {
+    font-size: 0.68rem;
+  }
+
+  .menu-header {
+    font-size: 0.92rem;
+  }
+
+  .submenu a {
+    font-size: 0.9rem;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 1.45rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 18px;
   }
 }

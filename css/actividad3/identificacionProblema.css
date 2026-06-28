@@ -192,19 +192,143 @@ a:hover {
 .reflexion-destacada p a:hover {
   text-decoration: underline;
 }
+/*=========================================================
+=                  RESPONSIVE                            =
+=========================================================*/
 
-@media (max-width: 768px) {
-  .problema-header {
-    flex-direction: column;
+@media (max-width: 992px) {
+  .identificacion-problema h2 {
+    font-size: 1.8rem;
+  }
 
-    text-align: center;
+  .analisis-grid {
+    grid-template-columns: 1fr;
   }
 
   .problema-content {
-    padding: 20px;
+    padding: 25px;
   }
 
   .justificacion-box {
     padding: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .identificacion-problema h2 {
+    font-size: 1.6rem;
+  }
+
+  .identificacion-problema .section-intro {
+    margin-bottom: 35px;
+  }
+
+  .problema-header {
+    padding: 18px 20px;
+  }
+
+  .problema-header span {
+    font-size: 1.7rem;
+  }
+
+  .problema-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .problema-content {
+    padding: 22px;
+  }
+
+  .problema-content blockquote {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .analisis-card {
+    padding: 22px;
+  }
+
+  .justificacion-box {
+    padding: 22px;
+  }
+
+  .transicion-problema {
+    padding: 28px 22px;
+  }
+
+  .reflexion-destacada {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .identificacion-problema h2 {
+    font-size: 1.4rem;
+  }
+
+  .identificacion-problema .section-intro {
+    font-size: 0.92rem;
+  }
+
+  .problema-header {
+    padding: 16px;
+
+    gap: 12px;
+  }
+
+  .problema-header span {
+    font-size: 1.5rem;
+  }
+
+  .problema-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .problema-content {
+    padding: 18px;
+  }
+
+  .problema-content blockquote {
+    font-size: 0.95rem;
+
+    padding-left: 15px;
+  }
+
+  .analisis-card {
+    padding: 18px;
+  }
+
+  .analisis-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .analisis-card p,
+  .analisis-card li {
+    font-size: 0.92rem;
+  }
+
+  .justificacion-box {
+    padding: 18px;
+  }
+
+  .transicion-problema {
+    padding: 22px 18px;
+  }
+
+  .transicion-problema h3 {
+    font-size: 1.2rem;
+  }
+
+  .reflexion-destacada {
+    padding: 18px;
+  }
+
+  .reflexion-destacada h3 {
+    font-size: 1rem;
+  }
+  .reflexion-destacada p {
+    overflow-wrap: break-word;
+
+    word-break: break-word;
   }
 }

@@ -160,93 +160,6 @@
   border-left: 6px solid #2563eb;
 }
 
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media (max-width: 900px) {
-  .hero-ods {
-    padding: 30px;
-  }
-
-  .hero-ods h1 {
-    font-size: 1.6rem;
-  }
-
-  .ods-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ods-diagrama {
-    grid-template-columns: 1fr;
-  }
-
-  .centro {
-    width: 150px;
-    height: 150px;
-  }
-
-  .barra-item {
-    grid-template-columns: 1fr;
-
-    gap: 10px;
-  }
-  /* =====================================
-   IMPACTOS ESPERADOS
-===================================== */
-
-  .impactos-grid {
-    margin-top: 25px;
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-
-    gap: 20px;
-  }
-
-  .impacto-card {
-    background: #f8fafc;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 18px;
-
-    padding: 25px;
-
-    transition: 0.3s;
-  }
-
-  .impacto-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  }
-
-  .impacto-icono {
-    font-size: 2.5rem;
-
-    margin-bottom: 15px;
-  }
-
-  .impacto-card h3 {
-    color: #1e293b;
-
-    margin-bottom: 15px;
-  }
-
-  .impacto-card ul {
-    padding-left: 20px;
-
-    color: #475569;
-
-    line-height: 1.8;
-  }
-
-  .impacto-card li {
-    margin-bottom: 8px;
-  }
-}
 /* =====================================
    IMPACTOS ESPERADOS
 ===================================== */
@@ -562,23 +475,6 @@
 }
 
 /* =====================================
-   RESPONSIVE
-===================================== */
-
-@media (max-width: 768px) {
-  .desafio-content {
-    padding: 20px;
-  }
-
-  .impactos-mini-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .desafio-header {
-    font-size: 0.95rem;
-  }
-}
-/* =====================================
    CONCLUSIÓN
 ===================================== */
 
@@ -633,4 +529,162 @@
   font-style: italic;
   font-weight: 600;
   text-decoration: none;
+}
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 992px) {
+  .hero-ods {
+    padding: 35px;
+  }
+
+  .hero-ods h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .ods-card {
+    min-height: auto;
+  }
+
+  .desafio-header {
+    padding: 18px 20px;
+  }
+
+  .desafio-content {
+    padding: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .ods-page {
+    gap: 20px;
+  }
+
+  .hero-ods {
+    padding: 28px 22px;
+  }
+
+  .hero-ods h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-ods p {
+    font-size: 0.96rem;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .ods-card {
+    padding: 22px;
+  }
+
+  .impactos-content {
+    gap: 15px;
+  }
+
+  .impactos-content .impactos-box ul {
+    padding-inline-start: 25px;
+  }
+
+  .desafio-header {
+    padding: 16px 18px;
+
+    font-size: 1rem;
+  }
+
+  .desafio-content {
+    padding: 20px;
+  }
+
+  .impacto-mini {
+    flex-direction: column;
+
+    text-align: center;
+
+    align-items: center;
+  }
+
+  .impacto-mini span {
+    font-size: 2.3rem;
+  }
+
+  .ods-link {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .reflexion-destacada {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-ods {
+    padding: 22px 18px;
+  }
+
+  .hero-ods h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-ods p {
+    font-size: 0.92rem;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .ods-card {
+    padding: 18px;
+  }
+
+  .ods-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .ods-card h3 {
+    font-size: 1rem;
+  }
+
+  .impacto-card {
+    padding: 20px;
+  }
+
+  .desafio-header {
+    padding: 15px;
+
+    font-size: 0.95rem;
+  }
+
+  .desafio-box {
+    padding: 18px;
+  }
+
+  .impacto-mini {
+    padding: 16px;
+  }
+
+  .ods-box {
+    padding: 18px;
+  }
+
+  .reflexion-destacada {
+    padding: 18px;
+  }
+  .reflexion-destacada p {
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+  }
 }

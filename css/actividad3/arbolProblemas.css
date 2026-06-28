@@ -574,3 +574,150 @@ html {
 .causas .tree-card:nth-child(5) {
   animation-delay: 0.95s;
 }
+/*=========================================================
+=                  RESPONSIVE                            =
+=========================================================*/
+
+@media (max-width: 992px) {
+  .arbol-problemas h2 {
+    font-size: 2rem;
+  }
+
+  .tree-title {
+    font-size: 1.6rem;
+  }
+
+  .problema-box {
+    padding: 35px;
+  }
+
+  .problema-box h3 {
+    font-size: 1.7rem;
+  }
+
+  .tree-analysis,
+  .tree-next {
+    padding: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .arbol-problemas::before {
+    font-size: 20rem;
+  }
+
+  .arbol-problemas h2 {
+    font-size: 1.7rem;
+  }
+
+  .tree-title {
+    margin: 45px 0 25px;
+
+    font-size: 1.4rem;
+  }
+
+  .tree-card {
+    padding: 22px;
+
+    min-height: auto;
+  }
+
+  .tree-icon {
+    width: 60px;
+
+    height: 60px;
+
+    font-size: 1.6rem;
+  }
+
+  .problema-box {
+    padding: 28px 22px;
+  }
+
+  .problema-icon {
+    width: 80px;
+
+    height: 80px;
+
+    font-size: 2.2rem;
+  }
+
+  .problema-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .vertical-line {
+    height: 60px;
+  }
+
+  .tree-analysis,
+  .tree-next {
+    padding: 25px;
+  }
+}
+@media (max-width: 480px) {
+  .arbol-problemas::before {
+    display: none;
+  }
+
+  .arbol-problemas h2 {
+    font-size: 1.45rem;
+  }
+
+  .tree-title {
+    font-size: 1.25rem;
+  }
+
+  .tree-card {
+    padding: 18px;
+  }
+
+  .tree-card h4 {
+    font-size: 1.05rem;
+
+    min-height: auto;
+  }
+
+  .tree-card p {
+    font-size: 0.9rem;
+  }
+
+  .tree-icon {
+    width: 55px;
+
+    height: 55px;
+
+    font-size: 1.4rem;
+  }
+
+  .problema-box {
+    padding: 22px 18px;
+  }
+
+  .problema-icon {
+    width: 70px;
+
+    height: 70px;
+
+    font-size: 2rem;
+  }
+
+  .problema-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .problema-box p {
+    font-size: 0.92rem;
+
+    line-height: 1.8;
+  }
+
+  .tree-analysis,
+  .tree-next {
+    padding: 20px;
+  }
+
+  .tree-analysis h3,
+  .tree-next h3 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,1091 @@
+/* =====================================================
+   CONTENEDOR GENERAL
+===================================================== */
+
+.idea-negocio h2 {
+  text-align: center;
+
+  font-size: 2.6rem;
+
+  color: #163b65;
+
+  margin-bottom: 25px;
+}
+
+.section-intro {
+  margin-bottom: 50px;
+
+  text-align: justify;
+
+  line-height: 1.9;
+
+  font-size: 1.08rem;
+
+  color: #555;
+}
+
+/* =====================================================
+   PERSONAJE
+===================================================== */
+
+.personaje-section {
+  display: grid;
+
+  grid-template-columns: 320px 1fr;
+
+  gap: 45px;
+
+  align-items: center;
+
+  background: #fff;
+
+  border-radius: 22px;
+
+  padding: 45px;
+
+  margin-bottom: 70px;
+
+  border-left: 8px solid #f4b400;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.personaje-section:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.personaje-img {
+  text-align: center;
+}
+
+.personaje-img img {
+  width: 100%;
+
+  max-width: 260px;
+}
+
+.personaje-info h3 {
+  color: #163b65;
+
+  margin-bottom: 10px;
+
+  font-size: 1.9rem;
+}
+
+.personaje-info h4 {
+  color: #f4b400;
+
+  margin-bottom: 25px;
+
+  font-size: 1.15rem;
+}
+
+.personaje-info p {
+  margin-bottom: 18px;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/* =====================================================
+   IDEA DE NEGOCIO
+===================================================== */
+
+.idea-box {
+  background: white;
+
+  border-left: 8px solid #2d8fdd;
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  margin-bottom: 70px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.idea-box:hover {
+  transform: translateY(-5px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.idea-box h3 {
+  color: #163b65;
+
+  font-size: 1.9rem;
+
+  margin-bottom: 30px;
+}
+
+.idea-box p {
+  line-height: 1.9;
+
+  text-align: justify;
+
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   MENSAJE CENTRAL
+===================================================== */
+
+.mensaje-central {
+  background: linear-gradient(135deg, #163b65, #1f5c99);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 65px 45px;
+
+  border-radius: 25px;
+
+  margin-bottom: 80px;
+
+  box-shadow: 0 20px 45px rgba(22, 59, 101, 0.35);
+}
+
+.mensaje-central h3 {
+  color: white;
+
+  font-size: 2rem;
+
+  margin-bottom: 35px;
+}
+
+.mensaje-central blockquote {
+  max-width: 950px;
+
+  margin: auto;
+
+  font-size: 1.18rem;
+
+  line-height: 2;
+
+  color: #eef6ff;
+}
+
+.mensaje-central strong {
+  display: block;
+
+  margin-top: 25px;
+
+  color: #8de0b3;
+
+  font-size: 1.25rem;
+}
+/* =====================================================
+   SEGURIDAD COMO EJE DE LA PROPUESTA
+===================================================== */
+
+.seguridad-section {
+  margin-bottom: 90px;
+}
+
+.seguridad-section h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.seguridad-section .section-description {
+  color: #666;
+  line-height: 1.9;
+  padding-bottom: 40px;
+}
+
+.seguridad-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.seguridad-card {
+  background: white;
+
+  border-top: 6px solid #f4b400;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.seguridad-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.seguridad-icon {
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: #163b65;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+}
+
+.seguridad-card h4 {
+  color: #163b65;
+
+  margin-bottom: 20px;
+}
+
+.seguridad-card h5 {
+  color: #f4b400;
+
+  margin: 20px 0 10px;
+
+  font-size: 1rem;
+}
+
+.seguridad-card p {
+  line-height: 1.8;
+
+  text-align: justify;
+}
+
+/* =====================================================
+   MODELO DE NEGOCIO
+===================================================== */
+
+.modelo-negocio {
+  margin-bottom: 90px;
+}
+
+.modelo-negocio h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.modelo-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 50px;
+  align-items: start;
+}
+
+.modelo-flujo {
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.paso {
+  background: white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.paso span {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #163b65;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+.paso p {
+  margin: 0;
+
+  font-weight: 600;
+
+  color: #444;
+}
+
+.flecha {
+  text-align: center;
+
+  font-size: 1.8rem;
+
+  color: #2d8fdd;
+
+  margin: 10px 0;
+}
+
+.modelo-info {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 40px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  border-left: 7px solid #4caf50;
+}
+
+.modelo-info h4 {
+  color: #163b65;
+
+  margin-bottom: 15px;
+
+  margin-top: 25px;
+}
+
+.modelo-info h4:first-child {
+  margin-top: 0;
+}
+
+.modelo-info p {
+  text-align: justify;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+/* =====================================================
+   EL DISCURSO DEL BLINDAJE
+===================================================== */
+
+.blindaje {
+  background: linear-gradient(135deg, #0d2b4d, #163b65);
+
+  color: white;
+
+  padding: 70px 45px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  box-shadow: 0 20px 45px rgba(22, 59, 101, 0.3);
+}
+
+.blindaje h3 {
+  color: #f4b400;
+
+  font-size: 2rem;
+
+  margin-bottom: 35px;
+}
+
+.blindaje blockquote {
+  max-width: 1000px;
+
+  margin: auto;
+
+  font-size: 1.25rem;
+
+  line-height: 2;
+
+  font-style: italic;
+
+  color: #f5f5f5;
+}
+
+.blindaje strong {
+  color: #8de0b3;
+}
+/* =====================================================
+   PORTAFOLIO DE SERVICIOS
+===================================================== */
+
+.servicios {
+  margin-bottom: 90px;
+}
+
+.servicios h3 {
+  text-align: center;
+
+  font-size: 2rem;
+
+  color: #163b65;
+
+  margin-bottom: 20px;
+}
+
+.servicios-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+
+  margin-top: 50px;
+}
+
+.servicio-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  border-top: 6px solid #2d8fdd;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.servicio-icon {
+  width: 80px;
+
+  height: 80px;
+
+  margin: auto;
+
+  margin-bottom: 25px;
+
+  border-radius: 50%;
+
+  background: #163b65;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.servicio-card h4 {
+  color: #163b65;
+
+  margin-bottom: 20px;
+}
+
+.servicio-card p {
+  text-align: justify;
+
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/* =====================================================
+   PROPUESTA DE VALOR
+===================================================== */
+
+.propuesta-valor {
+  margin-bottom: 90px;
+}
+
+.propuesta-valor h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.valor-grid {
+  margin-top: 45px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.valor-grid div {
+  background: #163b65;
+
+  color: white;
+
+  padding: 25px;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  font-weight: 600;
+
+  transition: 0.35s;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.valor-grid div:hover {
+  background: #2d8fdd;
+
+  transform: translateY(-6px);
+}
+
+/* =====================================================
+   CARTA "RÓMPELO"
+===================================================== */
+
+.rompelo {
+  margin-bottom: 80px;
+
+  background: #fff9ec;
+
+  border-radius: 25px;
+
+  padding: 50px;
+
+  border-left: 8px solid #f4b400;
+}
+
+.rompelo h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+}
+
+.rompelo > p {
+  text-align: center;
+
+  max-width: 950px;
+
+  margin: auto;
+
+  margin-bottom: 45px;
+
+  line-height: 1.9;
+
+  color: #555;
+}
+
+.rompelo-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 35px;
+}
+
+.rompelo-grid article {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.rompelo-grid article:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.rompelo-grid h4 {
+  color: #163b65;
+
+  margin-bottom: 20px;
+}
+
+.rompelo-grid p {
+  text-align: justify;
+
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/* =====================================================
+   MENSAJE DE INNOVACIÓN
+===================================================== */
+
+.innovacion-box {
+  background: linear-gradient(135deg, #f4b400, #ffcb42);
+
+  padding: 60px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  margin-bottom: 90px;
+
+  box-shadow: 0 20px 45px rgba(244, 180, 0, 0.3);
+}
+
+.innovacion-box blockquote {
+  max-width: 1000px;
+
+  margin: auto;
+
+  color: #163b65;
+
+  font-size: 1.2rem;
+
+  line-height: 2;
+
+  font-weight: 600;
+}
+/* =====================================================
+   RENTABILIDAD
+===================================================== */
+
+.rentabilidad {
+  margin-bottom: 60px;
+}
+
+.rentabilidad h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.rentabilidad-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 50px;
+}
+
+.rentabilidad-card {
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  border-top: 6px solid #4caf50;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.rentabilidad-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.rentabilidad-icon {
+  width: 75px;
+
+  height: 75px;
+
+  margin: auto;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: #4caf50;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.rentabilidad-card h4 {
+  color: #163b65;
+
+  margin-bottom: 18px;
+}
+
+.rentabilidad-card p {
+  text-align: justify;
+
+  line-height: 1.8;
+
+  color: #555;
+}
+
+/* =====================================================
+   IMPACTO
+===================================================== */
+
+.impacto {
+  margin-bottom: 90px;
+}
+
+.impacto h3 {
+  text-align: center;
+
+  color: #163b65;
+
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.impacto-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 30px;
+
+  margin-top: 50px;
+}
+
+.impacto-grid article {
+  background: #f8fbff;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  border-left: 6px solid #2d8fdd;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.impacto-grid article:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.impacto-grid h4 {
+  color: #163b65;
+
+  margin-bottom: 20px;
+}
+
+.impacto-grid ul {
+  padding-left: 20px;
+}
+
+.impacto-grid li {
+  margin-bottom: 12px;
+
+  color: #555;
+
+  line-height: 1.7;
+}
+
+/* =====================================================
+   COMPROMISO
+===================================================== */
+
+.compromiso {
+  background: #163b65;
+
+  color: white;
+
+  padding: 70px 50px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  margin-bottom: 80px;
+
+  box-shadow: 0 20px 45px rgba(22, 59, 101, 0.28);
+}
+
+.compromiso h3 {
+  color: #f4b400;
+
+  font-size: 2rem;
+
+  margin-bottom: 35px;
+}
+
+.compromiso blockquote {
+  max-width: 950px;
+
+  margin: auto;
+
+  font-size: 1.15rem;
+
+  line-height: 2;
+
+  color: #eef6ff;
+
+  font-style: italic;
+}
+
+/* =====================================================
+   CIERRE DEL PROYECTO
+===================================================== */
+
+.cierre-proyecto {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+
+  color: white;
+
+  border-radius: 28px;
+
+  padding: 80px 50px;
+
+  text-align: center;
+
+  box-shadow: 0 25px 50px rgba(46, 125, 50, 0.3);
+}
+
+.cierre-proyecto h2 {
+  font-size: 2.8rem;
+
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+.cierre-proyecto h3 {
+  font-size: 2rem;
+
+  color: #ffe082;
+
+  margin-bottom: 35px;
+
+  line-height: 1.4;
+}
+
+.cierre-proyecto p {
+  max-width: 950px;
+
+  margin: auto;
+
+  line-height: 2;
+
+  font-size: 1.08rem;
+
+  color: #f5f5f5;
+}
+/*=========================================================
+=                RESPONSIVE IDEA DE NEGOCIO              =
+=========================================================*/
+
+@media (max-width: 1200px) {
+  .personaje-section {
+    grid-template-columns: 280px 1fr;
+
+    gap: 35px;
+  }
+
+  .modelo-container {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valor-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .idea-negocio h2 {
+    font-size: 2rem;
+  }
+
+  .section-intro {
+    font-size: 1rem;
+
+    margin-bottom: 35px;
+  }
+
+  .personaje-section {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    padding: 30px;
+  }
+
+  .personaje-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .personaje-info h4 {
+    font-size: 1rem;
+  }
+
+  .personaje-info p {
+    text-align: left;
+  }
+
+  .idea-box,
+  .mensaje-central,
+  .blindaje,
+  .innovacion-box,
+  .compromiso,
+  .cierre-proyecto,
+  .rompelo,
+  .modelo-info,
+  .modelo-flujo {
+    padding: 30px;
+  }
+
+  .mensaje-central h3,
+  .blindaje h3,
+  .modelo-negocio h3,
+  .servicios h3,
+  .propuesta-valor h3,
+  .rompelo h3,
+  .rentabilidad h3,
+  .impacto h3,
+  .compromiso h3 {
+    font-size: 1.6rem;
+  }
+
+  .servicios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .idea-negocio h2 {
+    font-size: 1.7rem;
+  }
+
+  .personaje-section {
+    padding: 22px;
+
+    gap: 20px;
+  }
+
+  .personaje-img img {
+    max-width: 180px;
+  }
+
+  .idea-box,
+  .mensaje-central,
+  .blindaje,
+  .innovacion-box,
+  .compromiso,
+  .cierre-proyecto,
+  .rompelo,
+  .modelo-info,
+  .modelo-flujo {
+    padding: 22px;
+  }
+
+  .seguridad-card,
+  .servicio-card,
+  .rentabilidad-card,
+  .impacto-grid article,
+  .rompelo-grid article {
+    padding: 22px;
+  }
+
+  .mensaje-central blockquote,
+  .blindaje blockquote,
+  .innovacion-box blockquote,
+  .compromiso blockquote {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .cierre-proyecto h2 {
+    font-size: 2rem;
+  }
+
+  .cierre-proyecto h3 {
+    font-size: 1.4rem;
+  }
+
+  .cierre-proyecto p {
+    font-size: 0.95rem;
+
+    line-height: 1.8;
+  }
+
+  .paso {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 12px;
+  }
+
+  .seguridad-grid,
+  .rompelo-grid,
+  .rentabilidad-grid,
+  .impacto-grid {
+    gap: 20px;
+  }
+}

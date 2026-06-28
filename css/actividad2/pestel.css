@@ -155,3 +155,113 @@
   font-weight: 600;
   text-decoration: none;
 }
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .pestel-container {
+    padding: 35px;
+  }
+
+  .pestel-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .conclusion-pestel {
+    padding: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .pestel-container {
+    padding: 28px 22px;
+  }
+
+  .pestel-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .pestel-header {
+    padding: 1rem 1.2rem;
+
+    font-size: 0.95rem;
+  }
+
+  .pestel-item.active .pestel-content {
+    padding: 0 1.2rem 1.2rem;
+  }
+
+  .pestel-content h4 {
+    font-size: 1rem;
+  }
+
+  .impacto {
+    font-size: 0.9rem;
+  }
+
+  .conclusion-pestel {
+    padding: 22px;
+  }
+
+  .reflexion-destacada {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .pestel-container {
+    padding: 22px 18px;
+  }
+
+  .pestel-container h2 {
+    font-size: 1.35rem;
+  }
+
+  .pestel-header {
+    padding: 0.9rem 1rem;
+
+    font-size: 0.9rem;
+  }
+
+  .pestel-header span:first-child {
+    gap: 0.5rem;
+  }
+
+  .pestel-header .icono {
+    font-size: 1.2rem;
+  }
+
+  .pestel-item.active .pestel-content {
+    padding: 0 1rem 1rem;
+  }
+
+  .pestel-content p,
+  .pestel-content li {
+    font-size: 0.92rem;
+  }
+
+  .impacto {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .conclusion-pestel {
+    padding: 18px;
+  }
+
+  .reflexion-destacada {
+    padding: 18px;
+    white-space: wrap;
+  }
+
+  .reflexion-destacada span {
+    font-size: 1rem;
+  }
+  .reflexion-destacada ul {
+    list-style: none;
+
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+  }
+}

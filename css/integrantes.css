@@ -59,3 +59,62 @@
 
   color: var(--text-light);
 }
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .integrantes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .integrantes-page {
+    gap: 20px;
+  }
+
+  .hero-integrantes {
+    padding: 25px;
+  }
+
+  .integrantes-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .integrante-card {
+    padding: 22px;
+  }
+
+  .avatar-img {
+    width: 120px;
+
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-integrantes {
+    padding: 20px 15px;
+  }
+
+  .integrante-card {
+    padding: 18px;
+  }
+
+  .avatar-img {
+    width: 100px;
+
+    height: 100px;
+  }
+
+  .integrante-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .integrante-card p {
+    font-size: 0.92rem;
+  }
+}

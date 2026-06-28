@@ -56,3 +56,81 @@
 .energia {
   width: 100%;
 }
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .energia {
+    max-width: 450px;
+
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+  }
+
+  .hero-container {
+    gap: 20px;
+  }
+
+  .hero-content {
+    padding: 20px;
+  }
+
+  .landing ul {
+    margin-left: 18px;
+
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 22px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.92rem;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    padding: 18px;
+  }
+
+  .energia {
+    max-width: 280px;
+  }
+}

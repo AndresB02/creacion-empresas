@@ -49,12 +49,7 @@
   flex-direction: column;
   gap: 20px;
 }
-.estado-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  padding-top: 5px;
-}
+
 .estado-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -288,17 +283,6 @@
 }
 .cita-link:hover {
   text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .cadena-flow {
-    flex-direction: column;
-  }
-  .cadena-arrow {
-    transform: rotate(90deg);
-  }
-  .cadena-item {
-    width: 100%;
-  }
 }
 
 /* ===================================================
@@ -586,25 +570,6 @@
   text-decoration: underline;
 }
 
-/* ===================================================
-   RESPONSIVE
-=================================================== */
-
-@media (max-width: 768px) {
-  .participacion-solar {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .participacion-numero {
-    width: 140px;
-    height: 140px;
-  }
-
-  .participacion-numero span {
-    font-size: 1.8rem;
-  }
-}
 .barra-info {
   display: flex;
   justify-content: space-between;
@@ -835,25 +800,6 @@
   font-weight: 700;
 }
 
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width: 768px) {
-  .seguimiento-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .avance-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .estado-meta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 /*     CONCLUCIONES       */
 .conclusion {
   background: white;
@@ -901,4 +847,157 @@
 }
 .referencias p a:hover {
   text-decoration: underline;
+}
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+@media (max-width: 992px) {
+  .hero-content-dinamica {
+    padding: 35px 30px;
+  }
+
+  .hero-content-dinamica h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-stats {
+    gap: 20px;
+
+    flex-wrap: wrap;
+  }
+
+  .estado-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cadena-flow {
+    flex-direction: column;
+  }
+
+  .cadena-arrow {
+    transform: rotate(90deg);
+  }
+
+  .participacion-solar {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .participacion-texto {
+    min-width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-content-dinamica {
+    padding: 28px 22px;
+  }
+
+  .hero-content-dinamica h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero-content-dinamica p {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .hero-stat {
+    width: 100%;
+  }
+
+  .estado-card,
+  .evidencia-card,
+  .sector-card,
+  .seguimiento-card {
+    padding: 22px;
+  }
+
+  .analisis-sector,
+  .cadena-valor,
+  .conclusion {
+    padding: 22px;
+  }
+
+  .participacion-numero {
+    width: 150px;
+
+    height: 150px;
+  }
+
+  .participacion-numero span {
+    font-size: 2rem;
+  }
+
+  .barra-info {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .hero-content-dinamica {
+    padding: 22px 18px;
+  }
+
+  .hero-content-dinamica h1 {
+    font-size: 1.35rem;
+  }
+
+  .hero-content-dinamica p {
+    font-size: 0.92rem;
+  }
+
+  .hero-stat {
+    padding: 16px;
+  }
+
+  .hero-stat span {
+    font-size: 1.5rem;
+  }
+
+  .estado-card,
+  .evidencia-card,
+  .sector-card,
+  .seguimiento-card,
+  .meta-upme-card {
+    padding: 18px;
+  }
+
+  .analisis-sector,
+  .cadena-valor,
+  .interpretacion-box,
+  .conclusion,
+  .referencias {
+    padding: 18px;
+  }
+
+  .participacion-numero {
+    width: 120px;
+
+    height: 120px;
+  }
+
+  .participacion-numero span {
+    font-size: 1.6rem;
+  }
+
+  .estado-meta {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+  .referencias p {
+    overflow-wrap: break-word;
+
+    word-break: break-word;
+  }
 }
