@@ -3,28 +3,39 @@
 // ======================================
 
 function toggleMenu(id, elemento) {
-  const submenu = document.getElementById(id);
+  const submenuActual = document.getElementById(id);
+  const estabaAbierto = submenuActual.classList.contains("active");
 
-  submenu.classList.toggle("active");
+  // Cerrar todos los submenús
+  document.querySelectorAll(".submenu").forEach((submenu) => {
+    submenu.classList.remove("active");
+  });
 
-  elemento.classList.toggle("open");
+  // Quitar flechas abiertas
+  document.querySelectorAll(".menu-toggle").forEach((toggle) => {
+    toggle.classList.remove("open");
+  });
+
+  // Si estaba cerrado, abrir únicamente este
+  if (!estabaAbierto) {
+    submenuActual.classList.add("active");
+    elemento.classList.add("open");
+  }
 }
 
 // ======================================
 // CARGAR CSS DINÁMICO
 // ======================================
 
-function cargarCSS(nombreCSS) {
-  // eliminar css dinámicos anteriores
-
+function cargarCSS(rutaCSS) {
   document.querySelectorAll(".dynamic-css").forEach((css) => css.remove());
 
-  if (!nombreCSS) return;
+  if (!rutaCSS) return;
 
   const link = document.createElement("link");
 
   link.rel = "stylesheet";
-  link.href = `css/${nombreCSS}`;
+  link.href = rutaCSS;
   link.classList.add("dynamic-css");
 
   document.head.appendChild(link);
@@ -37,10 +48,10 @@ function cargarCSS(nombreCSS) {
 function cargarPagina(ruta, css = null, elemento = null) {
   fetch(ruta)
     .then((response) => {
-      // Si el archivo no existe (error 404), lanzamos un error para ir al catch
       if (!response.ok) {
         throw new Error("Página no encontrada");
       }
+
       return response.text();
     })
     .then((html) => {
@@ -59,21 +70,21 @@ function cargarPagina(ruta, css = null, elemento = null) {
       }
     })
     .catch((error) => {
-      // Si hay error, cargamos la página de "proximamente"
       console.warn("Ruta no encontrada, cargando aviso...", error);
+
       fetch("pages/proximamente.html")
         .then((res) => res.text())
         .then((html) => {
           document.getElementById("contenido").innerHTML = html;
-          // Cargamos un CSS genérico para el aviso si lo tienes
-          cargarCSS("proximamente.css");
+
+          cargarCSS("css/proximamente.css");
         });
     })
     .finally(() => {
-      // Limpieza de clases activas
       document.querySelectorAll(".menu-link").forEach((link) => {
         link.classList.remove("active");
       });
+
       if (elemento) {
         elemento.classList.add("active");
       }
@@ -81,12 +92,17 @@ function cargarPagina(ruta, css = null, elemento = null) {
 }
 
 // ======================================
-// INICIO
+// CARGA INICIAL
 // ======================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  cargarPagina("pages/inicio.html", "inicio.css");
+  cargarPagina("pages/inicio.html", "css/inicio.css");
 });
+
+// ======================================
+// ACORDEONES
+// ODS + HALLAZGOS + PESTEL
+// ======================================
 
 document.addEventListener("click", (e) => {
   const header = e.target.closest(
@@ -96,6 +112,7 @@ document.addEventListener("click", (e) => {
   if (!header) return;
 
   const item = header.parentElement;
+
   const contenedor = item.parentElement;
 
   const estabaAbierto = item.classList.contains("active");
@@ -108,8 +125,24 @@ document.addEventListener("click", (e) => {
     item.classList.add("active");
   }
 });
-document.querySelectorAll(".factor-card").forEach((card) => {
-  card.addEventListener("click", () => {
-    card.querySelector(".card-inner").classList.toggle("is-flipped");
+
+// ======================================
+// MAPA DE EMPATÍA
+// FLIP CARDS
+// ======================================
+
+document.addEventListener("click", (e) => {
+  const card = e.target.closest(".empatia-card");
+
+  if (!card) return;
+
+  const inner = card.querySelector(".card-inner");
+
+  document.querySelectorAll(".empatia-card .card-inner").forEach((item) => {
+    if (item !== inner) {
+      item.classList.remove("is-flipped");
+    }
   });
+
+  inner.classList.toggle("is-flipped");
 });

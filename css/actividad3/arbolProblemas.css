@@ -1,0 +1,576 @@
+/*=========================================================
+=            ÁRBOL DE PROBLEMAS - ESTRUCTURA              =
+=========================================================*/
+
+.arbol-problemas {
+  position: relative;
+  overflow: hidden;
+}
+
+/*=========================================
+=            Marca de Agua                =
+=========================================*/
+
+.arbol-problemas::before {
+  content: "🌳";
+  position: absolute;
+  font-size: 35rem;
+  opacity: 0.03;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/*=========================================
+=            Todo sobre el árbol          =
+=========================================*/
+
+.arbol-problemas > * {
+  position: relative;
+  z-index: 2;
+}
+
+/*=========================================
+=            Títulos                      =
+=========================================*/
+
+.arbol-problemas h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #1b5e20;
+  margin-bottom: 25px;
+}
+
+.tree-title {
+  text-align: center;
+  margin: 60px 0 35px;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/*=========================================
+=            Colores títulos              =
+=========================================*/
+
+.efecto-title {
+  color: #b71c1c;
+}
+
+.causa-title {
+  color: #2e7d32;
+}
+
+/*=========================================
+=            GRID                         =
+=========================================*/
+
+.tree-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  align-items: stretch;
+}
+
+/*=========================================
+=            Cards Base                   =
+=========================================*/
+
+.tree-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: 0.35s;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/*=========================================
+=            Icono                        =
+=========================================*/
+
+.tree-icon {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/*=========================================
+=            Texto Cards                  =
+=========================================*/
+
+.tree-card h4 {
+  font-size: 1.18rem;
+  margin-bottom: 15px;
+  color: #263238;
+}
+
+.tree-card p {
+  line-height: 1.75;
+  color: #616161;
+}
+.tree-card p a {
+  font-weight: 600;
+  color: #616161;
+}
+/*=========================================
+=            EFECTOS                      =
+=========================================*/
+
+.efecto {
+  border-top: 6px solid #d32f2f;
+}
+
+.efecto .tree-icon {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/*=========================================
+=            CAUSAS                       =
+=========================================*/
+
+.causa {
+  border-top: 6px solid #43a047;
+}
+
+.causa .tree-icon {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+/*=========================================
+=         Conectores Verticales           =
+=========================================*/
+
+.tree-connector {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+}
+
+.vertical-line {
+  width: 6px;
+  height: 80px;
+  background: #81c784;
+  border-radius: 20px;
+}
+
+/*=========================================
+=       Problema Central Wrapper          =
+=========================================*/
+
+.problema-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/*=========================================
+=       Problema Central                  =
+=========================================*/
+
+.problema-box {
+  width: min(900px, 100%);
+  background: linear-gradient(145deg, #fff9c4, #fffde7);
+  border-radius: 24px;
+  padding: 45px;
+  border-left: 10px solid #f9a825;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  position: relative;
+}
+.problema-box p a {
+  font-weight: 600;
+  color: #5d4037;
+}
+/*=========================================
+=       Icono Problema                    =
+=========================================*/
+
+.problema-icon {
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  border-radius: 50%;
+  background: #fbc02d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  margin-bottom: 25px;
+  color: white;
+}
+
+/*=========================================
+=      Texto Problema                     =
+=========================================*/
+
+.problema-box h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #795548;
+}
+
+.problema-box p {
+  font-size: 1.08rem;
+  line-height: 2;
+  text-align: justify;
+  color: #5d4037;
+}
+
+/*=========================================
+=      Interpretación                     =
+=========================================*/
+
+.tree-analysis {
+  margin-top: 80px;
+  background: #f8faf8;
+  border-left: 8px solid #4caf50;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.tree-analysis h3 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.tree-analysis p {
+  text-align: justify;
+  line-height: 2;
+}
+
+/*=========================================
+=      Siguiente sección                  =
+=========================================*/
+
+.tree-next {
+  margin-top: 40px;
+  background: #eef7ff;
+  border-left: 8px solid #1976d2;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.tree-next h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+}
+
+.tree-next p {
+  line-height: 1.9;
+  text-align: justify;
+}
+/*=========================================================
+=        ÁRBOL DE PROBLEMAS - EFECTOS Y ANIMACIONES       =
+=========================================================*/
+
+/*=========================================
+=      Animación de entrada               =
+=========================================*/
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tree-card,
+.problema-box,
+.tree-analysis,
+.tree-next {
+  animation: aparecer 0.8s ease both;
+}
+
+/*=========================================
+=      Hover tarjetas                     =
+=========================================*/
+
+.tree-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.16);
+}
+
+/*=========================================
+=      Hover efectos                      =
+=========================================*/
+
+.efecto:hover {
+  border-top-color: #b71c1c;
+}
+
+.efecto:hover .tree-icon {
+  background: #ffcdd2;
+  transform: scale(1.08);
+}
+
+/*=========================================
+=      Hover causas                       =
+=========================================*/
+
+.causa:hover {
+  border-top-color: #1b5e20;
+}
+
+.causa:hover .tree-icon {
+  background: #c8e6c9;
+  transform: scale(1.08);
+}
+
+/*=========================================
+=      Iconos                             =
+=========================================*/
+
+.tree-icon {
+  transition: 0.35s;
+}
+
+/*=========================================
+=      Problema Central                   =
+=========================================*/
+
+.problema-box {
+  transition: 0.45s;
+}
+
+.problema-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.18);
+}
+
+/*=========================================
+=      Icono problema                     =
+=========================================*/
+
+.problema-icon {
+  transition: 0.45s;
+}
+
+.problema-box:hover .problema-icon {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/*=========================================
+=      Brillo superior                    =
+=========================================*/
+
+.problema-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 25px 25px 0 0;
+  background: linear-gradient(90deg, #ffd54f, #fff176, #ffd54f);
+}
+
+/*=========================================
+=      Línea del árbol                    =
+=========================================*/
+
+.vertical-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.vertical-line::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.45);
+  animation: flujo 4s linear infinite;
+}
+
+@keyframes flujo {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: 100%;
+  }
+}
+
+/*=========================================
+=      Títulos                            =
+=========================================*/
+
+.tree-title {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.tree-title::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.efecto-title::after {
+  background: #d32f2f;
+}
+
+.causa-title::after {
+  background: #43a047;
+}
+
+/*=========================================
+=      Links                             =
+=========================================*/
+
+.tree-card a,
+.problema-box a,
+.tree-analysis a,
+.tree-next a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.tree-card a:hover,
+.problema-box a:hover,
+.tree-analysis a:hover {
+  text-decoration: underline;
+}
+
+/*=========================================
+=      Interpretación                     =
+=========================================*/
+
+.tree-analysis {
+  transition: 0.35s;
+}
+
+.tree-analysis:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/*=========================================
+=      Siguiente sección                  =
+=========================================*/
+
+.tree-next {
+  transition: 0.35s;
+}
+
+.tree-next:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/*=========================================
+=      Separación entre bloques           =
+=========================================*/
+
+.tree-section {
+  margin-bottom: 15px;
+}
+
+/*=========================================
+=      Espaciado cards                    =
+=========================================*/
+
+.tree-card h4 {
+  min-height: 55px;
+}
+
+/*=========================================
+=      Scroll suave                       =
+=========================================*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=========================================
+=      Selección de texto                 =
+=========================================*/
+
+::selection {
+  background: #81c784;
+  color: white;
+}
+
+/*=========================================
+=      Animación marca de agua            =
+=========================================*/
+
+.arbol-problemas::before {
+  animation: arbolFloat 8s ease-in-out infinite;
+}
+
+@keyframes arbolFloat {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50%, -49%) rotate(2deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/*=========================================
+=      Delays de entrada                  =
+=========================================*/
+
+.efectos .tree-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.efectos .tree-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.efectos .tree-card:nth-child(3) {
+  animation-delay: 0.25s;
+}
+.efectos .tree-card:nth-child(4) {
+  animation-delay: 0.35s;
+}
+.efectos .tree-card:nth-child(5) {
+  animation-delay: 0.45s;
+}
+.causas .tree-card:nth-child(1) {
+  animation-delay: 0.55s;
+}
+.causas .tree-card:nth-child(2) {
+  animation-delay: 0.65s;
+}
+.causas .tree-card:nth-child(3) {
+  animation-delay: 0.75s;
+}
+.causas .tree-card:nth-child(4) {
+  animation-delay: 0.85s;
+}
+.causas .tree-card:nth-child(5) {
+  animation-delay: 0.95s;
+}
