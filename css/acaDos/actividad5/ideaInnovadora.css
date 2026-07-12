@@ -1,0 +1,1025 @@
+/* =====================================================
+   ACTIVIDAD 5 - INNOVACIÓN Y CREATIVIDAD
+   BLOQUE 1
+   Contenedor + Hero + Introducción + Idea Innovadora
+===================================================== */
+
+.innovacion-page {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  color: #263238;
+}
+
+/*=====================================================
+ HERO
+=====================================================*/
+
+.hero-innovacion {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
+
+  border-radius: 22px;
+
+  padding: 30px 50px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.hero-innovacion::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -140px;
+  right: -100px;
+}
+
+.hero-innovacion::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  bottom: -70px;
+  left: -60px;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.hero-badge {
+  display: inline-block;
+
+  background: #ffd54f;
+
+  color: #0d47a1;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-weight: 700;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 18px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+
+  margin-bottom: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.hero-content p {
+  max-width: 850px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color: #eef6ff;
+}
+
+/*=====================================================
+ TARJETAS GENERALES
+=====================================================*/
+
+.card {
+  background: #fff;
+
+  border-radius: 22px;
+
+  padding: 45px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/*=====================================================
+ INTRODUCCIÓN
+=====================================================*/
+
+.introduccion-innovacion h2 {
+  color: #0d47a1;
+
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+}
+
+.introduccion-innovacion p {
+  font-size: 1.05rem;
+
+  line-height: 2;
+
+  text-align: justify;
+
+  margin-bottom: 18px;
+
+  color: #455a64;
+}
+
+/*=====================================================
+ IDEA INNOVADORA
+=====================================================*/
+
+.idea-innovadora {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 35px;
+
+  align-items: center;
+}
+
+.idea-texto {
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 45px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.idea-etiqueta {
+  display: inline-block;
+
+  background: #e3f2fd;
+
+  color: #1565c0;
+
+  padding: 8px 16px;
+
+  border-radius: 25px;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.idea-texto h2 {
+  color: #0d47a1;
+
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+
+  line-height: 1.3;
+}
+
+.idea-texto p {
+  text-align: justify;
+
+  line-height: 2;
+
+  font-size: 1.05rem;
+
+  color: #455a64;
+
+  margin-bottom: 18px;
+}
+
+/*=====================================================
+ FRASE DESTACADA
+=====================================================*/
+
+.idea-destacada {
+  height: 100%;
+}
+
+.frase-clave {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+
+  color: #fff;
+
+  height: 100%;
+
+  border-radius: 22px;
+
+  padding: 45px 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(13, 71, 161, 0.3);
+}
+
+.frase-clave span {
+  font-size: 3rem;
+
+  margin-bottom: 20px;
+}
+
+.frase-clave blockquote {
+  font-size: 1.2rem;
+
+  line-height: 1.9;
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+/* =====================================================
+   BLOQUE 2
+   CANVAS DE INNOVACIÓN + REFLEXIÓN
+=====================================================*/
+
+/*=====================================================
+ CANVAS
+=====================================================*/
+
+.canvas-innovacion {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.canvas-header {
+  text-align: center;
+
+  background: #ffffff;
+
+  padding: 45px;
+
+  border-radius: 22px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.canvas-header h2 {
+  color: #0d47a1;
+
+  font-size: 2.1rem;
+
+  margin-bottom: 20px;
+}
+
+.canvas-header p {
+  max-width: 900px;
+
+  margin: auto;
+
+  color: #546e7a;
+
+  line-height: 1.9;
+
+  font-size: 1.05rem;
+}
+
+/*=====================================================
+ GRID
+=====================================================*/
+
+.canvas-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/*=====================================================
+ TARJETAS
+=====================================================*/
+
+.canvas-card {
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.canvas-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.canvas-icon {
+  width: 75px;
+
+  height: 75px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+}
+
+/*=====================================================
+ COLORES
+=====================================================*/
+
+.deseable {
+  border-top: 7px solid #43a047;
+}
+
+.deseable .canvas-icon {
+  background: #43a047;
+
+  color: white;
+}
+
+.viable {
+  border-top: 7px solid #fb8c00;
+}
+
+.viable .canvas-icon {
+  background: #fb8c00;
+
+  color: white;
+}
+
+.factible {
+  border-top: 7px solid #1e88e5;
+}
+
+.factible .canvas-icon {
+  background: #1e88e5;
+
+  color: white;
+}
+
+/*=====================================================
+ CONTENIDO
+=====================================================*/
+
+.canvas-card h3 {
+  font-size: 1.6rem;
+
+  color: #0d47a1;
+
+  margin-bottom: 20px;
+}
+
+.canvas-card p {
+  color: #546e7a;
+
+  line-height: 1.9;
+
+  text-align: justify;
+
+  margin-bottom: 22px;
+}
+
+.canvas-card ul {
+  padding-left: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.canvas-card li {
+  color: #455a64;
+
+  line-height: 1.7;
+}
+
+/*=====================================================
+ REFLEXIÓN
+=====================================================*/
+
+.reflexion-innovacion {
+  margin-top: 10px;
+}
+
+.reflexion-box {
+  background: linear-gradient(135deg, #0d47a1, #1565c0);
+
+  color: white;
+
+  border-radius: 24px;
+
+  padding: 55px;
+
+  text-align: center;
+
+  box-shadow: 0 18px 45px rgba(21, 101, 192, 0.25);
+}
+
+.reflexion-box h3 {
+  font-size: 2rem;
+
+  margin-bottom: 25px;
+
+  color: #fff;
+}
+
+.reflexion-box p {
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: 1.08rem;
+
+  line-height: 2;
+
+  color: #eef6ff;
+}
+/* =====================================================
+   BLOQUE 3
+   DIFERENCIADORES + COMPARACIÓN + MENSAJE
+=====================================================*/
+
+/*=====================================================
+ TITULO DE SECCIONES
+=====================================================*/
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  color: #0d47a1;
+
+  font-size: 2.2rem;
+
+  margin-bottom: 18px;
+}
+
+.section-title p {
+  max-width: 900px;
+
+  margin: auto;
+
+  color: #546e7a;
+
+  line-height: 1.9;
+
+  font-size: 1.05rem;
+}
+
+/*=====================================================
+ DIFERENCIADORES
+=====================================================*/
+
+.innovacion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.innovacion-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.innovacion-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.innovacion-icon {
+  width: 80px;
+
+  height: 80px;
+
+  margin: auto;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: #1565c0;
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 2rem;
+}
+
+.innovacion-card h3 {
+  color: #0d47a1;
+
+  margin-bottom: 18px;
+
+  font-size: 1.25rem;
+}
+
+.innovacion-card p {
+  color: #546e7a;
+
+  line-height: 1.9;
+
+  text-align: justify;
+}
+
+/*=====================================================
+ COMPARACIÓN
+=====================================================*/
+
+.comparacion-modelos {
+  margin-top: 25px;
+}
+
+.comparacion-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 35px;
+}
+
+.modelo-card {
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 22px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.modelo-card h3 {
+  text-align: center;
+
+  margin-bottom: 25px;
+
+  font-size: 1.7rem;
+}
+
+.modelo-card ul {
+  padding-left: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.modelo-card li {
+  line-height: 1.7;
+
+  color: #455a64;
+}
+
+.tradicional {
+  border-top: 8px solid #ef5350;
+}
+
+.tradicional h3 {
+  color: #c62828;
+}
+
+.propuesta {
+  border-top: 8px solid #43a047;
+}
+
+.propuesta h3 {
+  color: #2e7d32;
+}
+
+/*=====================================================
+ MENSAJE FINAL
+=====================================================*/
+
+.mensaje-innovacion {
+  margin-top: 20px;
+}
+
+.mensaje-innovacion blockquote {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+
+  border-radius: 24px;
+
+  padding: 60px;
+
+  text-align: center;
+
+  color: white;
+
+  box-shadow: 0 20px 45px rgba(21, 101, 192, 0.28);
+}
+
+.mensaje-innovacion span {
+  display: block;
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  margin-bottom: 28px;
+
+  color: #ffd54f;
+}
+
+.mensaje-innovacion p {
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: 1.12rem;
+
+  line-height: 2;
+
+  color: #eef6ff;
+}
+/* =====================================================
+   BLOQUE 4
+   BENEFICIOS + CONCLUSIÓN + REFLEXIÓN FINAL
+   REFERENCIAS + RESPONSIVE GENERAL
+=====================================================*/
+
+/*=====================================================
+ BENEFICIOS
+=====================================================*/
+
+.beneficios-innovacion {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 40px;
+}
+
+.beneficios-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+
+.beneficio-card {
+  background: #ffffff;
+
+  padding: 35px;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  border-top: 6px solid #1565c0;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.beneficio-icon {
+  width: 75px;
+
+  height: 75px;
+
+  margin: auto;
+
+  margin-bottom: 22px;
+
+  border-radius: 50%;
+
+  background: #1565c0;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.beneficio-card h3 {
+  color: #0d47a1;
+
+  margin-bottom: 18px;
+
+  font-size: 1.25rem;
+}
+
+.beneficio-card p {
+  text-align: justify;
+
+  color: #546e7a;
+
+  line-height: 1.9;
+}
+
+/*=====================================================
+ CONCLUSIÓN
+=====================================================*/
+
+.conclusion-card {
+  background: #ffffff;
+
+  border-left: 8px solid #43a047;
+
+  border-radius: 24px;
+
+  padding: 50px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.conclusion-card h2 {
+  color: #2e7d32;
+
+  font-size: 2.2rem;
+
+  margin-bottom: 25px;
+}
+
+.conclusion-card p {
+  text-align: justify;
+
+  color: #455a64;
+
+  line-height: 2;
+
+  margin-bottom: 18px;
+}
+
+/*=====================================================
+ REFLEXIÓN FINAL
+=====================================================*/
+
+.reflexion-final {
+  margin-top: 15px;
+}
+
+.reflexion-final blockquote {
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+
+  color: white;
+
+  padding: 60px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 45px rgba(46, 125, 50, 0.28);
+}
+
+.reflexion-final span {
+  display: block;
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  color: #fff176;
+
+  margin-bottom: 25px;
+}
+
+.reflexion-final p {
+  max-width: 900px;
+
+  margin: auto;
+
+  line-height: 2;
+
+  font-size: 1.1rem;
+
+  color: #f5f5f5;
+}
+
+/*=====================================================
+ REFERENCIAS
+=====================================================*/
+
+.reflexion-destacada {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border-left: 6px solid #2563eb;
+}
+
+.reflexion-destacada h3 {
+  color: #0d47a1;
+
+  margin-bottom: 25px;
+
+  font-size: 1.6rem;
+}
+
+.reflexion-destacada p {
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.reflexion-destacada a {
+  margin: 0;
+  color: #1e3a8a;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.reflexion-destacada a:hover {
+  text-decoration: underline;
+  color: #1e3a8a;
+}
+/* =====================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+===================================================== */
+
+/* --- TABLETAS Y PANTALLAS MEDIANAS (Menos de 992px) --- */
+@media (min-width: 769px) AND (max-width: 1200px) {
+  /* Reducir el espaciado general */
+  .innovacion-page {
+    gap: 30px;
+  }
+
+  /* Grid del Canvas: Pasa de 3 a 2 columnas */
+  .canvas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Grid de Diferenciadores: Pasa de 3 a 2 columnas */
+  .innovacion-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* Grid de Beneficios: Pasa de 4 a 2 columnas */
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* --- MÓVILES Y PANTALLAS PEQUEÑAS (Menos de 768px) --- */
+@media (max-width: 768px) {
+  /* --- Ajustes de tipografía y paddings generales --- */
+  .hero-content h1 {
+    font-size: 2.2rem; /* Texto del Hero más amigable para móvil */
+  }
+  .beneficios-innovacion .section-title {
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  .canvas-header h2,
+  .section-title h2,
+  .conclusion-card h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Suavizar paddings para ganar espacio en los lados */
+  .hero-innovacion {
+    padding: 30px 20px;
+  }
+
+  .card,
+  .idea-texto,
+  .canvas-header,
+  .canvas-card,
+  .innovacion-card,
+  .modelo-card,
+  .beneficio-card,
+  .conclusion-card {
+    padding: 25px 20px;
+  }
+
+  /* Bloques de degradados/mensajes */
+  .frase-clave,
+  .reflexion-box,
+  .mensaje-innovacion blockquote,
+  .reflexion-final blockquote {
+    padding: 40px 20px;
+  }
+
+  .frase-clave span {
+    font-size: 2.2rem;
+  }
+
+  .mensaje-innovacion span,
+  .reflexion-final span {
+    font-size: 1.4rem;
+  }
+
+  /* --- Conversión de Grids a 1 Sola Columna --- */
+
+  /* Idea innovadora (Texto + Frase Destacada) */
+  .idea-innovadora {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* El bloque de la frase clave ya no necesita forzar altura completa */
+  .idea-destacada {
+    height: auto;
+  }
+
+  /* Canvas, Diferenciadores, Modelos y Beneficios a 1 columna */
+  .canvas-grid,
+  .innovacion-grid,
+  .comparacion-grid,
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* --- Mejoras de Lectura en Móvil --- */
+
+  /* El texto justificado suele dejar espacios gigantes en móviles. 
+     Es mejor alinearlo a la izquierda en pantallas chicas. */
+  .introduccion-innovacion p,
+  .idea-texto p,
+  .canvas-card p,
+  .innovacion-card p,
+  .beneficio-card p,
+  .conclusion-card p {
+    text-align: left;
+    line-height: 1.7; /* Un interlineado ligeramente menor para pantallas chicas */
+  }
+
+  /* Evitar que los círculos decorativos del Hero se desborden feo */
+  .hero-innovacion::before {
+    width: 200px;
+    height: 200px;
+    top: -80px;
+    right: -60px;
+  }
+  .reflexion-destacada {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}

@@ -37,7 +37,9 @@
             <li>
               <a
                 class="menu-link"
-                onclick="cargarPagina('pages/inicio.html', 'inicio.css', this)"
+                onclick="
+                  cargarPagina('pages/inicio.html', 'css/inicio.css', this)
+                "
               >
                 🏠 Inicio
               </a>
@@ -51,7 +53,7 @@
                 onclick="
                   cargarPagina(
                     'pages/integrantes.html',
-                    'integrantes.css',
+                    'css/integrantes.css',
                     this,
                   )
                 "
@@ -60,157 +62,376 @@
               </a>
             </li>
 
-            <!-- ACTIVIDAD 2 -->
+            <!-- =====================================
+            PROYECTO ACA 1
+            ====================================== -->
 
             <li class="menu-item">
-              <div class="menu-header" onclick="toggleMenu('actividad2', this)">
-                <span> 📋 Actividad Semana 2 </span>
-
+              <div class="menu-header" onclick="toggleMenu('acaUno', this)">
+                <span>📁 Proyecto ACA 1</span>
                 <span>▼</span>
               </div>
 
-              <ul id="actividad2" class="submenu">
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad2/ods.html',
-                        'css/actividad2/ods.css',
-                        this,
-                      )
-                    "
+              <ul id="acaUno" class="submenu">
+                <!-- =======================
+                ACTIVIDAD SEMANA 2
+              ======================== -->
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad2', this)"
                   >
-                    ODS
-                  </a>
+                    <span>📂 Actividad Semana 2</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad2" class="submenu">
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad2/ods.html',
+                            'css/acaUno/actividad2/ods.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 ODS
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad2/dinamicaSector.html',
+                            'css/acaUno/actividad2/dinamicaSector.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Dinámica del Sector
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad2/pestel.html',
+                            'css/acaUno/actividad2/pestel.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 PESTEL
+                      </a>
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad2/dinamicaSector.html',
-                        'css/actividad2/dinamicaSector.css',
-                        this,
-                      )
-                    "
+
+                <!-- =======================
+             ACTIVIDAD SEMANA 3
+        ======================== -->
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad3', this)"
                   >
-                    Dinámica del Sector
-                  </a>
+                    <span>📂 Actividad Semana 3</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad3" class="submenu">
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad3/mapaEmpatia.html',
+                            'css/acaUno/actividad3/mapaEmpatia.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Mapa de Empatía
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad3/identificacionProblema.html',
+                            'css/acaUno/actividad3/identificacionProblema.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Identificación del problema
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad3/arbolProblemas.html',
+                            'css/acaUno/actividad3/arbolProblemas.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Árbol de problemas
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad3/arbolObjetivos.html',
+                            'css/acaUno/actividad3/arbolObjetivos.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Árbol de objetivos
+                      </a>
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad2/pestel.html',
-                        'css/actividad2/pestel.css',
-                        this,
-                      )
-                    "
+
+                <!-- =======================
+             ACTIVIDAD SEMANA 4
+        ======================== -->
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad4', this)"
                   >
-                    PESTEL
-                  </a>
+                    <span>📂 Actividad Semana 4</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad4" class="submenu">
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaUno/actividad4/ideaNegocio.html',
+                            'css/acaUno/actividad4/ideaNegocio.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Idea de negocio
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
 
-            <!-- ACTIVIDAD 3 -->
+            <!-- =====================================
+            PROYECTO ACA 2
+            ====================================== -->
 
             <li class="menu-item">
-              <div class="menu-header" onclick="toggleMenu('actividad3')">
-                <span> 📋 Actividad Semana 3 </span>
-
+              <div class="menu-header" onclick="toggleMenu('acaDos', this)">
+                <span>📁 Proyecto ACA 2</span>
                 <span>▼</span>
               </div>
 
-              <ul id="actividad3" class="submenu">
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad3/mapaEmpatia.html',
-                        'css/actividad3/mapaEmpatia.css',
-                        this,
-                      )
-                    "
+              <ul id="acaDos" class="submenu">
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad5', this)"
                   >
-                    Mapa de Empatía
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad3/identificacionProblema.html',
-                        'css/actividad3/identificacionProblema.css',
-                        this,
-                      )
-                    "
-                  >
-                    Identificación del problema
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad3/arbolProblemas.html',
-                        'css/actividad3/arbolProblemas.css',
-                        this,
-                      )
-                    "
-                  >
-                    Árbol de problemas
-                  </a>
+                    <span>📂 Actividad Semana 5</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad5" class="submenu">
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaDos/actividad5/ideaInnovadora.html',
+                            'css/acaDos/actividad5/ideaInnovadora.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Idea Innovadora
+                      </a>
+                    </li>
+                  </ul>
                 </li>
 
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad3/arbolObjetivos.html',
-                        'css/actividad3/arbolObjetivos.css',
-                        this,
-                      )
-                    "
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad6', this)"
                   >
-                    Árbol de objetivos
-                  </a>
+                    <span>📂 Actividad Semana 6</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad6" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad7', this)"
+                  >
+                    <span>📂 Actividad Semana 7</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad7" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad8', this)"
+                  >
+                    <span>📂 Actividad Semana 8</span>
+                    <span>▼</span>
+                  </div>
+
+                  <ul id="actividad8" class="submenu"></ul>
                 </li>
               </ul>
             </li>
 
-            <!-- ACTIVIDAD 4 -->
+            <!-- =====================================
+            PROYECTO ACA 3
+            ====================================== -->
 
-            <li class="menu-item">
-              <div class="menu-header" onclick="toggleMenu('actividad4')">
-                <span> 📋 Actividad Semana 4 </span>
-
+            <!-- <li class="menu-item">
+              <div class="menu-header" onclick="toggleMenu('acaTres', this)">
+                <span>📁 Proyecto ACA 3</span>
                 <span>▼</span>
               </div>
 
-              <ul id="actividad4" class="submenu">
-                <li>
-                  <a
-                    class="menu-link"
-                    onclick="
-                      cargarPagina(
-                        'pages/actividad4/ideaNegocio.html',
-                        'css/actividad4/ideaNegocio.css',
-                        this,
-                      )
-                    "
+              <ul id="acaTres" class="submenu">
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad9', this)"
                   >
-                    Idea de negocio
-                  </a>
+                    <span>📂 Actividad Semana 9</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad9" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad10', this)"
+                  >
+                    <span>📂 Actividad Semana 10</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad10" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad11', this)"
+                  >
+                    <span>📂 Actividad Semana 11</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad11" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad12', this)"
+                  >
+                    <span>📂 Actividad Semana 12</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad12" class="submenu"></ul>
                 </li>
               </ul>
-            </li>
+            </li> -->
+
+            <!-- =====================================
+            PROYECTO ACA 4
+            ====================================== -->
+
+            <!-- <li class="menu-item">
+              <div class="menu-header" onclick="toggleMenu('acaCuatro', this)">
+                <span>📁 Proyecto ACA 4</span>
+                <span>▼</span>
+              </div>
+
+              <ul id="acaCuatro" class="submenu">
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad13', this)"
+                  >
+                    <span>📂 Actividad Semana 13</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad13" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad14', this)"
+                  >
+                    <span>📂 Actividad Semana 14</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad14" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad15', this)"
+                  >
+                    <span>📂 Actividad Semana 15</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad15" class="submenu"></ul>
+                </li>
+
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad16', this)"
+                  >
+                    <span>📂 Actividad Semana 16</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad16" class="submenu"></ul>
+                </li>
+              </ul>
+            </li> -->
           </ul>
         </nav>
       </aside>

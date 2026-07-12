@@ -1,26 +1,31 @@
 // ======================================
-// DESPLEGAR MENÚS
+// DESPLEGAR MENÚS ANIDADOS
 // ======================================
 
 function toggleMenu(id, elemento) {
-  const submenuActual = document.getElementById(id);
-  const estabaAbierto = submenuActual.classList.contains("active");
+  const submenu = document.getElementById(id);
 
-  // Cerrar todos los submenús
-  document.querySelectorAll(".submenu").forEach((submenu) => {
-    submenu.classList.remove("active");
-  });
+  if (!submenu) return;
 
-  // Quitar flechas abiertas
-  document.querySelectorAll(".menu-toggle").forEach((toggle) => {
-    toggle.classList.remove("open");
-  });
+  const padre = submenu.parentElement.parentElement;
 
-  // Si estaba cerrado, abrir únicamente este
-  if (!estabaAbierto) {
-    submenuActual.classList.add("active");
-    elemento.classList.add("open");
-  }
+  // Cerrar únicamente los hermanos
+  padre
+    .querySelectorAll(":scope > .menu-item > .submenu.active")
+    .forEach((item) => {
+      if (item !== submenu) {
+        item.classList.remove("active");
+
+        const header = item.previousElementSibling;
+
+        if (header) {
+          header.classList.remove("open");
+        }
+      }
+    });
+
+  submenu.classList.toggle("active");
+  elemento.classList.toggle("open");
 }
 
 // ======================================
