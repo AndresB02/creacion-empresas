@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("click", (e) => {
   const header = e.target.closest(
-    ".desafio-header, .hallazgo-header, .pestel-header",
+    ".desafio-header, .hallazgo-header, .pestel-header, .producto-header",
   );
 
   if (!header) return;

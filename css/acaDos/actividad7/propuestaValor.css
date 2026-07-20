@@ -1,0 +1,913 @@
+.propuestaValor-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  color: #1e293b !important;
+}
+
+/*=====================================================
+ HERO
+=====================================================*/
+.hero-propuesta {
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  color: #fff;
+
+  border-radius: 22px;
+
+  padding: 30px 50px;
+  margin-bottom: 30px;
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+.hero-propuesta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  top: -140px;
+  right: -100px;
+}
+.hero-propuesta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  bottom: -70px;
+  left: -60px;
+}
+.hero-content {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  background-color: transparent;
+}
+.hero-badge {
+  display: inline-block;
+
+  background: #ffd54f;
+
+  color: #0d47a1;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-weight: 700;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 18px;
+}
+.hero-content h1 {
+  font-size: 3rem;
+
+  margin-bottom: 20px;
+
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+.hero-content p {
+  max-width: 850px;
+
+  font-size: 1.08rem;
+
+  line-height: 1.9;
+
+  color: #eef6ff;
+}
+/*=====================================================
+  INTRODUCCIÓN
+=====================================================*/
+
+.introduccion-propuesta,
+.canvas-propuesta,
+.perfil-cliente {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 30px 0 20px 0;
+}
+
+/*=====================================================
+  TITULOS GENERALES
+=====================================================*/
+
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 18px;
+
+  background: #e3f2fd;
+
+  color: #1565c0;
+
+  border-radius: 30px;
+
+  font-size: 0.9rem;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  font-size: 2.15rem;
+
+  color: #0d47a1;
+
+  margin-bottom: 22px;
+
+  line-height: 1.25;
+}
+
+.section-title p {
+  font-size: 1.02rem;
+
+  line-height: 1.9;
+
+  color: #546e7a;
+
+  margin-bottom: 18px;
+}
+
+.section-title p:last-child {
+  margin-bottom: 0;
+}
+
+/*=====================================================
+  VALUE PROPOSITION CANVAS
+=====================================================*/
+
+.canvas-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 35px;
+
+  align-items: stretch;
+}
+
+.canvas-card {
+  background: #fff;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  border-top: 6px solid #1e88e5;
+
+  transition: 0.35s;
+}
+
+.canvas-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.canvas-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 2rem;
+
+  margin-bottom: 28px;
+
+  color: #1565c0;
+}
+
+.canvas-header h3 {
+  font-size: 1.45rem;
+
+  font-weight: 700;
+
+  color: #0d47a1;
+}
+
+.canvas-item {
+  padding: 18px 0;
+
+  border-bottom: 1px solid #eceff1;
+}
+
+.canvas-item:last-child {
+  border-bottom: none;
+
+  padding-bottom: 0;
+}
+
+.canvas-item h4 {
+  color: #1565c0;
+
+  margin-bottom: 15px;
+
+  font-size: 1.08rem;
+}
+
+.canvas-item ul {
+  padding-left: 22px;
+}
+
+.canvas-item li {
+  margin-bottom: 10px;
+
+  color: #546e7a;
+
+  line-height: 1.8;
+}
+
+/*=====================================================
+  PERFIL DESTACADO
+=====================================================*/
+
+.perfil-destacado {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.perfil-card {
+  background: #fff;
+
+  border-radius: 22px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.perfil-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  height: 6px;
+
+  background: #1e88e5;
+}
+
+.perfil-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.12);
+}
+
+.perfil-icon {
+  width: 85px;
+
+  height: 85px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #e3f2fd;
+
+  font-size: 2.2rem;
+}
+
+.perfil-card h3 {
+  color: #0d47a1;
+
+  margin-bottom: 18px;
+
+  font-size: 1.25rem;
+}
+
+.perfil-card p {
+  color: #546e7a;
+
+  line-height: 1.85;
+
+  font-size: 0.98rem;
+}
+
+/*=====================================================
+  RESPONSIVE BLOQUE
+=====================================================*/
+
+@media (max-width: 992px) {
+  .canvas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil-destacado {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .canvas-card,
+  .perfil-card {
+    padding: 28px;
+  }
+
+  .canvas-header {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 1.55rem;
+  }
+
+  .section-title p {
+    font-size: 0.96rem;
+  }
+
+  .canvas-card,
+  .perfil-card {
+    padding: 22px;
+  }
+
+  .perfil-icon {
+    width: 70px;
+    height: 70px;
+
+    font-size: 1.8rem;
+  }
+}
+/*==================================================
+  TRABAJOS - FRUSTRACIONES - ALEGRÍAS
+==================================================*/
+
+.trabajos-cliente,
+.frustraciones-cliente,
+.alegrias-cliente {
+  background: #f8fbfd;
+  padding: 30px 0;
+  border-radius: 50px;
+}
+
+.alegrias-cliente {
+  background: #f8fbfd;
+}
+
+/*=====================================
+GRID
+=====================================*/
+
+.trabajos-grid,
+.frustraciones-grid,
+.alegrias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 50px 0;
+}
+
+/*=====================================
+CARDS
+=====================================*/
+
+.trabajo-card,
+.frustracion-card,
+.alegria-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.35s;
+  border-top: 5px solid #00a86b;
+}
+
+.trabajo-card:hover,
+.frustracion-card:hover,
+.alegria-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+/*=====================================
+ICONOS
+=====================================*/
+
+.trabajo-icon,
+.frustracion-icon,
+.alegria-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #00b46c, #00d084);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 176, 109, 0.3);
+}
+
+/*=====================================
+TÍTULOS
+=====================================*/
+
+.trabajo-card h3,
+.frustracion-card h3,
+.alegria-card h3 {
+  text-align: center;
+  font-size: 1.35rem;
+  color: #073b4c;
+  margin-bottom: 18px;
+}
+
+/*=====================================
+PÁRRAFOS
+=====================================*/
+
+.trabajo-card p,
+.frustracion-card p,
+.alegria-card p {
+  color: #555;
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/*=====================================
+LISTAS
+=====================================*/
+
+.trabajo-card ul {
+  padding-left: 22px;
+}
+
+.trabajo-card li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.trabajo-card li::marker {
+  color: #00a86b;
+}
+
+/*=====================================
+CONCLUSIONES
+=====================================*/
+
+.trabajo-conclusion,
+.frustracion-conclusion,
+.alegria-conclusion {
+  margin-top: 0;
+  background: #ffffff;
+  padding: 35px;
+  border-left: 6px solid #00a86b;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.trabajo-conclusion h3,
+.frustracion-conclusion h3,
+.alegria-conclusion h3 {
+  color: #073b4c;
+  margin-bottom: 18px;
+  font-size: 1.35rem;
+}
+
+.trabajo-conclusion p,
+.frustracion-conclusion p,
+.alegria-conclusion p {
+  color: #555;
+  line-height: 1.9;
+  text-align: justify;
+}
+
+/*=====================================
+RESPONSIVE
+=====================================*/
+
+@media (max-width: 992px) {
+  .trabajos-cliente,
+  .frustraciones-cliente,
+  .alegrias-cliente {
+    padding: 70px 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trabajos-grid,
+  .frustraciones-grid,
+  .alegrias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trabajo-card,
+  .frustracion-card,
+  .alegria-card {
+    padding: 28px 22px;
+  }
+
+  .trabajo-conclusion,
+  .frustracion-conclusion,
+  .alegria-conclusion {
+    padding: 25px;
+  }
+}
+/* =====================================================
+   PRODUCTOS Y SERVICIOS
+   ALIVIADORES
+   CREADORES DE ALEGRÍAS
+=====================================================*/
+
+.productos-servicios,
+.aliviadores-frustraciones,
+.creadores-alegrias {
+  padding: 40px 0 0 0;
+}
+
+/*======================================
+Acordeón
+======================================*/
+
+.productos-acordeon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.producto-item {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+}
+
+.producto-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/*======================================
+Cabecera
+======================================*/
+
+.producto-header {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 22px 28px;
+
+  background: #ffffff;
+  color: #14532d;
+
+  font-size: 1.08rem;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.producto-header:hover {
+  background: #edf9f0;
+}
+
+.producto-header span {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.producto-header i {
+  font-size: 1.8rem;
+  color: #16a34a;
+  transition: 0.35s;
+}
+
+/*======================================
+Contenido
+======================================*/
+
+.producto-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease;
+  background: #fff;
+}
+
+.producto-body p {
+  padding: 25px 28px 25px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/*======================================
+Estado activo
+======================================*/
+
+.producto-item.active .producto-body {
+  max-height: 300px;
+}
+
+.producto-item.active .producto-header {
+  background: #16a34a;
+  color: #fff;
+}
+
+.producto-item.active .producto-header i {
+  transform: rotate(180deg);
+  color: #fff;
+}
+
+/*======================================
+Conclusión
+======================================*/
+
+.producto-conclusion {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(22, 163, 74, 0.25);
+}
+
+.producto-conclusion h3 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.producto-conclusion p {
+  line-height: 1.9;
+  font-size: 1.03rem;
+  opacity: 0.96;
+}
+
+/*======================================
+Responsive
+======================================*/
+
+@media (max-width: 768px) {
+  .productos-servicios,
+  .aliviadores-frustraciones,
+  .creadores-alegrias {
+    padding: 70px 6%;
+  }
+
+  .producto-header {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+
+  .producto-body p {
+    padding: 0 20px 20px;
+  }
+
+  .producto-conclusion {
+    padding: 30px 22px;
+  }
+
+  .producto-conclusion h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/*=====================================================
+ENCAJE DE LA PROPUESTA DE VALOR
+======================================================*/
+
+.encaje-propuesta {
+  padding: 40px 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+/*=============================
+Tabla
+=============================*/
+
+.encaje-tabla {
+  margin: 50px auto;
+  overflow-x: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.encaje-tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.encaje-tabla thead {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  color: #fff;
+}
+
+.encaje-tabla th {
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.encaje-tabla td {
+  padding: 18px;
+  border-bottom: 1px solid #e5e7eb;
+  vertical-align: top;
+  line-height: 1.7;
+  color: #555;
+}
+
+.encaje-tabla tbody tr:nth-child(even) {
+  background: #f8fbf9;
+}
+
+.encaje-tabla tbody tr:hover {
+  background: #eef9f0;
+  transition: 0.3s;
+}
+
+/*=============================
+Conclusión del encaje
+=============================*/
+
+.encaje-conclusion {
+  padding: 40px;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  color: #fff;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 18px 45px rgba(22, 163, 74, 0.25);
+}
+
+.encaje-conclusion h3 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.encaje-conclusion p {
+  line-height: 1.9;
+  opacity: 0.95;
+}
+
+/*=====================================================
+CONCLUSIÓN FINAL
+======================================================*/
+.conclusion {
+  padding: 50px 0;
+}
+.conclusion-box {
+  background: #fff;
+  border-left: 8px solid #16a34a;
+  border-radius: 20px;
+  padding: 45px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+.conclusion .section-badge {
+  font-size: 1.8rem;
+  padding: 15px 18px;
+}
+.conclusion-box p {
+  color: #555;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+.conclusion-box p:last-child {
+  margin-bottom: 0;
+}
+
+/*=====================================================
+Responsive
+======================================================*/
+
+@media (max-width: 768px) {
+  .encaje-propuesta {
+    padding: 70px 6%;
+  }
+  .conclusion {
+    padding: 0;
+    margin: 40px 0 10px 0;
+  }
+  .encaje-tabla table {
+    min-width: 700px;
+  }
+
+  .encaje-tabla th,
+  .encaje-tabla td {
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+
+  .encaje-conclusion {
+    padding: 30px 22px;
+  }
+
+  .encaje-conclusion h3 {
+    font-size: 1.4rem;
+  }
+
+  .conclusion-box {
+    padding: 30px 22px;
+  }
+
+  .conclusion-box p {
+    font-size: 1rem;
+  }
+}
+/*=====================================================
+ REFERENCIAS
+=====================================================*/
+
+.referencias-finales {
+  margin-top: 25px;
+  padding: 25px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border-left: 6px solid #2563eb;
+  color: #1e293b;
+}
+
+.referencias-finales h2 {
+  color: #0d47a1;
+  margin-bottom: 25px;
+}
+
+.referencias-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.referencias-lista p {
+  margin: 0;
+  line-height: 1.8;
+  color: #1e293b;
+}
+
+.referencias-lista a {
+  margin: 0;
+  color: #1e3a8a;
+  font-style: italic;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.referencias-lista a:hover {
+  text-decoration: underline;
+}
