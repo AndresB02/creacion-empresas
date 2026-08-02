@@ -1,0 +1,763 @@
+/*====================================================
+    VARIABLES GLOBALES
+====================================================*/
+
+:root {
+  --primary: #182240;
+  --secondary: #24356f;
+  --accent: #4f7df5;
+  --success: #6abf69;
+
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+
+  --text: #182240;
+  --text-light: #64748b;
+
+  --border: #e6ebf5;
+
+  --radius: 24px;
+
+  --shadow: 0 12px 35px rgba(24, 34, 64, 0.08);
+  --shadow-hover: 0 22px 50px rgba(24, 34, 64, 0.15);
+
+  --transition: 0.35s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 125, 245, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(106, 191, 105, 0.1),
+      transparent 35%
+    ),
+    var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+/*====================================================
+    HERO
+====================================================*/
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(79, 125, 245, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(106, 191, 105, 0.1),
+      transparent 35%
+    ),
+    var(--bg);
+
+  padding: 40px 0 80px;
+} /*====================================================
+    NAVBAR
+====================================================*/
+
+.navbar {
+  width: min(1400px, 92%);
+  margin: auto;
+  padding: 18px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 25px;
+  z-index: 999;
+}
+#navbarMenu {
+  display: flex;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  width: 58px;
+}
+
+.logo span {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.menu-toggle {
+  display: none;
+
+  border: none;
+
+  background: none;
+
+  font-size: 2rem;
+
+  color: var(--primary);
+
+  cursor: pointer;
+}
+.navbar nav ul {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--text-light);
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.navbar nav a:hover {
+  color: var(--accent);
+}
+
+.btn-nav {
+  text-decoration: none;
+  background: var(--primary);
+  color: #fff !important;
+  padding: 15px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: var(--transition);
+  box-shadow: 0 10px 25px rgba(24, 34, 64, 0.15);
+}
+
+.btn-nav:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+} /*====================================================
+    CONTENIDO HERO
+====================================================*/
+
+.hero-container {
+  width: min(1400px, 92%);
+
+  margin: 90px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 1.1fr 0.9fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+.hero-info {
+  animation: fadeLeft 0.8s ease;
+}
+
+.hero-info h1 {
+  font-size: 4.4rem;
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  margin-bottom: 28px;
+
+  color: var(--primary);
+}
+
+.hero-info h1 span {
+  color: var(--accent);
+}
+
+.hero-info p {
+  font-size: 1.15rem;
+
+  color: var(--text-light);
+
+  line-height: 2;
+
+  max-width: 650px;
+
+  margin-bottom: 40px;
+} /*====================================================
+    BOTONES
+====================================================*/
+
+.hero-buttons {
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  text-decoration: none;
+
+  background: var(--primary);
+
+  color: #fff;
+
+  padding: 18px 36px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+
+  background: var(--secondary);
+}
+
+.btn-secondary {
+  text-decoration: none;
+
+  background: #fff;
+
+  color: var(--primary);
+
+  border: 2px solid var(--border);
+
+  padding: 18px 36px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary);
+
+  transform: translateY(-4px);
+} /*====================================================
+    IMAGEN HERO
+====================================================*/
+
+.hero-image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeRight 0.8s ease;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 620px;
+
+  border-radius: 28px;
+} /*====================================================
+    TARJETAS FLOTANTES
+====================================================*/
+
+.floating-card {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  font-size: 0.95rem;
+
+  color: var(--primary);
+
+  font-weight: 600;
+}
+
+.floating-card strong {
+  font-weight: 700;
+}
+
+/* Posiciones */
+
+.card-1 {
+  top: 20px;
+  left: -40px;
+
+  animation: float1 5s ease-in-out infinite;
+}
+
+.card-2 {
+  top: 150px;
+  right: -35px;
+
+  animation: float2 6s ease-in-out infinite;
+}
+
+.card-3 {
+  bottom: 120px;
+  left: -45px;
+
+  animation: float3 5.5s ease-in-out infinite;
+}
+
+.card-4 {
+  bottom: 25px;
+  right: -30px;
+
+  animation: float4 6.5s ease-in-out infinite;
+} /*====================================================
+    ANIMACIONES
+====================================================*/
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@keyframes float4 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(14px);
+  }
+}
+/*====================================================
+    RESPONSIVE
+====================================================*/
+/*====================================================
+    TABLET
+====================================================*/
+/*====================================================
+    TABLET
+    769px - 1200px
+====================================================*/
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  /*============================
+      NAVBAR
+  ============================*/
+
+  .navbar {
+    width: 95%;
+    padding: 16px 22px;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 48px;
+  }
+
+  .logo span {
+    font-size: 0.8rem;
+  }
+
+  .navbar nav ul {
+    gap: 20px;
+  }
+
+  .navbar nav a {
+    font-size: 0.8rem;
+  }
+  #navbarMenu {
+    gap: 10px;
+  }
+  .btn-nav {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  /*============================
+      HERO
+  ============================*/
+
+  .hero-container {
+    width: 95%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    margin-top: 70px;
+  }
+
+  .hero-info h1 {
+    font-size: 3.3rem;
+
+    line-height: 1.1;
+  }
+
+  .hero-info p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 15px 26px;
+
+    font-size: 0.95rem;
+  }
+
+  /*============================
+      IMAGEN
+  ============================*/
+
+  .hero-image img {
+    max-width: 500px;
+  }
+
+  /*============================
+      TARJETAS
+  ============================*/
+
+  .floating-card {
+    padding: 12px 18px;
+
+    font-size: 0.82rem;
+  }
+
+  .card-1 {
+    top: 15px;
+    left: -20px;
+  }
+
+  .card-2 {
+    top: 110px;
+    right: -15px;
+  }
+
+  .card-3 {
+    bottom: 90px;
+    left: -25px;
+  }
+
+  .card-4 {
+    bottom: 15px;
+    right: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /*=========================
+      HERO
+  ==========================*/
+
+  .hero {
+    min-height: auto;
+    padding: 20px 0 50px;
+  }
+
+  /*=========================
+      NAVBAR
+  ==========================*/
+
+  .navbar {
+    width: 92%;
+    padding: 16px 20px;
+    top: 15px;
+  }
+
+  .logo img {
+    width: 46px;
+  }
+
+  .logo span {
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 12px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    font-size: 1.5rem;
+
+    box-shadow: var(--shadow);
+
+    z-index: 1001;
+  }
+
+  /*=========================
+      MENÚ
+  ==========================*/
+
+  #navbarMenu {
+    position: absolute;
+
+    top: calc(100% + 14px);
+
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-15px);
+
+    transition: 0.35s;
+  }
+
+  #navbarMenu.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  #navbarMenu ul {
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 100%;
+  }
+
+  #navbarMenu li {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .btn-nav {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /*=========================
+      HERO CONTENT
+  ==========================*/
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-top: 60px;
+
+    text-align: center;
+  }
+
+  .hero-info {
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
+  }
+
+  /*=========================
+      TITULOS
+  ==========================*/
+
+  .hero-info h1 {
+    font-size: 2.8rem;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+  }
+
+  .hero-info p {
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    margin: auto auto 35px;
+  }
+
+  /*=========================
+      BOTONES
+  ==========================*/
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  /*=========================
+      IMAGEN
+  ==========================*/
+
+  .hero-image img {
+    width: 95%;
+
+    max-width: 420px;
+  }
+
+  /*=========================
+      FLOATING CARDS
+  ==========================*/
+
+  .floating-card {
+    padding: 12px 18px;
+
+    font-size: 0.8rem;
+
+    gap: 8px;
+  }
+
+  .card-1 {
+    top: -5px;
+
+    left: 5%;
+  }
+
+  .card-2 {
+    top: 18%;
+
+    right: 2%;
+  }
+
+  .card-3 {
+    bottom: 18%;
+
+    left: 2%;
+  }
+
+  .card-4 {
+    bottom: -5px;
+
+    right: 8%;
+  }
+}
