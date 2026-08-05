@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/prototipo/propuesta.css" />
+    <title>PDF</title>
+  </head>
+  <body>
+    <!--==================================================
+PROPUESTA SOLAR NovaEnergía
+CAPÍTULO 1
+===================================================-->
+    <!--==========================================
+    PORTADA
+    ===========================================-->
+
+    <section class="proposal-page cover">
+      <div class="cover-center">
+        <span class="proposal-badge"> PROPUESTA PRELIMINAR </span>
+
+        <h1>Sistema Solar Fotovoltaico</h1>
+
+        <h2>Diseño Personalizado para tu Vivienda</h2>
+
+        <p>
+          Este documento fue generado automáticamente a partir del Diagnóstico
+          Solar Inteligente desarrollado por NovaEnergía.
+        </p>
+      </div>
+
+      <div class="cover-footer">
+        <div>
+          <strong> Fecha </strong>
+
+          <span id="pdfFecha"> -- </span>
+        </div>
+
+        <div>
+          <strong> Propuesta # </strong>
+
+          <span id="pdfCodigo"> NOVA-0000 </span>
+        </div>
+      </div>
+    </section>
+    <main id="novaProposal" class="proposal">
+      <div class="proposal-container">
+        <!--==========================================
+    PERFIL DEL PROYECTO
+    ===========================================-->
+
+        <section class="proposal-page">
+          <div class="proposal-header">
+            <h2>Perfil del Proyecto</h2>
+
+            <p>Información obtenida durante el diagnóstico.</p>
+          </div>
+
+          <div class="proposal-grid">
+            <div class="proposal-card">
+              <h3>Información del Cliente</h3>
+
+              <table class="proposal-table">
+                <tr>
+                  <td>Nombre</td>
+
+                  <td id="pdfNombre">--</td>
+                </tr>
+
+                <tr>
+                  <td>Ciudad</td>
+
+                  <td id="pdfCiudad">--</td>
+                </tr>
+
+                <tr>
+                  <td>Tipo de Vivienda</td>
+
+                  <td id="pdfTipo">--</td>
+                </tr>
+
+                <tr>
+                  <td>Área Construida</td>
+
+                  <td id="pdfArea">--</td>
+                </tr>
+
+                <tr>
+                  <td>Pisos</td>
+
+                  <td id="pdfPisos">--</td>
+                </tr>
+
+                <tr>
+                  <td>Habitantes</td>
+
+                  <td id="pdfHabitantes">--</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="proposal-card">
+              <h3>Perfil Energético</h3>
+
+              <table class="proposal-table">
+                <tr>
+                  <td>Factura Promedio</td>
+
+                  <td id="pdfFactura">--</td>
+                </tr>
+
+                <tr>
+                  <td>Consumo Mensual</td>
+
+                  <td id="pdfConsumo">--</td>
+                </tr>
+
+                <tr>
+                  <td>Objetivo</td>
+
+                  <td id="pdfObjetivo">--</td>
+                </tr>
+
+                <tr>
+                  <td>Viabilidad Solar</td>
+
+                  <td>
+                    <strong> Excelente </strong>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="proposal-note">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+              Los datos presentados corresponden a la información suministrada
+              durante el Diagnóstico Solar Inteligente.
+            </p>
+          </div>
+        </section>
+        <!--==========================================
+SISTEMA RECOMENDADO
+===========================================-->
+
+        <section class="proposal-page">
+          <div class="proposal-header">
+            <h2>Sistema Solar Recomendado</h2>
+
+            <p>
+              Con base en el análisis realizado, este es el sistema fotovoltaico
+              recomendado para maximizar el ahorro energético y el retorno de la
+              inversión.
+            </p>
+          </div>
+
+          <!--======================================
+    RESUMEN DEL SISTEMA
+    =======================================-->
+
+          <div class="proposal-system">
+            <div class="proposal-system-card primary">
+              <span class="proposal-label"> Sistema recomendado </span>
+
+              <h2 id="pdfCategoria">Residencial Premium</h2>
+
+              <p id="pdfDescripcion">--</p>
+            </div>
+
+            <div class="proposal-system-grid">
+              <div class="proposal-mini-card">
+                <i class="fa-solid fa-solar-panel"></i>
+
+                <span>Paneles</span>
+
+                <strong id="pdfPaneles"> 10 </strong>
+              </div>
+
+              <div class="proposal-mini-card">
+                <i class="fa-solid fa-bolt"></i>
+
+                <span>Potencia</span>
+
+                <strong id="pdfPotencia"> 6.15 kWp </strong>
+              </div>
+
+              <div class="proposal-mini-card">
+                <i class="fa-solid fa-plug-circle-bolt"></i>
+
+                <span>Inversor</span>
+
+                <strong id="pdfInversor"> Huawei 6 kW </strong>
+              </div>
+
+              <div class="proposal-mini-card">
+                <i class="fa-solid fa-sun"></i>
+
+                <span>Producción</span>
+
+                <strong id="pdfProduccion"> 930 kWh/mes </strong>
+              </div>
+            </div>
+          </div>
+
+          <!--======================================
+    DIAGRAMA
+    =======================================-->
+
+          <div class="proposal-flow">
+            <div class="flow-item">
+              <i class="fa-solid fa-solar-panel"></i>
+
+              <h4>Paneles</h4>
+
+              <p id="pdfFlowPaneles">10 Paneles JA Solar 615W</p>
+            </div>
+
+            <div class="flow-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+              <i class="fa-solid fa-plug-circle-bolt"></i>
+
+              <h4>Inversor</h4>
+
+              <p id="pdfFlowInversor">Huawei On Grid</p>
+            </div>
+
+            <div class="flow-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+              <i class="fa-solid fa-house"></i>
+
+              <h4>Vivienda</h4>
+
+              <p>Consumo Inteligente</p>
+            </div>
+
+            <div class="flow-arrow">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="flow-item">
+              <i class="fa-solid fa-building-columns"></i>
+
+              <h4>Red Eléctrica</h4>
+
+              <p>Energía Bidireccional</p>
+            </div>
+          </div>
+
+          <!--======================================
+    RESUMEN TÉCNICO
+    =======================================-->
+
+          <div class="proposal-card">
+            <h3>Resumen Técnico</h3>
+
+            <table class="proposal-table">
+              <tr>
+                <td>Panel seleccionado</td>
+
+                <td id="pdfPanelModelo">JA Solar 615W</td>
+              </tr>
+
+              <tr>
+                <td>Tipo de sistema</td>
+
+                <td>On Grid</td>
+              </tr>
+
+              <tr>
+                <td>Potencia instalada</td>
+
+                <td id="pdfPotenciaTabla">6.15 kWp</td>
+              </tr>
+
+              <tr>
+                <td>Producción estimada</td>
+
+                <td id="pdfProduccionTabla">930 kWh / mes</td>
+              </tr>
+
+              <tr>
+                <td>Vida útil estimada</td>
+
+                <td>25 - 30 años</td>
+              </tr>
+
+              <tr>
+                <td>Garantía paneles</td>
+
+                <td>25 años</td>
+              </tr>
+
+              <tr>
+                <td>Garantía inversor</td>
+
+                <td>10 años</td>
+              </tr>
+            </table>
+          </div>
+        </section>
+        <!--==========================================
+PRESUPUESTO
+===========================================-->
+
+        <section class="proposal-page">
+          <div class="proposal-header">
+            <h2>Presupuesto Estimado</h2>
+
+            <p>
+              El siguiente presupuesto corresponde a una estimación preliminar
+              basada en la información suministrada durante el diagnóstico. Los
+              valores podrán ajustarse después de la visita técnica.
+            </p>
+          </div>
+
+          <!--======================================
+    TABLA PRESUPUESTO
+    =======================================-->
+
+          <div class="proposal-budget">
+            <table class="proposal-budget-table">
+              <thead>
+                <tr>
+                  <th>Concepto</th>
+
+                  <th>Cantidad</th>
+
+                  <th>Valor</th>
+                </tr>
+              </thead>
+
+              <tbody id="pdfBudgetTable">
+                <tr>
+                  <td>Paneles JA Solar 615W</td>
+
+                  <td id="pdfCantidadPaneles">10</td>
+
+                  <td id="pdfValorPaneles">$6.500.000</td>
+                </tr>
+
+                <tr>
+                  <td>Inversor On Grid</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorInversor">$4.100.000</td>
+                </tr>
+
+                <tr>
+                  <td>Estructura de montaje</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorEstructura">$1.250.000</td>
+                </tr>
+
+                <tr>
+                  <td>Protecciones eléctricas</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorProtecciones">$950.000</td>
+                </tr>
+
+                <tr>
+                  <td>Cableado fotovoltaico</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorCableado">$780.000</td>
+                </tr>
+
+                <tr>
+                  <td>Ingeniería</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorIngenieria">$1.300.000</td>
+                </tr>
+
+                <tr>
+                  <td>Instalación especializada</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorInstalacion">$2.400.000</td>
+                </tr>
+
+                <tr>
+                  <td>Legalización</td>
+
+                  <td>1</td>
+
+                  <td id="pdfValorLegalizacion">$950.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!--======================================
+    TOTAL
+    =======================================-->
+
+          <div class="proposal-total">
+            <div>
+              <span> INVERSIÓN ESTIMADA </span>
+
+              <strong id="pdfTotal"> $18.230.000 </strong>
+            </div>
+          </div>
+
+          <!--======================================
+    ACLARACIONES
+    =======================================-->
+
+          <div class="proposal-card">
+            <h3>El presupuesto incluye</h3>
+
+            <ul class="proposal-list">
+              <li>Diseño e ingeniería del sistema.</li>
+
+              <li>Paneles solares certificados.</li>
+
+              <li>Inversor de alta eficiencia.</li>
+
+              <li>Estructura de montaje.</li>
+
+              <li>Protecciones eléctricas.</li>
+
+              <li>Cableado fotovoltaico.</li>
+
+              <li>Instalación especializada.</li>
+
+              <li>Configuración y puesta en marcha.</li>
+
+              <li>Legalización ante el operador de red.</li>
+            </ul>
+          </div>
+
+          <!--======================================
+    OBSERVACIÓN
+    =======================================-->
+
+          <div class="proposal-note">
+            <i class="fa-solid fa-circle-info"></i>
+
+            <p>
+              Los precios corresponden a valores aproximados de mercado para
+              proyectos residenciales desarrollados por NovaEnergía. El valor
+              definitivo dependerá de la visita técnica, disponibilidad de
+              equipos, condiciones del inmueble y requerimientos específicos del
+              proyecto.
+            </p>
+          </div>
+        </section>
+        <!--==========================================
+BENEFICIOS DEL PROYECTO
+===========================================-->
+
+        <section class="proposal-page">
+          <div class="proposal-header">
+            <h2>Beneficios de tu Proyecto Solar</h2>
+
+            <p>
+              La implementación del sistema recomendado permitirá disminuir
+              significativamente el costo de energía, aumentar el valor de la
+              vivienda y contribuir a la protección del medio ambiente.
+            </p>
+          </div>
+
+          <!--======================================
+    BENEFICIOS ECONÓMICOS
+    =======================================-->
+
+          <div class="proposal-benefits-grid">
+            <div class="proposal-benefit">
+              <i class="fa-solid fa-wallet"></i>
+
+              <h3>Ahorro mensual</h3>
+
+              <strong id="pdfAhorroMensual"> $620.000 </strong>
+            </div>
+
+            <div class="proposal-benefit">
+              <i class="fa-solid fa-calendar-days"></i>
+
+              <h3>Ahorro anual</h3>
+
+              <strong id="pdfAhorroAnual"> $7.440.000 </strong>
+            </div>
+
+            <div class="proposal-benefit">
+              <i class="fa-solid fa-chart-line"></i>
+
+              <h3>Retorno estimado</h3>
+
+              <strong id="pdfRetorno"> 6 años </strong>
+            </div>
+          </div>
+
+          <!--======================================
+    BENEFICIOS AMBIENTALES
+    =======================================-->
+
+          <div class="proposal-card">
+            <h3>Impacto Ambiental</h3>
+
+            <table class="proposal-table">
+              <tr>
+                <td>Producción anual</td>
+
+                <td id="pdfProduccionAnual">11.160 kWh</td>
+              </tr>
+
+              <tr>
+                <td>CO₂ evitado</td>
+
+                <td id="pdfCO2">6.480 kg</td>
+              </tr>
+
+              <tr>
+                <td>Equivalente ambiental</td>
+
+                <td id="pdfArboles">54 árboles</td>
+              </tr>
+            </table>
+          </div>
+
+          <!--======================================
+    GARANTÍAS
+    =======================================-->
+
+          <div class="proposal-card">
+            <h3>Garantías NovaEnergía</h3>
+
+            <ul class="proposal-list">
+              <li>
+                Paneles solares con garantía de producción hasta por 25 años.
+              </li>
+
+              <li>Inversores con garantía de fábrica hasta por 10 años.</li>
+
+              <li>Garantía de instalación y puesta en marcha.</li>
+
+              <li>Soporte técnico especializado.</li>
+
+              <li>Acompañamiento durante el proceso de legalización.</li>
+
+              <li>Asesoría postventa y monitoreo del sistema.</li>
+            </ul>
+          </div>
+
+          <!--======================================
+    LLAMADO A LA ACCIÓN
+    =======================================-->
+
+          <div class="proposal-contact">
+            <h2>¿Qué sigue ahora?</h2>
+
+            <p>
+              Nuestro equipo realizará una visita técnica para validar las
+              condiciones reales del inmueble y elaborar la propuesta definitiva
+              completamente personalizada.
+            </p>
+
+            <div class="proposal-contact-grid">
+              <div>
+                <i class="fa-solid fa-phone"></i>
+
+                <span> +57 344 856 9563 </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+
+                <span> contacto@novaenergia.com </span>
+              </div>
+
+              <div>
+                <i class="fa-solid fa-globe"></i>
+
+                <span> www.novaenergia.com </span>
+              </div>
+
+              <div>
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <span> WhatsApp Empresarial </span>
+              </div>
+            </div>
+          </div>
+
+          <!--======================================
+    PIE DEL DOCUMENTO
+    =======================================-->
+
+          <footer class="proposal-footer">
+            <p>
+              Este documento constituye una propuesta preliminar generada
+              automáticamente a partir del Diagnóstico Solar Inteligente
+              desarrollado por NovaEnergía. Los valores aquí presentados son
+              aproximados y podrán modificarse después de la visita técnica y
+              del diseño definitivo del proyecto.
+            </p>
+
+            <strong> © NovaEnergía · Todos los derechos reservados. </strong>
+          </footer>
+        </section>
+      </div>
+    </main>
+    
+  </body>
+</html>

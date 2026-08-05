@@ -1,0 +1,252 @@
+/*======================================================
+MODAL PROPUESTA
+======================================================*/
+
+.proposal-modal {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(24, 34, 64, 0.55);
+
+  backdrop-filter: blur(6px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: var(--transition);
+
+  z-index: 9999;
+}
+
+.proposal-modal.active {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+/*======================================================
+CONTENEDOR
+======================================================*/
+
+.proposal-modal-content {
+  width: min(100%, 560px);
+
+  background: var(--surface);
+
+  border-radius: var(--radius);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow-hover);
+
+  padding: 2rem;
+
+  transform: translateY(20px) scale(0.96);
+
+  transition: var(--transition);
+}
+
+.proposal-modal.active .proposal-modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/*======================================================
+HEADER
+======================================================*/
+
+.proposal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 1rem;
+
+  margin-bottom: 2rem;
+}
+
+.proposal-header h2 {
+  color: var(--primary);
+
+  margin-bottom: 0.35rem;
+}
+
+.proposal-header p {
+  color: var(--text-light);
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+}
+
+/*======================================================
+BOTÓN CERRAR
+======================================================*/
+
+.proposal-close {
+  width: 42px;
+
+  height: 42px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: var(--text-light);
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  transition: var(--transition);
+}
+
+.proposal-close:hover {
+  background: var(--bg);
+
+  color: var(--primary);
+}
+
+/*======================================================
+FORMULARIO
+======================================================*/
+
+.proposal-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  margin-bottom: 1.25rem;
+}
+
+.proposal-group label {
+  color: var(--primary);
+
+  font-weight: 600;
+}
+
+.proposal-group input {
+  padding: 0.9rem 1rem;
+
+  border: 1px solid var(--border);
+
+  border-radius: 14px;
+
+  background: #fff;
+
+  color: var(--text);
+
+  transition: var(--transition);
+}
+
+.proposal-group input:focus {
+  outline: none;
+
+  border-color: var(--accent);
+
+  box-shadow: 0 0 0 3px rgba(79, 125, 245, 0.15);
+}
+
+/*======================================================
+INFO
+======================================================*/
+
+.proposal-info {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 0.75rem;
+
+  padding: 1rem;
+
+  margin: 1.5rem 0;
+
+  background: #eef4ff;
+
+  border: 1px solid rgba(79, 125, 245, 0.15);
+
+  border-radius: 16px;
+}
+
+.proposal-info span {
+  font-size: 1.2rem;
+}
+
+.proposal-info p {
+  color: var(--text-light);
+
+  font-size: 0.9rem;
+
+  line-height: 1.5;
+}
+
+/*======================================================
+BOTONES
+======================================================*/
+
+.proposal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.proposal-btn-secondary,
+.proposal-btn-primary {
+  padding: 0.85rem 1.4rem;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: var(--transition);
+}
+
+.proposal-btn-secondary {
+  background: #edf1f7;
+
+  color: var(--primary);
+}
+
+.proposal-btn-secondary:hover {
+  background: #dfe7f4;
+}
+
+.proposal-btn-primary {
+  background: var(--accent);
+
+  color: #fff;
+}
+
+.proposal-btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 24px rgba(79, 125, 245, 0.25);
+}

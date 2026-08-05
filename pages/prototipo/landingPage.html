@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="../../css/prototipo/landingPage.css" />
     <link rel="stylesheet" href="../../css/prototipo/valor.css" />
     <link rel="stylesheet" href="../../css/prototipo/ecosistema.css" />
+    <link rel="stylesheet" href="../../css/prototipo/hogar.css" />
+    <link rel="stylesheet" href="../../css/prototipo/diagnostico.css" />
+    <link rel="stylesheet" href="../../css/prototipo/modaPropuesta.css" />
     <title>Prototipo - Landing Page</title>
   </head>
   <body>
@@ -106,7 +109,7 @@
         <div class="why-header">
           <span class="why-badge"> ¿Por qué NovaEnergia? </span>
 
-          <h2>Mucho más que paneles solares.</h2>
+          <h2>Mucho más que <span>paneles solares.</span></h2>
 
           <p>
             En NovaEnergia diseñamos soluciones energéticas completas que
@@ -124,7 +127,7 @@
           <div class="why-preview">
             <img
               id="whyImage"
-              src="/assets/why/ingenieria.jpg"
+              src="/assets/porquenova/Nova_1.jpg"
               alt="Ingeniería especializada"
             />
 
@@ -393,346 +396,1282 @@
           <button class="ecosistema-arrow" id="nextSlide">→</button>
         </div>
       </section>
+      <!--==================================================
+    SERVICIOS HOGAR
+===================================================-->
+
+      <section class="hogar" id="servicios">
+        <div class="hogar-container">
+          <!--=========================
+            HEADER
+        =========================-->
+
+          <div class="hogar-header">
+            <span class="hogar-badge">
+              <i class="fa-solid fa-house"></i>
+
+              Servicios para el hogar
+            </span>
+
+            <h2>
+              Todo lo que tu hogar necesita para
+
+              <span>producir su propia energía.</span>
+            </h2>
+
+            <p>
+              En NovaEnergia desarrollamos soluciones energéticas completas para
+              hogares, integrando tecnología, ingeniería y acompañamiento para
+              que cada familia aproveche al máximo la energía solar.
+            </p>
+          </div>
+
+          <!--=========================
+            GRID
+        =========================-->
+
+          <div class="hogar-grid">
+            <!--=================================
+                SISTEMA SOLAR
+            ==================================-->
+
+            <article class="hogar-card" data-service="solar">
+              <div class="hogar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M128 32C110.3 32 95.1 44.2 90.9 61.4L2.9 413.4C.3 423.6 2.6 434.4 9.1 442.7S25.2 456 35.8 456H256v24H192c-13.3 0-24 10.7-24 24s10.7 24 24 24H448c13.3 0 24-10.7 24-24s-10.7-24-24-24H384V456H604.2c10.6 0 20.7-4.9 27.2-13.3s8.8-19.1 6.2-29.3l-88-352C544.9 44.2 529.7 32 512 32H128zM149.2 80H256v80H129.2l20-80zm154.8 0H416v80H304V80zm160 0h26.8l20 80H464V80zM117.2 208H256v80H97.2l20-80zm186.8 0H416v80H304V208zm160 0h58.8l20 80H464V208zM85.2 336H256v72H67.2l18-72zm218.8 0H416v72H304V336zm160 0h90.8l18 72H464V336z"
+                  />
+                </svg>
+              </div>
+
+              <div class="hogar-info">
+                <h3>Sistema Solar Fotovoltaico</h3>
+
+                <p>
+                  Genera tu propia energía y reduce el consumo proveniente de la
+                  red eléctrica.
+                </p>
+              </div>
+
+              <button class="hogar-btn">
+                Conocer más
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  />
+                </svg>
+              </button>
+            </article>
+
+            <!--=================================
+                BESS
+            ==================================-->
+
+            <article class="hogar-card" data-service="bess">
+              <div class="hogar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 640 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M80 64c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l96 0c0-17.7 14.3-32 32-32l64 0c17.7 0 32 14.3 32 32l16 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128C0 92.7 28.7 64 64 64l16 0zM392 184c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 32-32 0c-13.3 0-24 10.7-24 24s10.7 24 24 24l32 0 0 32c0 13.3 10.7 24 24 24s24-10.7 24-24l0-32 32 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-32 0 0-32zM64 240c0 13.3 10.7 24 24 24l112 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L88 216c-13.3 0-24 10.7-24 24z"
+                  />
+                </svg>
+              </div>
+
+              <div class="hogar-info">
+                <h3>Respaldo Energético BESS</h3>
+
+                <p>
+                  Almacena la energía producida para utilizarla cuando más la
+                  necesites.
+                </p>
+              </div>
+
+              <button class="hogar-btn">
+                Conocer más
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  />
+                </svg>
+              </button>
+            </article>
+
+            <!--=================================
+                MONITOREO
+            ==================================-->
+
+            <article class="hogar-card" data-service="monitor">
+              <div class="hogar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64L0 400c0 44.2 35.8 80 80 80l400 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 416c-8.8 0-16-7.2-16-16L64 64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7 262.6 153.4c-12.5-12.5-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l73.4-73.4 57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
+                  />
+                </svg>
+              </div>
+
+              <div class="hogar-info">
+                <h3>Monitoreo Inteligente</h3>
+
+                <p>
+                  Consulta en tiempo real la producción y consumo energético
+                  desde cualquier lugar.
+                </p>
+              </div>
+
+              <button class="hogar-btn">
+                Conocer más
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  />
+                </svg>
+              </button>
+            </article>
+
+            <!--=================================
+                MANTENIMIENTO
+            ==================================-->
+
+            <article class="hogar-card" data-service="maintenance">
+              <div class="hogar-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M70.8-6.7c5.4-5.4 13.8-6.2 20.2-2L209.9 70.5c8.9 5.9 14.2 15.9 14.2 26.6l0 49.6 90.8 90.8c33.3-15 73.9-8.9 101.2 18.5L542.2 382.1c18.7 18.7 18.7 49.1 0 67.9l-60.1 60.1c-18.7 18.7-49.1 18.7-67.9 0L288.1 384c-27.4-27.4-33.5-67.9-18.5-101.2l-90.8-90.8-49.6 0c-10.7 0-20.7-5.3-26.6-14.2L23.4 58.9c-4.2-6.3-3.4-14.8 2-20.2L70.8-6.7zm145 303.5c-6.3 36.9 2.3 75.9 26.2 107.2l-94.9 95c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8l135.4-135.5 35.2 35.1zM384.1 0c20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1L388.8 91.3c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l56.7-56.7c7.6-7.5 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 43.2-17.2 82.3-45 111.1l-49.1-49.1c-33.1-33-78.5-45.7-121.1-38.4l-56.8-56.8 0-29.7-.2-5c-.8-12.4-4.4-24.3-10.5-34.9 29.4-35 73.4-57.2 122.7-57.3z"
+                  />
+                </svg>
+              </div>
+
+              <div class="hogar-info">
+                <h3>Mantenimiento y Soporte</h3>
+
+                <p>
+                  Garantizamos el máximo rendimiento del sistema durante toda su
+                  vida útil.
+                </p>
+              </div>
+
+              <button class="hogar-btn">
+                Conocer más
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="currentColor"
+                  width="24"
+                  height="24"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                  />
+                </svg>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!--==================================================
+    MODAL
+==================================================-->
+      <div class="hogar-modal" id="hogarModal">
+        <div class="hogar-modal-overlay"></div>
+
+        <div class="hogar-modal-content">
+          <!--======================
+            BOTÓN CERRAR
+        =======================-->
+
+          <button class="hogar-close" id="hogarClose">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 384 512"
+              fill="currentColor"
+              width="24"
+              height="24"
+            >
+              <path
+                d="M55.1 73.4C45.7 64 45.7 48.8 55.1 39.4s24.6-9.4 33.9 0L192 142.1 295 39.4c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9L225.9 176l103 102.6c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L192 209.9 89 312.6c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9L158.1 176 55.1 73.4z"
+              />
+            </svg>
+          </button>
+
+          <!--======================
+            BODY
+        =======================-->
+
+          <div class="hogar-modal-body">
+            <!-- Badge -->
+
+            <span id="modalBadge"> Sistema Solar </span>
+
+            <!-- Título -->
+
+            <h2 id="modalTitle">Sistema Solar Fotovoltaico</h2>
+
+            <!-- Descripción -->
+
+            <p id="modalDescription"></p>
+
+            <!-- Divider -->
+
+            <div class="hogar-modal-divider"></div>
+
+            <!--======================
+                GRID
+            =======================-->
+
+            <div class="hogar-modal-grid">
+              <!--==================
+                    COLUMNA 1
+                ==================-->
+
+              <div class="hogar-modal-column">
+                <h4>Incluye</h4>
+
+                <ul id="modalIncludes"></ul>
+              </div>
+
+              <!--==================
+                    COLUMNA 2
+                ==================-->
+
+              <div class="hogar-modal-column">
+                <h4>Beneficios</h4>
+
+                <ul id="modalBenefits"></ul>
+              </div>
+            </div>
+
+            <!-- Divider -->
+
+            <div class="hogar-modal-divider"></div>
+
+            <!-- Botón -->
+
+            <a href="#contacto" class="hogar-modal-btn">
+              Solicitar asesoría
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                fill="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.7 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--=========================================================
+    DIAGNÓSTICO SOLAR INTELIGENTE
+==========================================================-->
+
+      <section class="nova-diagnostico" id="diagnostico">
+        <button id="novaClose" class="nova-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="nova-container">
+          <!-- Encabezado -->
+
+          <div class="nova-header">
+            <span class="nova-badge"> Diagnóstico Inteligente </span>
+
+            <h2>Descubre la solución solar <span>ideal para tu hogar</span></h2>
+
+            <p>
+              En menos de <strong>2 minutos</strong> estimaremos el sistema
+              fotovoltaico recomendado para tu vivienda, la producción esperada,
+              el ahorro anual y una inversión aproximada basada en información
+              técnica del mercado colombiano.
+            </p>
+          </div>
+
+          <!-- Contenedor principal -->
+
+          <div class="nova-card">
+            <!-- Barra superior -->
+
+            <div class="nova-progress-wrapper">
+              <div class="nova-progress-info">
+                <span id="novaCurrentStep"> Paso 0 </span>
+
+                <span id="novaTotalSteps"> de 10 </span>
+              </div>
+
+              <div class="nova-progress">
+                <div class="nova-progress-bar" id="novaProgressBar"></div>
+              </div>
+            </div>
+
+            <!-- CONTENIDO -->
+
+            <div class="nova-content">
+              <!--======================================================
+                    PANTALLA DE BIENVENIDA
+                =======================================================-->
+
+              <div class="nova-screen active" data-step="0">
+                <div class="nova-welcome">
+                  <div class="nova-icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 576 512"
+                    >
+                      <path
+                        d="M121.8 32c-30 0-56 20.8-62.5 50.1L9.6 306.1C.7 346.1 31.1 384 72 384l184.1 0 0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64 184.1 0c40.9 0 71.4-37.9 62.5-77.9l-49.8-224C510.4 52.8 484.5 32 454.5 32L121.8 32zM245.6 96l85.2 0 7.3 88-99.8 0 7.3-88zm-55.5 88l-87.8 0 19.6-88 75.6 0-7.3 88zM91.6 232l94.5 0-7.3 88-106.7 0 19.6-88zm142.6 0l107.8 0 7.3 88-122.5 0 7.3-88zm156 0l94.5 0 19.6 88-106.7 0-7.3-88zM474 184l-87.8 0-7.3-88 75.6 0 19.6 88z"
+                      />
+                    </svg>
+                  </div>
+
+                  <h3>Bienvenido al Diagnóstico Solar Inteligente</h3>
+
+                  <p>
+                    Nuestro sistema analizará las características de tu vivienda
+                    para recomendarte una solución fotovoltaica personalizada.
+                  </p>
+
+                  <div class="nova-benefits">
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Sistema recomendado </span>
+                    </div>
+
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Producción mensual estimada </span>
+                    </div>
+
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Ahorro potencial </span>
+                    </div>
+
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Tiempo estimado de retorno </span>
+                    </div>
+
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Presupuesto desglosado </span>
+                    </div>
+
+                    <div class="nova-benefit">
+                      <i class="fa-solid fa-circle-check"></i>
+
+                      <span> Descarga de propuesta en PDF </span>
+                    </div>
+                  </div>
+
+                  <button class="nova-btn-start" id="novaStart">
+                    Comenzar diagnóstico
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- AQUÍ COMIENZAN LAS PREGUNTAS -->
+              <!--======================================================
+    PREGUNTA 1
+=======================================================-->
+
+              <div class="nova-screen" data-step="1">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 1 de 10 </span>
+
+                  <h3>¿Qué tipo de vivienda tienes?</h3>
+
+                  <p>
+                    Esto nos permitirá estimar el espacio disponible para la
+                    instalación del sistema solar.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input
+                        type="radio"
+                        name="tipoVivienda"
+                        value="apartamento"
+                      />
+
+                      <span>Apartamento</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="tipoVivienda" value="casa" />
+
+                      <span>Casa</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input
+                        type="radio"
+                        name="tipoVivienda"
+                        value="campestre"
+                      />
+
+                      <span>Casa Campestre</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 2
+=======================================================-->
+
+              <div class="nova-screen" data-step="2">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 2 de 10 </span>
+
+                  <h3>¿En qué ciudad está ubicada tu vivienda?</h3>
+
+                  <p>
+                    Utilizaremos la radiación solar promedio de tu ciudad para
+                    estimar la producción del sistema.
+                  </p>
+
+                  <div class="nova-select">
+                    <select id="ciudad" name="ciudad">
+                      <option value="">Selecciona una ciudad</option>
+
+                      <option>Bogotá</option>
+
+                      <option>Medellín</option>
+
+                      <option>Cali</option>
+
+                      <option>Barranquilla</option>
+
+                      <option>Cartagena</option>
+
+                      <option>Bucaramanga</option>
+
+                      <option>Pereira</option>
+
+                      <option>Manizales</option>
+
+                      <option>Armenia</option>
+
+                      <option>Ibagué</option>
+
+                      <option>Villavicencio</option>
+
+                      <option>Neiva</option>
+
+                      <option>Cúcuta</option>
+
+                      <option>Santa Marta</option>
+
+                      <option>Montería</option>
+
+                      <option>Sincelejo</option>
+
+                      <option>Pasto</option>
+
+                      <option>Tunja</option>
+
+                      <option>Popayán</option>
+
+                      <option>Valledupar</option>
+
+                      <option>Otra</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 3
+=======================================================-->
+
+              <div class="nova-screen" data-step="3">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 3 de 10 </span>
+
+                  <h3>¿Cuál es el área construida aproximada?</h3>
+
+                  <p>
+                    Esta información nos ayuda a estimar el tamaño del sistema.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="40-70" />
+                      <span>40 - 70 m²</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="70-120" />
+                      <span>70 - 120 m²</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="120-180" />
+                      <span>120 - 180 m²</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="180-250" />
+                      <span>180 - 250 m²</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="250-350" />
+                      <span>250 - 350 m²</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="area" value="350+" />
+                      <span>Más de 350 m²</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 4
+=======================================================-->
+
+              <div class="nova-screen" data-step="4">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 4 de 10 </span>
+
+                  <h3>¿Cuántos pisos tiene la vivienda?</h3>
+
+                  <p>
+                    La complejidad de la instalación puede variar según el
+                    número de niveles.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="pisos" value="1" />
+
+                      <span>1 Piso</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="pisos" value="2" />
+
+                      <span>2 Pisos</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="pisos" value="3" />
+
+                      <span>3 Pisos</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="pisos" value="4+" />
+
+                      <span>Más de 3 Pisos</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <!--======================================================
+    PREGUNTA 5
+=======================================================-->
+
+              <div class="nova-screen" data-step="5">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 5 de 10 </span>
+
+                  <h3>¿Qué tipo de cubierta tiene tu vivienda?</h3>
+
+                  <p>
+                    El tipo de cubierta influye en la estructura de montaje y en
+                    la instalación del sistema.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="cubierta" value="metalica" />
+                      <span>Teja metálica</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="cubierta" value="barro" />
+                      <span>Teja de barro</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="cubierta" value="concreto" />
+                      <span>Placa de concreto</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="cubierta" value="terraza" />
+                      <span>Terraza transitable</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input
+                        type="radio"
+                        name="cubierta"
+                        value="termoacustica"
+                      />
+                      <span>Teja termoacústica</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="cubierta" value="desconoce" />
+                      <span>No estoy seguro</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 6
+=======================================================-->
+
+              <div class="nova-screen" data-step="6">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 6 de 10 </span>
+
+                  <h3>¿Cuál es el estado aproximado de la cubierta?</h3>
+
+                  <p>
+                    Esto nos ayuda a determinar si la estructura actual es
+                    adecuada para una instalación fotovoltaica.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="estadoTecho" value="nuevo" />
+                      <span>Menos de 5 años</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="estadoTecho" value="medio" />
+                      <span>Entre 5 y 10 años</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="estadoTecho" value="antiguo" />
+                      <span>Más de 10 años</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="estadoTecho" value="revision" />
+                      <span>Requiere revisión</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 7
+=======================================================-->
+
+              <div class="nova-screen" data-step="7">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 7 de 10 </span>
+
+                  <h3>
+                    ¿La cubierta recibe sombra durante gran parte del día?
+                  </h3>
+
+                  <p>
+                    La presencia de sombras puede disminuir el rendimiento de un
+                    sistema solar.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="sombras" value="no" />
+                      <span>No</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="sombras" value="parcial" />
+                      <span>Solo algunas horas</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="sombras" value="si" />
+                      <span>Sí</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="sombras" value="desconoce" />
+                      <span>No estoy seguro</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 8
+=======================================================-->
+
+              <div class="nova-screen" data-step="8">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 8 de 10 </span>
+
+                  <h3>¿Cuántas personas viven actualmente en la vivienda?</h3>
+
+                  <p>
+                    Esta información ayuda a estimar el comportamiento del
+                    consumo energético.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="habitantes" value="2" />
+                      <span>1 - 2 Personas</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="habitantes" value="4" />
+                      <span>3 - 4 Personas</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="habitantes" value="6" />
+                      <span>5 - 6 Personas</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="habitantes" value="7" />
+                      <span>Más de 6 Personas</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+              <!--======================================================
+    PREGUNTA 9
+=======================================================-->
+
+              <div class="nova-screen" data-step="9">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 9 de 10 </span>
+
+                  <h3>
+                    ¿Cuál es el valor promedio mensual de tu factura de energía?
+                  </h3>
+
+                  <p>
+                    Esta es una de las variables más importantes para estimar el
+                    tamaño del sistema recomendado.
+                  </p>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="factura" value="150000" />
+                      <span>Menos de $150.000</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="factura" value="300000" />
+                      <span>$150.000 - $300.000</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="factura" value="500000" />
+                      <span>$300.000 - $500.000</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="factura" value="800000" />
+                      <span>$500.000 - $800.000</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="factura" value="1000000" />
+                      <span>Más de $800.000</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PREGUNTA 10
+=======================================================-->
+
+              <div class="nova-screen" data-step="10">
+                <div class="nova-question">
+                  <span class="nova-step"> Paso 10 de 10 </span>
+
+                  <h3>Cuéntanos un poco más sobre tu vivienda</h3>
+
+                  <p>Selecciona los equipos de alto consumo que tengas.</p>
+
+                  <div class="nova-check-grid">
+                    <label class="nova-check">
+                      <input type="checkbox" value="aire" />
+                      Aire acondicionado
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="piscina" />
+                      Piscina
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="jacuzzi" />
+                      Jacuzzi
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="carro" />
+                      Vehículo eléctrico
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="bomba" />
+                      Bomba de agua
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="calentador" />
+                      Calentador eléctrico
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="cocina" />
+                      Cocina eléctrica
+                    </label>
+
+                    <label class="nova-check">
+                      <input type="checkbox" value="riego" />
+                      Sistema de riego
+                    </label>
+                  </div>
+
+                  <div class="nova-divider"></div>
+
+                  <h4>¿Cuál es tu principal objetivo?</h4>
+
+                  <div class="nova-options radio-group">
+                    <label class="nova-option">
+                      <input type="radio" name="objetivo" value="ahorro" />
+                      <span>Reducir mi factura</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="objetivo" value="respaldo" />
+                      <span>Tener respaldo energético</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input
+                        type="radio"
+                        name="objetivo"
+                        value="independencia"
+                      />
+                      <span>Mayor independencia energética</span>
+                    </label>
+
+                    <label class="nova-option">
+                      <input type="radio" name="objetivo" value="ambiental" />
+                      <span>Contribuir al medio ambiente</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="nova-navigation">
+                  <button type="button" class="nova-btn-secondary nova-prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Anterior
+                  </button>
+
+                  <button type="button" class="nova-btn-primary nova-next">
+                    Siguiente
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!--======================================================
+    PANTALLA DE PROCESAMIENTO
+=======================================================-->
+
+              <div class="nova-screen" data-step="loading">
+                <div class="nova-loading">
+                  <div class="nova-loader"></div>
+
+                  <h3>Analizando la información...</h3>
+
+                  <ul>
+                    <li>✓ Analizando características de la vivienda</li>
+
+                    <li>✓ Calculando producción solar</li>
+
+                    <li>✓ Seleccionando sistema recomendado</li>
+
+                    <li>✓ Estimando inversión</li>
+
+                    <li>✓ Calculando ahorro</li>
+
+                    <li>✓ Preparando propuesta</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!--======================================================
+    RESULTADOS
+=======================================================-->
+
+              <div class="nova-screen" data-step="result">
+                <div class="nova-result">
+                  <span class="nova-result-badge">
+                    Diagnóstico completado
+                  </span>
+
+                  <h2 id="resultadoPerfil">Residencia Familiar Premium</h2>
+
+                  <p id="resultadoDescripcion"></p>
+
+                  <div class="nova-summary">
+                    <div class="nova-summary-item">
+                      <strong>Sistema recomendado</strong>
+                      <span id="resultadoSistema"></span>
+                    </div>
+
+                    <div class="nova-summary-item">
+                      <strong>Potencia instalada</strong>
+                      <span id="resultadoPotencia"></span>
+                    </div>
+
+                    <div class="nova-summary-item">
+                      <strong>Producción mensual</strong>
+                      <span id="resultadoProduccion"></span>
+                    </div>
+
+                    <div class="nova-summary-item">
+                      <strong>Ahorro estimado</strong>
+                      <span id="resultadoAhorro"></span>
+                    </div>
+
+                    <div class="nova-summary-item">
+                      <strong>Retorno</strong>
+                      <span id="resultadoRetorno"></span>
+                    </div>
+                  </div>
+
+                  <div class="nova-budget">
+                    <h3>Presupuesto estimado</h3>
+
+                    <div id="detallePresupuesto">
+                      <!-- JS -->
+                    </div>
+
+                    <div class="nova-total">
+                      <span>Total estimado</span>
+
+                      <strong id="resultadoTotal"></strong>
+                    </div>
+                  </div>
+
+                  <div class="nova-impact">
+                    <div>
+                      <strong>CO₂ evitado</strong>
+
+                      <span id="resultadoCO2"></span>
+                    </div>
+
+                    <div>
+                      <strong>Equivalente</strong>
+
+                      <span id="resultadoArboles"></span>
+                    </div>
+                  </div>
+
+                  <div class="nova-result-actions">
+                    <button id="novaRestart">Realizar otro diagnóstico</button>
+
+                    <button id="btnPDF">Descargar propuesta</button>
+
+                    <a href="#contacto" id="btnAsesoria">
+                      Hablar con un asesor
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--======================================================
+MODAL PROPUESTA PERSONALIZADA
+=======================================================-->
+
+      <div id="proposalModal" class="proposal-modal">
+        <div class="proposal-modal-content">
+          <!-- CABECERA -->
+
+          <div class="proposal-header">
+            <div>
+              <h2>Solicita tu propuesta personalizada</h2>
+
+              <p>
+                Completa tus datos para generar la propuesta comercial en PDF.
+              </p>
+            </div>
+
+            <button
+              id="btnCloseProposal"
+              class="proposal-close"
+              type="button"
+              aria-label="Cerrar"
+            >
+              &times;
+            </button>
+          </div>
+
+          <!-- FORMULARIO -->
+
+          <form id="proposalForm" autocomplete="off">
+            <div class="proposal-group">
+              <label for="clientName"> Nombre completo </label>
+
+              <input
+                id="clientName"
+                type="text"
+                placeholder="Ej. Juan Pérez"
+                required
+              />
+            </div>
+
+            <div class="proposal-group">
+              <label for="clientEmail"> Correo electrónico </label>
+
+              <input
+                id="clientEmail"
+                type="email"
+                placeholder="correo@ejemplo.com"
+                required
+              />
+            </div>
+
+            <div class="proposal-group">
+              <label for="clientPhone"> Teléfono </label>
+
+              <input
+                id="clientPhone"
+                type="tel"
+                placeholder="3001234567"
+                required
+              />
+            </div>
+
+            <!-- MENSAJE -->
+
+            <div class="proposal-info">
+              <span>📄</span>
+
+              <p>
+                La información del diagnóstico ya fue cargada automáticamente.
+                Al continuar se generará tu propuesta comercial en formato PDF.
+              </p>
+            </div>
+
+            <!-- BOTONES -->
+
+            <div class="proposal-actions">
+              <button
+                type="button"
+                id="btnCancelProposal"
+                class="proposal-btn-secondary"
+              >
+                Cancelar
+              </button>
+
+              <button type="submit" class="proposal-btn-primary">
+                Generar propuesta PDF
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </main>
-    <script>
-      /*====================================================
-    MENU RESPONSIVE
-====================================================*/
-
-      const menu = document.getElementById("navbarMenu");
-      const button = document.getElementById("menuToggle");
-
-      button.addEventListener("click", () => {
-        menu.classList.toggle("active");
-        button.textContent = menu.classList.contains("active") ? "✕" : "☰";
-      });
-
-      /*====================================================
-    ECOSISTEMA SLIDER
-====================================================*/
-
-      document.addEventListener("DOMContentLoaded", () => {
-        const track = document.getElementById("ecosistemaTrack");
-
-        const cards = document.querySelectorAll(".ecosistema-card");
-
-        const prev = document.getElementById("prevSlide");
-
-        const next = document.getElementById("nextSlide");
-
-        const pagination = document.getElementById("ecosistemaPagination");
-
-        let currentIndex = 0;
-
-        let cardsPerView = getCardsPerView();
-
-        let maxIndex = cards.length - cardsPerView;
-
-        let autoplay;
-
-        /*==================================*/
-
-        function getCardsPerView() {
-          if (window.innerWidth <= 768) {
-            return 1;
-          }
-
-          if (window.innerWidth <= 1200) {
-            return 2;
-          }
-
-          return 3;
-        }
-
-        /*==================================*/
-
-        function renderDots() {
-          pagination.innerHTML = "";
-
-          maxIndex = cards.length - cardsPerView;
-
-          for (let i = 0; i <= maxIndex; i++) {
-            const dot = document.createElement("span");
-
-            if (i === currentIndex) {
-              dot.classList.add("active");
-            }
-
-            dot.addEventListener("click", () => {
-              currentIndex = i;
-
-              updateSlider();
-            });
-
-            pagination.appendChild(dot);
-          }
-        }
-
-        /*==================================*/
-
-        function updateSlider() {
-          cardsPerView = getCardsPerView();
-
-          maxIndex = cards.length - cardsPerView;
-
-          if (currentIndex > maxIndex) {
-            currentIndex = maxIndex;
-          }
-
-          if (currentIndex < 0) {
-            currentIndex = 0;
-          }
-
-          const cardWidth = cards[0].offsetWidth;
-
-          const gap = parseFloat(getComputedStyle(track).gap);
-
-          const move = currentIndex * (cardWidth + gap);
-
-          track.style.transform = `translateX(-${move}px)`;
-
-          const dots = pagination.querySelectorAll("span");
-
-          dots.forEach((dot, index) => {
-            dot.classList.toggle("active", index === currentIndex);
-          });
-        }
-
-        /*==================================*/
-
-        next.addEventListener("click", () => {
-          currentIndex++;
-
-          if (currentIndex > maxIndex) {
-            currentIndex = 0;
-          }
-
-          updateSlider();
-        });
-
-        prev.addEventListener("click", () => {
-          currentIndex--;
-
-          if (currentIndex < 0) {
-            currentIndex = maxIndex;
-          }
-
-          updateSlider();
-        });
-
-        /*==================================
-            AUTOPLAY
-    ==================================*/
-
-        function startAutoplay() {
-          autoplay = setInterval(() => {
-            currentIndex++;
-
-            if (currentIndex > maxIndex) {
-              currentIndex = 0;
-            }
-
-            updateSlider();
-          }, 5000);
-        }
-
-        function stopAutoplay() {
-          clearInterval(autoplay);
-        }
-
-        track.addEventListener("mouseenter", stopAutoplay);
-
-        track.addEventListener("mouseleave", startAutoplay);
-
-        /*==================================
-            TOUCH
-    ==================================*/
-
-        let startX = 0;
-
-        let endX = 0;
-
-        track.addEventListener("touchstart", (e) => {
-          startX = e.touches[0].clientX;
-        });
-
-        track.addEventListener("touchend", (e) => {
-          endX = e.changedTouches[0].clientX;
-
-          const diff = startX - endX;
-
-          if (diff > 50) {
-            currentIndex++;
-          }
-
-          if (diff < -50) {
-            currentIndex--;
-          }
-
-          if (currentIndex < 0) {
-            currentIndex = maxIndex;
-          }
-
-          if (currentIndex > maxIndex) {
-            currentIndex = 0;
-          }
-
-          updateSlider();
-        });
-
-        /*==================================
-            RESIZE
-    ==================================*/
-
-        window.addEventListener("resize", () => {
-          cardsPerView = getCardsPerView();
-
-          renderDots();
-
-          updateSlider();
-        });
-
-        /*==================================*/
-
-        renderDots();
-
-        updateSlider();
-
-        startAutoplay();
-      });
-      /*====================================================
-    WHY NOVAENERGIA
-====================================================*/
-
-      const whyData = [
-        {
-          number: "01",
-          title: "Ingeniería Especializada",
-          description:
-            "Cada proyecto comienza con un estudio técnico que permite diseñar soluciones energéticas personalizadas según las necesidades de cada cliente.",
-
-          button: "Hablar con un ingeniero →",
-
-          image: "/assets/why/ingenieria.jpg",
-        },
-
-        {
-          number: "02",
-
-          title: "Ecosistema Integral",
-
-          description:
-            "Integramos generación solar, almacenamiento energético, monitoreo y gestión inteligente en un solo ecosistema tecnológico.",
-
-          button: "Conocer el ecosistema →",
-
-          image: "/assets/why/ecosistema.jpg",
-        },
-
-        {
-          number: "03",
-
-          title: "Tecnología Inteligente",
-
-          description:
-            "Utilizamos plataformas digitales para supervisar, analizar y optimizar el comportamiento energético en tiempo real.",
-
-          button: "Ver tecnología →",
-
-          image: "/assets/why/tecnologia.jpg",
-        },
-
-        {
-          number: "04",
-
-          title: "Monitoreo Continuo",
-
-          description:
-            "Nuestros sistemas permiten visualizar indicadores, consumos y rendimiento desde cualquier lugar.",
-
-          button: "Explorar monitoreo →",
-
-          image: "/assets/why/monitoreo.jpg",
-        },
-
-        {
-          number: "05",
-
-          title: "Escalabilidad",
-
-          description:
-            "Cada solución está preparada para crecer junto con las necesidades energéticas de la empresa.",
-
-          button: "Ver crecimiento →",
-
-          image: "/assets/why/escalabilidad.jpg",
-        },
-
-        {
-          number: "06",
-
-          title: "Acompañamiento Permanente",
-
-          description:
-            "Desde el diagnóstico inicial hasta el mantenimiento, acompañamos cada etapa del proyecto energético.",
-
-          button: "Contactar asesor →",
-
-          image: "/assets/why/acompanamiento.jpg",
-        },
-      ];
-
-      const whyCards = document.querySelectorAll(".why-card");
-
-      const whyImage = document.getElementById("whyImage");
-
-      const whyNumber = document.getElementById("whyNumber");
-
-      const whyTitle = document.getElementById("whyTitle");
-
-      const whyDescription = document.getElementById("whyDescription");
-
-      const whyButton = document.getElementById("whyButton");
-
-      whyCards.forEach((card, index) => {
-        card.addEventListener("click", () => {
-          whyCards.forEach((c) => c.classList.remove("active"));
-
-          card.classList.add("active");
-
-          whyImage.style.opacity = 0;
-
-          whyImage.style.transform = "scale(.97)";
-
-          whyTitle.style.opacity = 0;
-
-          whyDescription.style.opacity = 0;
-
-          whyNumber.style.opacity = 0;
-
-          setTimeout(() => {
-            whyImage.src = whyData[index].image;
-
-            whyNumber.textContent = whyData[index].number;
-
-            whyTitle.textContent = whyData[index].title;
-
-            whyDescription.textContent = whyData[index].description;
-
-            whyButton.textContent = whyData[index].button;
-
-            whyImage.style.opacity = 1;
-
-            whyImage.style.transform = "scale(1)";
-
-            whyTitle.style.opacity = 1;
-
-            whyDescription.style.opacity = 1;
-
-            whyNumber.style.opacity = 1;
-          }, 250);
-        });
-      });
-    </script>
+    <script src="../../js/menu.js"></script>
+    <!-- html2canvas -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+
+    <!-- proposal -->
+    <script src="../../js/proposal.js"></script>
+    <script src="../../js/proposal.js"></script>
+    <script src="../../js/ecosistema.js"></script>
+    <script src="../../js/whyNova.js"></script>
+    <script src="../../js/servicios.js"></script>
+    <script src="../../js/diagnostico.js"></script>
   </body>
 </html>

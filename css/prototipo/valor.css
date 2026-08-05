@@ -18,17 +18,12 @@
 
 .why-badge {
   display: inline-flex;
-
+  align-items: center;
   padding: 10px 22px;
-
   border-radius: 999px;
-
-  background: #eaf2ff;
-
+  background: #edf3ff;
   color: var(--accent);
-
   font-weight: 700;
-
   margin-bottom: 22px;
 }
 
@@ -41,13 +36,13 @@
 
   line-height: 1.2;
 }
-
+.why-header h2 span {
+  color: var(--accent);
+}
 .why-header p {
   color: var(--text-light);
-
-  font-size: 1.1rem;
-
-  line-height: 1.9;
+  line-height: 2;
+  font-size: 1.05rem;
 }
 /*====================================================
     CONTENEDOR
@@ -72,8 +67,6 @@
 
   border-radius: 30px;
 
-  background: var(--surface);
-
   box-shadow: var(--shadow-hover);
 }
 
@@ -86,11 +79,22 @@
 
   display: block;
 
-  transition: 0.5s;
+  transition:
+    opacity 0.45s ease,
+    transform 0.8s ease,
+    filter 0.6s ease;
 }
+.why-preview img.animating {
+  opacity: 0.25;
+
+  transform: scale(1.08);
+
+  filter: brightness(0.75);
+}
+
 .why-info {
   position: absolute;
-
+  opacity: 0.9;
   left: 40px;
 
   bottom: 40px;
@@ -167,11 +171,14 @@
 ====================================================*/
 
 .why-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   background: var(--surface);
 
   border-radius: 24px;
 
-  padding: 28px;
+  padding: 26px;
 
   cursor: pointer;
 
@@ -206,8 +213,6 @@
   justify-content: center;
 
   font-weight: 700;
-
-  margin-bottom: 18px;
 }
 
 .why-card h4 {
@@ -245,4 +250,10 @@
 
     transform: translateY(0);
   }
+}
+#whyImage,
+#whyTitle,
+#whyDescription,
+#whyNumber {
+  transition: 0.35s ease;
 }

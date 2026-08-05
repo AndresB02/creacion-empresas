@@ -1,0 +1,1069 @@
+/*==================================================
+PROPUESTA NOVA ENERGÍA
+CAPÍTULO 1
+CONFIGURACIÓN GENERAL
+==================================================*/
+
+:root {
+  --proposal-primary: #182240;
+
+  --proposal-secondary: #24356f;
+
+  --proposal-accent: #4f7df5;
+
+  --proposal-success: #6abf69;
+
+  --proposal-bg: #f8faff;
+
+  --proposal-surface: #ffffff;
+
+  --proposal-text: #182240;
+
+  --proposal-light: #64748b;
+
+  --proposal-border: #e5ebf6;
+
+  --proposal-radius: 20px;
+
+  --proposal-shadow: 0 15px 45px rgba(24, 34, 64, 0.08);
+}
+
+/*==================================================
+RESET
+==================================================*/
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+.proposal {
+  background: var(--proposal-bg);
+
+  font-family: "Poppins", sans-serif;
+
+  color: var(--proposal-text);
+}
+.proposal-container {
+  width: 1400px;
+  margin: 0 auto;
+}
+/*==================================================
+PÁGINAS
+==================================================*/
+
+.proposal-page {
+  padding: 45px;
+
+  background: #fff;
+
+  page-break-after: always;
+
+  position: relative;
+}
+
+.proposal-page:last-child {
+  page-break-after: auto;
+}
+
+/*==================================================
+ENCABEZADOS
+==================================================*/
+
+.proposal-header {
+  margin-bottom: 40px;
+}
+
+.proposal-header h2 {
+  font-size: 2.2rem;
+
+  color: var(--proposal-primary);
+
+  margin-bottom: 12px;
+
+  font-weight: 700;
+}
+
+.proposal-header p {
+  color: var(--proposal-light);
+
+  line-height: 1.8;
+
+  font-size: 1rem;
+}
+
+/*==================================================
+PORTADA
+==================================================*/
+
+.cover {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  background: linear-gradient(135deg, #182240, #24356f);
+
+  color: #fff;
+}
+
+.cover-top {
+  display: flex;
+
+  justify-content: center;
+}
+
+.proposal-logo {
+  width: 180px;
+}
+
+.cover-center {
+  text-align: center;
+}
+
+.proposal-badge {
+  display: inline-flex;
+
+  padding: 12px 26px;
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 35px;
+}
+
+.cover-center h1 {
+  font-size: 3rem;
+
+  line-height: 1.15;
+
+  margin-bottom: 20px;
+
+  font-weight: 700;
+}
+
+.cover-center h2 {
+  font-size: 1.5rem;
+
+  font-weight: 500;
+
+  color: #dbe6ff;
+
+  margin-bottom: 30px;
+}
+
+.cover-center p {
+  max-width: 650px;
+
+  margin: 15px auto;
+
+  line-height: 1.9;
+
+  color: #dbe6ff;
+
+  font-size: 1rem;
+}
+
+.cover-image {
+  display: flex;
+
+  justify-content: center;
+
+  margin: 50px 0;
+}
+
+.cover-image img {
+  width: 80%;
+
+  max-width: 650px;
+}
+
+.cover-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding-top: 25px;
+}
+
+.cover-footer strong {
+  display: block;
+
+  font-size: 0.9rem;
+
+  color: #dbe6ff;
+}
+
+.cover-footer span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.cover-footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+/*==================================================
+SEPARADORES
+==================================================*/
+
+.proposal-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--proposal-border);
+
+  margin: 35px 0;
+}
+
+/*==================================================
+NOTAS
+==================================================*/
+
+.proposal-note {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: flex-start;
+
+  margin-top: 30px;
+
+  padding: 20px;
+
+  background: #f4f7ff;
+
+  border-left: 4px solid var(--proposal-accent);
+
+  border-radius: 12px;
+}
+
+.proposal-note i {
+  color: var(--proposal-accent);
+
+  font-size: 1.2rem;
+
+  margin-top: 2px;
+}
+
+.proposal-note p {
+  line-height: 1.8;
+
+  color: var(--proposal-light);
+
+  font-size: 0.95rem;
+}
+/*==================================================
+CAPÍTULO 5.2
+PERFIL DEL PROYECTO
+SISTEMA RECOMENDADO
+==================================================*/
+
+/*==================================================
+GRID GENERAL
+==================================================*/
+
+.proposal-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  margin-bottom: 35px;
+}
+
+/*==================================================
+CARDS
+==================================================*/
+
+.proposal-card {
+  background: #fff;
+  margin-bottom: 20px;
+  border: 1px solid var(--proposal-border);
+
+  border-radius: var(--proposal-radius);
+
+  padding: 30px;
+
+  box-shadow: var(--proposal-shadow);
+}
+
+.proposal-card h3 {
+  font-size: 1.25rem;
+
+  color: var(--proposal-primary);
+
+  margin-bottom: 22px;
+}
+
+/*==================================================
+TABLAS
+==================================================*/
+
+.proposal-table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.proposal-table tr {
+  border-bottom: 1px solid var(--proposal-border);
+}
+
+.proposal-table tr:last-child {
+  border-bottom: none;
+}
+
+.proposal-table td {
+  padding: 14px 6px;
+
+  font-size: 0.95rem;
+}
+
+.proposal-table td:first-child {
+  color: var(--proposal-light);
+
+  width: 55%;
+}
+
+.proposal-table td:last-child {
+  text-align: right;
+
+  font-weight: 600;
+
+  color: var(--proposal-primary);
+}
+
+/*==================================================
+SISTEMA RECOMENDADO
+==================================================*/
+
+.proposal-system {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+.proposal-system-card {
+  border-radius: 26px;
+
+  padding: 40px;
+
+  color: #fff;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.proposal-system-card.primary {
+  background: linear-gradient(
+    135deg,
+    var(--proposal-primary),
+    var(--proposal-secondary)
+  );
+}
+
+.proposal-system-card.primary::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+
+  height: 260px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  top: -120px;
+
+  right: -100px;
+}
+
+.proposal-label {
+  display: inline-flex;
+
+  padding: 10px 22px;
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  margin-bottom: 22px;
+
+  letter-spacing: 1px;
+
+  font-size: 0.85rem;
+}
+
+.proposal-system-card h2 {
+  font-size: 2.2rem;
+
+  margin-bottom: 18px;
+}
+
+.proposal-system-card p {
+  line-height: 1.9;
+
+  color: #e8efff;
+
+  max-width: 700px;
+}
+
+/*==================================================
+MINI CARDS
+==================================================*/
+
+.proposal-system-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+.proposal-mini-card {
+  background: #fff;
+
+  border: 1px solid var(--proposal-border);
+
+  border-radius: 22px;
+
+  padding: 28px 18px;
+
+  text-align: center;
+
+  box-shadow: var(--proposal-shadow);
+}
+
+.proposal-mini-card i {
+  font-size: 2rem;
+
+  color: var(--proposal-accent);
+
+  margin-bottom: 18px;
+}
+
+.proposal-mini-card span {
+  display: block;
+
+  color: var(--proposal-light);
+
+  font-size: 0.9rem;
+
+  margin-bottom: 12px;
+}
+
+.proposal-mini-card strong {
+  font-size: 1.35rem;
+
+  color: var(--proposal-primary);
+}
+
+/*==================================================
+DIAGRAMA
+==================================================*/
+
+.proposal-flow {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin: 50px 0;
+
+  gap: 18px;
+}
+
+.flow-item {
+  flex: 1;
+
+  background: #fff;
+
+  border: 1px solid var(--proposal-border);
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  text-align: center;
+
+  box-shadow: var(--proposal-shadow);
+}
+
+.flow-item i {
+  font-size: 2.4rem;
+
+  color: var(--proposal-accent);
+
+  margin-bottom: 18px;
+}
+
+.flow-item h4 {
+  color: var(--proposal-primary);
+
+  margin-bottom: 12px;
+
+  font-size: 1.1rem;
+}
+
+.flow-item p {
+  color: var(--proposal-light);
+
+  line-height: 1.7;
+
+  font-size: 0.92rem;
+}
+
+.flow-arrow {
+  color: var(--proposal-accent);
+
+  font-size: 1.6rem;
+
+  flex: none;
+}
+
+/*==================================================
+FICHA TÉCNICA
+==================================================*/
+
+.proposal-specs {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 28px;
+
+  margin-top: 35px;
+}
+
+.proposal-spec {
+  background: #f7f9fd;
+
+  border-radius: 18px;
+
+  padding: 24px;
+
+  border: 1px solid var(--proposal-border);
+}
+
+.proposal-spec span {
+  display: block;
+
+  color: var(--proposal-light);
+
+  margin-bottom: 8px;
+
+  font-size: 0.9rem;
+}
+
+.proposal-spec strong {
+  font-size: 1.15rem;
+
+  color: var(--proposal-primary);
+}
+/*==================================================
+CAPÍTULO 5.3
+PRESUPUESTO
+BENEFICIOS
+GARANTÍAS
+==================================================*/
+
+/*==================================================
+TABLA DE PRESUPUESTO
+==================================================*/
+
+.proposal-budget {
+  margin: 35px 0 15px 0;
+
+  border: 1px solid var(--proposal-border);
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow: var(--proposal-shadow);
+}
+
+.proposal-budget-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: #fff;
+}
+
+.proposal-budget-table thead {
+  background: var(--proposal-primary);
+
+  color: #fff;
+}
+
+.proposal-budget-table th {
+  padding: 18px;
+
+  text-align: left;
+
+  font-weight: 600;
+
+  font-size: 0.95rem;
+}
+
+.proposal-budget-table th:last-child {
+  text-align: right;
+}
+
+.proposal-budget-table td {
+  padding: 18px;
+
+  border-bottom: 1px solid var(--proposal-border);
+
+  font-size: 0.95rem;
+}
+
+.proposal-budget-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.proposal-budget-table td:nth-child(2) {
+  text-align: center;
+
+  color: var(--proposal-light);
+}
+
+.proposal-budget-table td:last-child {
+  text-align: right;
+
+  font-weight: 600;
+
+  color: var(--proposal-primary);
+}
+
+/*==================================================
+TOTAL
+==================================================*/
+
+.proposal-total {
+  margin-bottom: 20px;
+}
+
+.proposal-total div {
+  background: linear-gradient(
+    135deg,
+    var(--proposal-primary),
+    var(--proposal-secondary)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+
+  border-radius: 24px;
+
+  padding: 10px 35px;
+
+  box-shadow: 0 18px 45px rgba(24, 34, 64, 0.18);
+}
+
+.proposal-total span {
+  display: block;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 1px;
+
+  opacity: 0.85;
+}
+
+.proposal-total strong {
+  display: block;
+
+  font-size: 2rem;
+
+  font-weight: 700;
+}
+
+/*==================================================
+LISTAS
+==================================================*/
+
+.proposal-list {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.proposal-list li {
+  position: relative;
+
+  padding-left: 30px;
+
+  color: var(--proposal-light);
+
+  line-height: 1.8;
+}
+
+.proposal-list li::before {
+  content: "✔";
+
+  position: absolute;
+
+  left: 0;
+
+  color: var(--proposal-success);
+
+  font-weight: 700;
+}
+
+/*==================================================
+BENEFICIOS
+==================================================*/
+
+.proposal-benefits-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+
+  margin: 40px 0;
+}
+
+.proposal-benefit {
+  background: #fff;
+
+  border: 1px solid var(--proposal-border);
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  text-align: center;
+
+  box-shadow: var(--proposal-shadow);
+
+  transition: 0.3s;
+}
+
+.proposal-benefit:hover {
+  transform: translateY(-6px);
+}
+
+.proposal-benefit i {
+  font-size: 2.6rem;
+
+  color: var(--proposal-accent);
+
+  margin-bottom: 20px;
+}
+
+.proposal-benefit h3 {
+  color: var(--proposal-light);
+
+  font-size: 1rem;
+
+  margin-bottom: 15px;
+
+  font-weight: 500;
+}
+
+.proposal-benefit strong {
+  display: block;
+
+  color: var(--proposal-primary);
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+}
+
+/*==================================================
+GARANTÍAS
+==================================================*/
+
+.proposal-guarantee {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+
+  margin-top: 35px;
+}
+
+.proposal-guarantee-card {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: flex-start;
+
+  background: #fff;
+
+  border: 1px solid var(--proposal-border);
+
+  border-radius: 22px;
+
+  padding: 28px;
+
+  box-shadow: var(--proposal-shadow);
+}
+
+.proposal-guarantee-card i {
+  font-size: 2rem;
+
+  color: var(--proposal-success);
+
+  margin-top: 3px;
+}
+
+.proposal-guarantee-card h4 {
+  color: var(--proposal-primary);
+
+  margin-bottom: 10px;
+
+  font-size: 1.05rem;
+}
+
+.proposal-guarantee-card p {
+  color: var(--proposal-light);
+
+  line-height: 1.8;
+
+  font-size: 0.94rem;
+}
+
+/*==================================================
+CAJA DESTACADA
+==================================================*/
+
+.proposal-highlight {
+  margin-top: 40px;
+
+  padding: 30px;
+
+  border-radius: 24px;
+
+  background: #eef4ff;
+
+  border-left: 6px solid var(--proposal-accent);
+}
+
+.proposal-highlight h3 {
+  color: var(--proposal-primary);
+
+  margin-bottom: 14px;
+}
+
+.proposal-highlight p {
+  color: var(--proposal-light);
+
+  line-height: 1.9;
+}
+/*==================================================
+CAPÍTULO 5.4
+CONTACTO
+FOOTER
+RESPONSIVE
+PRINT
+==================================================*/
+
+/*==================================================
+CONTACTO
+==================================================*/
+
+.proposal-contact {
+  margin-top: 50px;
+
+  padding: 50px;
+
+  background: linear-gradient(
+    135deg,
+    var(--proposal-primary),
+    var(--proposal-secondary)
+  );
+
+  color: #fff;
+
+  border-radius: 28px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.proposal-contact::before {
+  content: "";
+
+  position: absolute;
+
+  width: 320px;
+
+  height: 320px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  top: -140px;
+
+  right: -120px;
+}
+
+.proposal-contact h2 {
+  font-size: 2rem;
+
+  margin-bottom: 18px;
+}
+
+.proposal-contact p {
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.9;
+
+  color: #dfe8ff;
+}
+
+/*==================================================
+GRID CONTACTO
+==================================================*/
+
+.proposal-contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  margin: 45px 0;
+}
+
+.proposal-contact-grid div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  justify-content: center;
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.proposal-contact-grid i {
+  font-size: 1.5rem;
+
+  color: #fff;
+}
+
+.proposal-contact-grid span {
+  color: #fff;
+
+  font-weight: 500;
+}
+
+/*==================================================
+QR
+==================================================*/
+
+.proposal-qr {
+  margin-top: 30px;
+}
+
+.proposal-qr img {
+  width: 160px;
+
+  height: 160px;
+
+  object-fit: contain;
+
+  background: #fff;
+
+  padding: 12px;
+
+  border-radius: 18px;
+
+  margin-bottom: 18px;
+}
+
+.proposal-qr p {
+  color: #dfe8ff;
+}
+
+/*==================================================
+FOOTER
+==================================================*/
+
+.proposal-footer {
+  margin-top: 50px;
+
+  border-top: 1px solid var(--proposal-border);
+
+  padding-top: 30px;
+
+  text-align: center;
+}
+
+.proposal-footer p {
+  color: var(--proposal-light);
+
+  line-height: 1.8;
+
+  font-size: 0.9rem;
+
+  margin-bottom: 18px;
+}
+
+.proposal-footer strong {
+  color: var(--proposal-primary);
+
+  font-size: 0.95rem;
+}
+
+/*==================================================
+IMÁGENES
+==================================================*/
+
+.proposal img {
+  max-width: 100%;
+
+  display: block;
+}
