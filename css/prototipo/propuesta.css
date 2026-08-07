@@ -1,36 +1,35 @@
-/*==================================================
-PROPUESTA NOVA ENERGÍA
-CAPÍTULO 1
-CONFIGURACIÓN GENERAL
-==================================================*/
+/*======================================================
+NOVA ENERGÍA
+PDF ENGINE 2.0
+
+CAPÍTULO C2.1
+BASE DEL DOCUMENTO
+======================================================*/
 
 :root {
-  --proposal-primary: #182240;
+  --primary: #182240;
+  --secondary: #24356f;
 
-  --proposal-secondary: #24356f;
+  --accent: #4f7df5;
 
-  --proposal-accent: #4f7df5;
+  --success: #63b96d;
 
-  --proposal-success: #6abf69;
+  --text: #1d2945;
+  --textLight: #6d7b96;
 
-  --proposal-bg: #f8faff;
+  --border: #e8edf6;
 
-  --proposal-surface: #ffffff;
+  --surface: #ffffff;
+  --background: #f4f7fb;
 
-  --proposal-text: #182240;
+  --radius: 16px;
 
-  --proposal-light: #64748b;
-
-  --proposal-border: #e5ebf6;
-
-  --proposal-radius: 20px;
-
-  --proposal-shadow: 0 15px 45px rgba(24, 34, 64, 0.08);
+  --shadow: 0 10px 28px rgba(24, 34, 64, 0.07);
 }
 
-/*==================================================
+/*======================================================
 RESET
-==================================================*/
+======================================================*/
 
 * {
   margin: 0;
@@ -40,86 +39,211 @@ RESET
   box-sizing: border-box;
 }
 
-.proposal {
-  background: var(--proposal-bg);
+body {
+  background: #d9e1ef;
 
   font-family: "Poppins", sans-serif;
-
-  color: var(--proposal-text);
 }
+
+/*======================================================
+DOCUMENTO
+======================================================*/
+
+.proposal {
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family: "Poppins", sans-serif;
+}
+
+/*======================================================
+A4
+======================================================*/
+
 .proposal-container {
-  width: 1400px;
-  margin: 0 auto;
-}
-/*==================================================
-PÁGINAS
-==================================================*/
+  width: 210mm;
 
-.proposal-page {
-  padding: 45px;
+  margin: auto;
 
   background: #fff;
+}
+
+/*======================================================
+PÁGINAS
+======================================================*/
+
+.proposal-page {
+  width: 210mm;
+
+  min-height: 297mm;
+
+  background: #fff;
+  padding: 10mm;
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  overflow: hidden;
 
   page-break-after: always;
 
-  position: relative;
+  break-after: page;
+}
+.proposal-page-container {
+  padding: 0;
+}
+.proposal-page-content {
+  padding: 18mm 18mm 5mm 18mm;
 }
 
+.proposal-page-two {
+  padding: 5mm 10mm 5mm 10mm;
+}
 .proposal-page:last-child {
   page-break-after: auto;
 }
 
-/*==================================================
-ENCABEZADOS
-==================================================*/
+/*======================================================
+TIPOGRAFÍA
+======================================================*/
 
-.proposal-header {
-  margin-bottom: 40px;
-}
+h1 {
+  font-size: 30px;
 
-.proposal-header h2 {
-  font-size: 2.2rem;
-
-  color: var(--proposal-primary);
-
-  margin-bottom: 12px;
+  line-height: 1.2;
 
   font-weight: 700;
+
+  color: var(--primary);
 }
 
-.proposal-header p {
-  color: var(--proposal-light);
+h2 {
+  font-size: 23px;
 
-  line-height: 1.8;
+  line-height: 1.25;
 
-  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--primary);
 }
 
-/*==================================================
-PORTADA
-==================================================*/
+h3 {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: var(--primary);
+}
+
+h4 {
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: var(--primary);
+}
+
+p {
+  font-size: 13px;
+
+  line-height: 1.75;
+
+  color: var(--textLight);
+}
+
+/*======================================================
+ESPACIADOS
+======================================================*/
+
+.proposal-header {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.proposal-divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border);
+
+  margin: 22px 0;
+}
+
+/*======================================================
+CARDS
+======================================================*/
+
+.proposal-card {
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 22px;
+  margin-top: 25px;
+  box-shadow: var(--shadow);
+}
+.proposal-card-two {
+  margin: 0;
+}
+.proposal-card-two h3 {
+  margin: 8px !important;
+}
+/*======================================================
+IMÁGENES
+======================================================*/
+
+img {
+  display: block;
+
+  max-width: 100%;
+} /*======================================================
+CAPÍTULO C2.2
+PORTADA PDF
+======================================================*/
 
 .cover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+  color: #fff;
+
   display: flex;
 
   flex-direction: column;
 
   justify-content: space-between;
-
-  background: linear-gradient(135deg, #182240, #24356f);
-
-  color: #fff;
 }
+
+/*======================================================
+LOGO
+======================================================*/
 
 .cover-top {
   display: flex;
 
   justify-content: center;
+
+  margin-bottom: 18px;
 }
 
 .proposal-logo {
-  width: 180px;
+  width: 145px;
 }
+
+/*======================================================
+CENTRO
+======================================================*/
 
 .cover-center {
   text-align: center;
@@ -128,193 +252,166 @@ PORTADA
 .proposal-badge {
   display: inline-flex;
 
-  padding: 12px 26px;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 20px;
 
   border-radius: 100px;
 
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-  font-size: 0.9rem;
+  font-size: 12px;
 
   letter-spacing: 2px;
 
-  margin-bottom: 35px;
+  margin-bottom: 22px;
 }
 
 .cover-center h1 {
-  font-size: 3rem;
+  color: #fff;
+
+  font-size: 34px;
 
   line-height: 1.15;
 
-  margin-bottom: 20px;
-
-  font-weight: 700;
+  margin-bottom: 14px;
 }
 
 .cover-center h2 {
-  font-size: 1.5rem;
+  color: #dfe8ff;
+
+  font-size: 18px;
 
   font-weight: 500;
 
-  color: #dbe6ff;
-
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .cover-center p {
-  max-width: 650px;
+  width: 88%;
 
-  margin: 15px auto;
-
-  line-height: 1.9;
+  margin: auto;
 
   color: #dbe6ff;
 
-  font-size: 1rem;
+  line-height: 1.75;
+
+  font-size: 13px;
 }
+
+/*======================================================
+ILUSTRACIÓN
+======================================================*/
 
 .cover-image {
   display: flex;
 
   justify-content: center;
 
-  margin: 50px 0;
+  margin: 22px 0;
 }
 
 .cover-image img {
-  width: 80%;
+  width: 72%;
 
-  max-width: 650px;
+  max-width: 520px;
 }
+
+/*======================================================
+FOOTER
+======================================================*/
 
 .cover-footer {
   display: flex;
 
   justify-content: space-between;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
 
-  padding-top: 25px;
+  margin-top: 18px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cover-footer div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 .cover-footer strong {
-  display: block;
-
-  font-size: 0.9rem;
-
   color: #dbe6ff;
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 6px;
 }
 
 .cover-footer span {
-  font-size: 1rem;
+  color: #fff;
+
+  font-size: 14px;
+
   font-weight: 600;
 }
-.cover-footer div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-/*==================================================
-SEPARADORES
-==================================================*/
-
-.proposal-divider {
-  width: 100%;
-
-  height: 1px;
-
-  background: var(--proposal-border);
-
-  margin: 35px 0;
-}
-
-/*==================================================
-NOTAS
-==================================================*/
-
-.proposal-note {
-  display: flex;
-
-  gap: 15px;
-
-  align-items: flex-start;
-
-  margin-top: 30px;
-
-  padding: 20px;
-
-  background: #f4f7ff;
-
-  border-left: 4px solid var(--proposal-accent);
-
-  border-radius: 12px;
-}
-
-.proposal-note i {
-  color: var(--proposal-accent);
-
-  font-size: 1.2rem;
-
-  margin-top: 2px;
-}
-
-.proposal-note p {
-  line-height: 1.8;
-
-  color: var(--proposal-light);
-
-  font-size: 0.95rem;
-}
-/*==================================================
-CAPÍTULO 5.2
+/*======================================================
+CAPÍTULO C2.3
 PERFIL DEL PROYECTO
-SISTEMA RECOMENDADO
-==================================================*/
+======================================================*/
 
-/*==================================================
-GRID GENERAL
-==================================================*/
+/*======================================================
+GRID
+======================================================*/
 
 .proposal-grid {
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 
-  gap: 28px;
+  gap: 18px;
 
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 
-/*==================================================
+/*======================================================
 CARDS
-==================================================*/
+======================================================*/
 
 .proposal-card {
   background: #fff;
-  margin-bottom: 20px;
-  border: 1px solid var(--proposal-border);
 
-  border-radius: var(--proposal-radius);
+  border: 1px solid var(--border);
 
-  padding: 30px;
+  border-radius: var(--radius);
 
-  box-shadow: var(--proposal-shadow);
+  padding: 18px;
+
+  box-shadow: var(--shadow);
 }
 
 .proposal-card h3 {
-  font-size: 1.25rem;
+  font-size: 18px;
 
-  color: var(--proposal-primary);
+  color: var(--primary);
 
-  margin-bottom: 22px;
+  margin-bottom: 14px;
 }
 
-/*==================================================
+/*======================================================
 TABLAS
-==================================================*/
+======================================================*/
 
 .proposal-table {
   width: 100%;
@@ -323,7 +420,7 @@ TABLAS
 }
 
 .proposal-table tr {
-  border-bottom: 1px solid var(--proposal-border);
+  border-bottom: 1px solid var(--border);
 }
 
 .proposal-table tr:last-child {
@@ -331,28 +428,107 @@ TABLAS
 }
 
 .proposal-table td {
-  padding: 14px 6px;
+  padding: 10px 4px;
 
-  font-size: 0.95rem;
+  font-size: 13px;
 }
 
 .proposal-table td:first-child {
-  color: var(--proposal-light);
+  color: var(--textLight);
 
-  width: 55%;
+  width: 58%;
 }
 
 .proposal-table td:last-child {
   text-align: right;
 
-  font-weight: 600;
+  color: var(--primary);
 
-  color: var(--proposal-primary);
+  font-weight: 600;
 }
 
-/*==================================================
+/*======================================================
+NOTA
+======================================================*/
+
+.proposal-note {
+  display: flex;
+  align-items: center !important;
+  gap: 14px;
+  margin-top: 25px;
+  padding: 16px;
+  border-left: 4px solid var(--accent);
+  background: #f5f8ff;
+  border-radius: 12px;
+}
+
+.proposal-note-two {
+  margin: 0;
+  padding: 10px !important;
+}
+.proposal-note svg {
+  fill: var(--accent);
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+}
+.proposal-note-budget svg {
+  fill: var(--accent);
+  width: 60px;
+  height: 60px;
+}
+.proposal-note p {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+.proposal-note-two p {
+  font-size: 12.5px;
+  line-height: 0;
+}
+/*======================================================
+ESPECIFICACIONES
+======================================================*/
+
+.proposal-specs {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+
+  margin-top: 20px;
+}
+
+.proposal-spec {
+  padding: 16px;
+
+  border-radius: 14px;
+
+  background: #f7f9fd;
+
+  border: 1px solid var(--border);
+}
+
+.proposal-spec span {
+  display: block;
+
+  color: var(--textLight);
+
+  font-size: 11px;
+
+  margin-bottom: 5px;
+}
+
+.proposal-spec strong {
+  color: var(--primary);
+
+  font-size: 15px;
+}
+/*======================================================
+CAPÍTULO C2.4
 SISTEMA RECOMENDADO
-==================================================*/
+======================================================*/
 
 .proposal-system {
   display: flex;
@@ -361,13 +537,17 @@ SISTEMA RECOMENDADO
 
   gap: 30px;
 
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
-.proposal-system-card {
-  border-radius: 26px;
+/*======================================================
+CARD PRINCIPAL
+======================================================*/
 
-  padding: 40px;
+.proposal-system-card {
+  border-radius: 20px;
+
+  padding: 28px;
 
   color: #fff;
 
@@ -377,11 +557,7 @@ SISTEMA RECOMENDADO
 }
 
 .proposal-system-card.primary {
-  background: linear-gradient(
-    135deg,
-    var(--proposal-primary),
-    var(--proposal-secondary)
-  );
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
 .proposal-system-card.primary::before {
@@ -389,115 +565,117 @@ SISTEMA RECOMENDADO
 
   position: absolute;
 
-  width: 260px;
+  width: 180px;
 
-  height: 260px;
+  height: 180px;
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.05);
 
-  top: -120px;
+  top: -70px;
 
-  right: -100px;
+  right: -70px;
 }
 
 .proposal-label {
   display: inline-flex;
 
-  padding: 10px 22px;
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 8px 18px;
 
   border-radius: 100px;
 
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
-  margin-bottom: 22px;
+  margin-bottom: 16px;
+
+  font-size: 11px;
 
   letter-spacing: 1px;
-
-  font-size: 0.85rem;
 }
 
 .proposal-system-card h2 {
-  font-size: 2.2rem;
+  font-size: 28px;
 
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+
+  color: #fff;
 }
 
 .proposal-system-card p {
-  line-height: 1.9;
+  color: #e7efff;
 
-  color: #e8efff;
+  line-height: 1.7;
 
-  max-width: 700px;
+  font-size: 13px;
 }
 
-/*==================================================
+/*======================================================
 MINI CARDS
-==================================================*/
+======================================================*/
 
 .proposal-system-grid {
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
 
-  gap: 22px;
+  gap: 14px;
 }
 
 .proposal-mini-card {
   background: #fff;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 
-  border-radius: 22px;
+  border-radius: 18px;
 
-  padding: 28px 18px;
+  padding: 18px 12px;
 
   text-align: center;
 
-  box-shadow: var(--proposal-shadow);
+  box-shadow: var(--shadow);
 }
 
-.proposal-mini-card i {
-  font-size: 2rem;
-
-  color: var(--proposal-accent);
-
-  margin-bottom: 18px;
+.proposal-mini-card svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--accent);
 }
 
 .proposal-mini-card span {
   display: block;
 
-  color: var(--proposal-light);
+  color: var(--textLight);
 
-  font-size: 0.9rem;
+  font-size: 11px;
 
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .proposal-mini-card strong {
-  font-size: 1.35rem;
+  color: var(--primary);
 
-  color: var(--proposal-primary);
+  font-size: 17px;
 }
 
-/*==================================================
+/*======================================================
 DIAGRAMA
-==================================================*/
+======================================================*/
 
 .proposal-flow {
   display: flex;
 
-  justify-content: space-between;
-
   align-items: center;
 
-  margin: 50px 0;
+  justify-content: space-between;
 
-  gap: 18px;
+  gap: 10px;
 }
 
 .flow-item {
@@ -505,110 +683,105 @@ DIAGRAMA
 
   background: #fff;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 
-  border-radius: 22px;
+  border-radius: 18px;
 
-  padding: 28px;
+  padding: 16px;
 
   text-align: center;
 
-  box-shadow: var(--proposal-shadow);
+  box-shadow: var(--shadow);
 }
 
-.flow-item i {
-  font-size: 2.4rem;
-
-  color: var(--proposal-accent);
-
-  margin-bottom: 18px;
+.flow-item svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--accent);
 }
 
 .flow-item h4 {
-  color: var(--proposal-primary);
+  font-size: 14px;
 
-  margin-bottom: 12px;
-
-  font-size: 1.1rem;
+  margin-bottom: 8px;
 }
 
 .flow-item p {
-  color: var(--proposal-light);
+  font-size: 11px;
 
-  line-height: 1.7;
-
-  font-size: 0.92rem;
+  line-height: 1.55;
 }
 
-.flow-arrow {
-  color: var(--proposal-accent);
-
-  font-size: 1.6rem;
-
+.flow-arrow svg {
   flex: none;
+  width: 13px;
+  height: 13px;
+  fill: var(--accent);
 }
 
-/*==================================================
+/*======================================================
 FICHA TÉCNICA
-==================================================*/
+======================================================*/
 
 .proposal-specs {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 28px;
+  gap: 14px;
 
-  margin-top: 35px;
+  margin-top: 18px;
 }
 
 .proposal-spec {
-  background: #f7f9fd;
+  padding: 14px;
 
-  border-radius: 18px;
+  background: #f8faff;
 
-  padding: 24px;
+  border-radius: 14px;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 }
 
 .proposal-spec span {
   display: block;
 
-  color: var(--proposal-light);
+  color: var(--textLight);
 
-  margin-bottom: 8px;
+  font-size: 11px;
 
-  font-size: 0.9rem;
+  margin-bottom: 4px;
 }
 
 .proposal-spec strong {
-  font-size: 1.15rem;
+  color: var(--primary);
 
-  color: var(--proposal-primary);
+  font-size: 14px;
 }
-/*==================================================
-CAPÍTULO 5.3
+/*======================================================
+CAPÍTULO C2.5
 PRESUPUESTO
-BENEFICIOS
-GARANTÍAS
-==================================================*/
+======================================================*/
 
-/*==================================================
-TABLA DE PRESUPUESTO
-==================================================*/
+/*======================================================
+CONTENEDOR
+======================================================*/
 
 .proposal-budget {
-  margin: 35px 0 15px 0;
+  margin: 22px 0 0 0;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 
-  border-radius: 24px;
+  border-radius: 18px;
 
   overflow: hidden;
 
-  box-shadow: var(--proposal-shadow);
+  box-shadow: var(--shadow);
 }
+
+/*======================================================
+TABLA
+======================================================*/
 
 .proposal-budget-table {
   width: 100%;
@@ -619,19 +792,21 @@ TABLA DE PRESUPUESTO
 }
 
 .proposal-budget-table thead {
-  background: var(--proposal-primary);
+  background: var(--primary);
 
   color: #fff;
 }
 
 .proposal-budget-table th {
-  padding: 18px;
+  padding: 13px 14px;
 
-  text-align: left;
+  font-size: 12px;
 
   font-weight: 600;
 
-  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+
+  text-align: left;
 }
 
 .proposal-budget-table th:last-child {
@@ -639,11 +814,11 @@ TABLA DE PRESUPUESTO
 }
 
 .proposal-budget-table td {
-  padding: 18px;
+  padding: 11px 14px;
 
-  border-bottom: 1px solid var(--proposal-border);
+  font-size: 12px;
 
-  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .proposal-budget-table tbody tr:last-child td {
@@ -651,49 +826,51 @@ TABLA DE PRESUPUESTO
 }
 
 .proposal-budget-table td:nth-child(2) {
+  width: 90px;
+
   text-align: center;
 
-  color: var(--proposal-light);
+  color: var(--textLight);
 }
 
 .proposal-budget-table td:last-child {
   text-align: right;
 
-  font-weight: 600;
+  color: var(--primary);
 
-  color: var(--proposal-primary);
+  font-weight: 600;
 }
 
-/*==================================================
+/*======================================================
 TOTAL
-==================================================*/
+======================================================*/
 
 .proposal-total {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .proposal-total div {
-  background: linear-gradient(
-    135deg,
-    var(--proposal-primary),
-    var(--proposal-secondary)
-  );
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
+  padding: 18px 28px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+
   color: #fff;
-
-  border-radius: 24px;
-
-  padding: 10px 35px;
-
-  box-shadow: 0 18px 45px rgba(24, 34, 64, 0.18);
 }
 
 .proposal-total span {
   display: block;
 
-  font-size: 0.9rem;
+  font-size: 11px;
+
+  text-transform: uppercase;
 
   letter-spacing: 1px;
 
@@ -701,225 +878,224 @@ TOTAL
 }
 
 .proposal-total strong {
-  display: block;
-
-  font-size: 2rem;
+  font-size: 28px;
 
   font-weight: 700;
 }
 
-/*==================================================
-LISTAS
-==================================================*/
+/*======================================================
+INCLUYE
+======================================================*/
 
 .proposal-list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px 20px;
+
   list-style: none;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 16px;
+  margin-top: 22px;
 }
 
 .proposal-list li {
   position: relative;
 
-  padding-left: 30px;
+  padding-left: 22px;
 
-  color: var(--proposal-light);
+  font-size: 12px;
 
-  line-height: 1.8;
+  line-height: 1.55;
+
+  color: var(--textLight);
 }
 
 .proposal-list li::before {
-  content: "✔";
+  content: "✓";
 
   position: absolute;
 
   left: 0;
 
-  color: var(--proposal-success);
+  top: 0;
+
+  color: var(--success);
 
   font-weight: 700;
 }
-
-/*==================================================
+/*======================================================
+CAPÍTULO C2.6
 BENEFICIOS
-==================================================*/
+GARANTÍAS
+======================================================*/
+
+/*======================================================
+BENEFICIOS
+======================================================*/
 
 .proposal-benefits-grid {
   display: grid;
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 28px;
+  gap: 18px;
 
-  margin: 40px 0;
+  margin: 0;
 }
 
 .proposal-benefit {
   background: #fff;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 
-  border-radius: 24px;
+  border-radius: 18px;
 
-  padding: 35px;
+  padding: 15px 18px;
 
   text-align: center;
 
-  box-shadow: var(--proposal-shadow);
-
-  transition: 0.3s;
+  box-shadow: var(--shadow);
 }
 
-.proposal-benefit:hover {
-  transform: translateY(-6px);
-}
-
-.proposal-benefit i {
-  font-size: 2.6rem;
-
-  color: var(--proposal-accent);
-
-  margin-bottom: 20px;
+.proposal-benefit svg {
+  width: 30px;
+  height: 30px;
+  color: var(--accent);
 }
 
 .proposal-benefit h3 {
-  color: var(--proposal-light);
-
-  font-size: 1rem;
-
-  margin-bottom: 15px;
+  font-size: 13px;
 
   font-weight: 500;
+
+  color: var(--textLight);
+
+  margin-bottom: 10px;
 }
 
 .proposal-benefit strong {
   display: block;
 
-  color: var(--proposal-primary);
+  color: var(--primary);
 
-  font-size: 1.8rem;
+  font-size: 24px;
 
   font-weight: 700;
 }
 
-/*==================================================
+/*======================================================
 GARANTÍAS
-==================================================*/
+======================================================*/
 
 .proposal-guarantee {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 25px;
+  gap: 16px;
 
-  margin-top: 35px;
+  margin-top: 24px;
 }
 
 .proposal-guarantee-card {
   display: flex;
 
-  gap: 20px;
-
   align-items: flex-start;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  border-radius: 18px;
 
   background: #fff;
 
-  border: 1px solid var(--proposal-border);
+  border: 1px solid var(--border);
 
-  border-radius: 22px;
-
-  padding: 28px;
-
-  box-shadow: var(--proposal-shadow);
+  box-shadow: var(--shadow);
 }
 
 .proposal-guarantee-card i {
-  font-size: 2rem;
+  font-size: 24px;
 
-  color: var(--proposal-success);
+  color: var(--success);
 
-  margin-top: 3px;
+  margin-top: 2px;
 }
 
 .proposal-guarantee-card h4 {
-  color: var(--proposal-primary);
+  font-size: 14px;
 
-  margin-bottom: 10px;
+  color: var(--primary);
 
-  font-size: 1.05rem;
+  margin-bottom: 6px;
 }
 
 .proposal-guarantee-card p {
-  color: var(--proposal-light);
+  font-size: 12px;
 
-  line-height: 1.8;
+  line-height: 1.6;
 
-  font-size: 0.94rem;
+  color: var(--textLight);
 }
 
-/*==================================================
+/*======================================================
 CAJA DESTACADA
-==================================================*/
+======================================================*/
 
 .proposal-highlight {
-  margin-top: 40px;
+  margin-top: 24px;
 
-  padding: 30px;
+  padding: 22px;
 
-  border-radius: 24px;
+  border-left: 5px solid var(--accent);
 
-  background: #eef4ff;
+  border-radius: 18px;
 
-  border-left: 6px solid var(--proposal-accent);
+  background: #eef5ff;
 }
 
 .proposal-highlight h3 {
-  color: var(--proposal-primary);
+  font-size: 18px;
 
-  margin-bottom: 14px;
+  color: var(--primary);
+
+  margin-bottom: 10px;
 }
 
 .proposal-highlight p {
-  color: var(--proposal-light);
+  font-size: 12px;
 
-  line-height: 1.9;
+  line-height: 1.7;
+
+  color: var(--textLight);
 }
-/*==================================================
-CAPÍTULO 5.4
-CONTACTO
-FOOTER
-RESPONSIVE
-PRINT
-==================================================*/
+/*======================================================
+CAPÍTULO C2.7
+CONTACTO · CIERRE · FOOTER
+======================================================*/
 
-/*==================================================
-CONTACTO
-==================================================*/
+/*======================================================
+BLOQUE CONTACTO
+======================================================*/
 
 .proposal-contact {
-  margin-top: 50px;
+  margin-top: 28px;
 
-  padding: 50px;
+  padding: 15px 32px 0 32px;
 
-  background: linear-gradient(
-    135deg,
-    var(--proposal-primary),
-    var(--proposal-secondary)
-  );
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
 
   color: #fff;
 
-  border-radius: 28px;
+  border-radius: 22px;
 
   text-align: center;
 
-  overflow: hidden;
-
   position: relative;
+
+  overflow: hidden;
 }
 
 .proposal-contact::before {
@@ -927,47 +1103,51 @@ CONTACTO
 
   position: absolute;
 
-  width: 320px;
+  width: 220px;
 
-  height: 320px;
+  height: 220px;
 
   border-radius: 50%;
 
   background: rgba(255, 255, 255, 0.05);
 
-  top: -140px;
+  right: -70px;
 
-  right: -120px;
+  top: -70px;
 }
 
 .proposal-contact h2 {
-  font-size: 2rem;
+  color: #fff;
 
-  margin-bottom: 18px;
+  font-size: 28px;
+
+  margin-bottom: 12px;
 }
 
 .proposal-contact p {
-  max-width: 700px;
+  color: #dce7ff;
+
+  width: 85%;
 
   margin: auto;
 
-  line-height: 1.9;
+  font-size: 13px;
 
-  color: #dfe8ff;
+  line-height: 1.75;
 }
 
-/*==================================================
+/*======================================================
 GRID CONTACTO
-==================================================*/
+======================================================*/
 
 .proposal-contact-grid {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 22px;
+  gap: 14px;
 
-  margin: 45px 0;
+  margin: 28px 0;
 }
 
 .proposal-contact-grid div {
@@ -975,95 +1155,121 @@ GRID CONTACTO
 
   align-items: center;
 
-  gap: 16px;
-
   justify-content: center;
 
-  padding: 18px;
+  gap: 12px;
 
-  border-radius: 18px;
+  padding: 10px;
+
+  border-radius: 14px;
 
   background: rgba(255, 255, 255, 0.08);
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.proposal-contact-grid i {
-  font-size: 1.5rem;
-
-  color: #fff;
+.proposal-contact-grid svg {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
 }
 
 .proposal-contact-grid span {
   color: #fff;
 
+  font-size: 13px;
+
   font-weight: 500;
 }
 
-/*==================================================
+/*======================================================
 QR
-==================================================*/
+======================================================*/
 
 .proposal-qr {
-  margin-top: 30px;
+  margin-top: 18px;
 }
 
 .proposal-qr img {
-  width: 160px;
+  width: 120px;
 
-  height: 160px;
+  height: 120px;
 
-  object-fit: contain;
+  margin: auto;
+
+  padding: 8px;
 
   background: #fff;
 
-  padding: 12px;
+  border-radius: 14px;
 
-  border-radius: 18px;
+  object-fit: contain;
 
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 
 .proposal-qr p {
-  color: #dfe8ff;
+  color: #dce7ff;
+
+  font-size: 12px;
 }
 
-/*==================================================
+/*======================================================
 FOOTER
-==================================================*/
+======================================================*/
 
 .proposal-footer {
-  margin-top: 50px;
+  margin-top: 25px;
 
-  border-top: 1px solid var(--proposal-border);
+  padding-top: 15px;
 
-  padding-top: 30px;
+  border-top: 1px solid var(--border);
 
   text-align: center;
 }
 
 .proposal-footer p {
-  color: var(--proposal-light);
+  color: var(--textLight);
 
-  line-height: 1.8;
+  font-size: 11px;
 
-  font-size: 0.9rem;
+  line-height: 1.6;
 
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .proposal-footer strong {
-  color: var(--proposal-primary);
+  color: var(--primary);
 
-  font-size: 0.95rem;
+  font-size: 12px;
+
+  font-weight: 600;
 }
 
-/*==================================================
+/*======================================================
 IMÁGENES
-==================================================*/
+======================================================*/
 
 .proposal img {
   max-width: 100%;
 
   display: block;
+}
+
+/*======================================================
+IMPRESIÓN
+======================================================*/
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .proposal {
+    background: #fff;
+  }
+
+  .proposal-page {
+    box-shadow: none;
+  }
 }

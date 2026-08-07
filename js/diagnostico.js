@@ -645,15 +645,14 @@ ENVIAR INFORMACIÓN A proposal.js
         codigo: "NOVA-" + Date.now(),
 
         cliente: {
-          nombre: "",
-          correo: "",
-          telefono: "",
+          fecha: new Date().toLocaleDateString("es-CO"),
+          codigo: "NOVA-" + Date.now(),
         },
 
         vivienda: {
           ciudad: answers.ciudad,
 
-          tipo: answers.tipo,
+          tipo: answers.tipoVivienda,
 
           area: answers.area,
 
@@ -663,7 +662,7 @@ ENVIAR INFORMACIÓN A proposal.js
 
           factura: answers.factura,
 
-          consumo: profile.produccion,
+          consumoEstimado: profile.produccion,
 
           objetivo: answers.objetivo,
         },
@@ -677,13 +676,11 @@ ENVIAR INFORMACIÓN A proposal.js
 
           panelModelo: "Panel Monocristalino 615W",
 
-          potencia: profile.potencia.toFixed(2) + " kWp",
+          potencia: profile.potencia.toFixed(2),
 
-          inversor: profile.inversor + " kW",
+          inversor: profile.inversor,
 
-          produccionMensual: profile.produccion,
-
-          produccionAnual: profile.produccion * 12,
+          produccion: profile.produccion,
         },
 
         presupuesto: {
@@ -766,8 +763,6 @@ ENVIAR INFORMACIÓN A proposal.js
   /*=========================================================
     BOTÓN PDF
 =========================================================*/
-
-
 
   /*=========================================================
     BOTÓN CONTACTAR ASESOR

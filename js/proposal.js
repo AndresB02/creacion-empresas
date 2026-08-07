@@ -1,669 +1,617 @@
 /*=========================================================
-NOVA ENERGÍA
-PROPOSAL.JS 2.0
+PROPOSAL.JS 3.0
+Nova Energía
 
-Módulo encargado de:
-
-✔ Recibir los datos del diagnóstico
-✔ Mostrar el modal
-✔ Construir la propuesta comercial
-✔ Generar el PDF
+Gestor de propuestas comerciales
 =========================================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("📄 Proposal.js inicializado.");
+"use strict";
 
-  /*=====================================================
-    ESTADO GENERAL
-    =====================================================*/
+console.log("📄 Proposal.js 3.0 inicializado.");
 
-  const proposal = {
-    ready: false,
+/*=========================================================
+CONFIGURACIÓN
+=========================================================*/
 
-    dataLoaded: false,
+const ProposalConfig = {
+  templatePath: "propuesta.html",
 
-    generated: false,
-  };
+  pdfFileName: "Propuesta_NovaEnergia.pdf",
 
-  /*=====================================================
-    OBJETO PRINCIPAL
-    =====================================================*/
+  animationDuration: 300,
+};
 
-  const proposalData = {
-    fecha: "",
+/*=========================================================
+ESTADO GLOBAL
+=========================================================*/
 
-    codigo: "",
+const ProposalState = {
+  initialized: false,
 
-    cliente: {},
+  dataLoaded: false,
 
-    vivienda: {},
+  templateLoaded: false,
 
-    sistema: {},
+  proposalData: null,
 
-    presupuesto: {},
+  templateElement: null,
+};
 
-    beneficios: {},
-  };
+/*=========================================================
+REFERENCIAS DEL DOM
+=========================================================*/
 
-  /*=====================================================
-    REFERENCIAS DEL DOM
-    =====================================================*/
+const ProposalDOM = {
+  modal: null,
 
-  const modal = document.getElementById("proposalModal");
+  form: null,
 
-  const form = document.getElementById("proposalForm");
+  btnOpen: null,
 
-  const btnOpen = document.getElementById("btnPDF");
+  btnClose: null,
 
-  const btnClose = document.getElementById("btnCloseProposal");
+  btnCancel: null,
 
-  const btnCancel = document.getElementById("btnCancelProposal");
+  inputName: null,
 
-  const txtNombre = document.getElementById("clientName");
+  inputEmail: null,
 
-  const txtCorreo = document.getElementById("clientEmail");
+  inputPhone: null,
+};
 
-  const txtTelefono = document.getElementById("clientPhone");
+console.log("✅ Configuración cargada.");
+/*=========================================================
+PROPOSAL MANAGER
+=========================================================*/
 
-  const proposalHTML = document.getElementById("proposal");
-
-  /*=====================================================
-    UTILIDADES
-    =====================================================*/
-
-  function money(value) {
-    return new Intl.NumberFormat(
-      "es-CO",
-
-      {
-        style: "currency",
-
-        currency: "COP",
-
-        maximumFractionDigits: 0,
-      },
-    ).format(value);
+class ProposalManager {
+  constructor() {
+    this.state = ProposalState;
+    this.dom = ProposalDOM;
+    this.config = ProposalConfig;
   }
 
-  function today() {
-    return new Date().toLocaleDateString(
-      "es-CO",
+  /*==========================================
+    INICIALIZAR
+    ==========================================*/
 
-      {
-        day: "2-digit",
+  init() {
+    if (this.state.initialized) return;
 
-        month: "long",
+    this.cacheDOM();
 
-        year: "numeric",
-      },
-    );
+    this.bindEvents();
+
+    this.state.initialized = true;
+
+    console.log("✅ ProposalManager inicializado.");
   }
 
-  function generateCode() {
-    const d = new Date();
+  /*==========================================
+    CACHE DEL DOM
+    ==========================================*/
 
-    return (
-      "NOVA-" +
-      d.getFullYear() +
-      String(d.getMonth() + 1).padStart(2, "0") +
-      String(d.getDate()).padStart(2, "0") +
-      "-" +
-      Math.floor(Math.random() * 900 + 100)
-    );
+  cacheDOM() {
+    this.dom.modal = document.getElementById("proposalModal");
+
+    this.dom.form = document.getElementById("proposalForm");
+
+    this.dom.btnOpen =
+      document.getElementById("btnOpenProposal") ||
+      document.getElementById("btnPDF");
+
+    this.dom.btnClose = document.getElementById("btnCloseProposal");
+
+    this.dom.btnCancel = document.getElementById("btnCancelProposal");
+
+    this.dom.inputName = document.getElementById("clientName");
+
+    this.dom.inputEmail = document.getElementById("clientEmail");
+
+    this.dom.inputPhone = document.getElementById("clientPhone");
+
+    console.log("📦 DOM cacheado.");
   }
 
-  proposalData.fecha = today();
-
-  proposalData.codigo = generateCode();
-
-  proposal.ready = true;
-
-  console.log("✅ Proposal lista.");
-  /*=====================================================
-    CAPÍTULO 2
-    MODAL MANAGER
-    =====================================================*/
-
-  /*=====================================================
-    ABRIR MODAL
-    =====================================================*/
-
-  function openModal() {
-    if (!modal) return;
-
-    modal.classList.add("active");
-
-    document.body.style.overflow = "hidden";
-
-    if (txtNombre) {
-      txtNombre.focus();
-    }
-  }
-
-  /*=====================================================
-    CERRAR MODAL
-    =====================================================*/
-
-  function closeModal() {
-    if (!modal) return;
-
-    modal.classList.remove("active");
-
-    document.body.style.overflow = "";
-  }
-
-  /*=====================================================
-    LIMPIAR FORMULARIO
-    =====================================================*/
-
-  function resetForm() {
-    if (!form) return;
-
-    form.reset();
-  }
-
-  /*=====================================================
-    VALIDAR
-    =====================================================*/
-
-  function validateForm() {
-    if (!txtNombre.value.trim()) {
-      alert("Ingresa tu nombre.");
-
-      txtNombre.focus();
-
-      return false;
-    }
-
-    if (!txtCorreo.value.trim()) {
-      alert("Ingresa tu correo electrónico.");
-
-      txtCorreo.focus();
-
-      return false;
-    }
-
-    if (!txtTelefono.value.trim()) {
-      alert("Ingresa tu teléfono.");
-
-      txtTelefono.focus();
-
-      return false;
-    }
-
-    return true;
-  }
-
-  /*=====================================================
-    GUARDAR CLIENTE
-    =====================================================*/
-
-  function saveClient() {
-    proposalData.cliente = {
-      nombre: txtNombre.value.trim(),
-
-      correo: txtCorreo.value.trim(),
-
-      telefono: txtTelefono.value.trim(),
-    };
-  }
-
-  /*=====================================================
+  /*==========================================
     EVENTOS
-    =====================================================*/
+    ==========================================*/
 
-  if (btnOpen) {
-    btnOpen.addEventListener(
+  bindEvents() {
+    console.log("🔗 Eventos registrados.");
+  }
+}
+
+/*=========================================================
+INSTANCIA ÚNICA
+=========================================================*/
+
+const proposalManager = new ProposalManager();
+/*=========================================================
+MODAL
+=========================================================*/
+
+ProposalManager.prototype.openModal = function () {
+  if (!this.dom.modal) return;
+
+  this.dom.modal.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+
+  if (this.dom.inputName) {
+    setTimeout(() => {
+      this.dom.inputName.focus();
+    }, 200);
+  }
+};
+
+/*=========================================================
+CERRAR MODAL
+=========================================================*/
+
+ProposalManager.prototype.closeModal = function () {
+  if (!this.dom.modal) return;
+
+  this.dom.modal.classList.remove("active");
+
+  document.body.style.overflow = "";
+};
+
+/*=========================================================
+EVENTOS
+=========================================================*/
+
+ProposalManager.prototype.bindEvents = function () {
+  console.log("🔗 Eventos registrados.");
+
+  /*--------------------------------------
+    Abrir
+    --------------------------------------*/
+
+  if (this.dom.btnOpen) {
+    this.dom.btnOpen.addEventListener(
       "click",
 
-      openModal,
+      () => {
+        this.openModal();
+      },
     );
   }
 
-  if (btnClose) {
-    btnClose.addEventListener(
+  /*--------------------------------------
+    Botón X
+    --------------------------------------*/
+
+  if (this.dom.btnClose) {
+    this.dom.btnClose.addEventListener(
       "click",
 
-      closeModal,
+      () => {
+        this.closeModal();
+      },
     );
   }
 
-  if (btnCancel) {
-    btnCancel.addEventListener(
+  /*--------------------------------------
+    Cancelar
+    --------------------------------------*/
+
+  if (this.dom.btnCancel) {
+    this.dom.btnCancel.addEventListener(
       "click",
 
-      closeModal,
+      () => {
+        this.closeModal();
+      },
     );
   }
 
-  /*=====================================================
-    CERRAR CON ESC
-    =====================================================*/
+  /*--------------------------------------
+    Cerrar al hacer clic afuera
+    --------------------------------------*/
 
-  document.addEventListener(
-    "keydown",
-
-    (e) => {
-      if (e.key === "Escape") {
-        closeModal();
-      }
-    },
-  );
-
-  /*=====================================================
-    CLICK FUERA
-    =====================================================*/
-
-  if (modal) {
-    modal.addEventListener(
+  if (this.dom.modal) {
+    this.dom.modal.addEventListener(
       "click",
 
       (e) => {
-        if (e.target === modal) {
-          closeModal();
+        if (e.target === this.dom.modal) {
+          this.closeModal();
         }
       },
     );
   }
+};
 
-  console.log("✅ Modal Manager listo.");
-  /*=====================================================
-    CAPÍTULO 3
-    DATA MANAGER
-    =====================================================*/
+/*=========================================================
+INICIALIZACIÓN
+=========================================================*/
 
-  /*=====================================================
-    CARGAR INFORMACIÓN DEL DIAGNÓSTICO
-    =====================================================*/
+document.addEventListener(
+  "DOMContentLoaded",
 
-  function loadProposalData(data) {
-    if (!data) {
-      console.warn("No llegaron datos del diagnóstico.");
+  () => {
+    proposalManager.init();
+  },
+); /*=========================================================
+RECEPCIÓN DE DATOS
+=========================================================*/
 
-      return;
+ProposalManager.prototype.loadData = function (data) {
+  if (!data) {
+    console.warn("⚠ No se recibieron datos del diagnóstico.");
+
+    return;
+  }
+
+  this.state.proposalData = structuredClone(data);
+
+  this.state.dataLoaded = true;
+
+  console.log("📊 Datos del diagnóstico recibidos.");
+
+  console.table(this.state.proposalData);
+};
+
+/*=========================================================
+VERIFICAR DISPONIBILIDAD
+=========================================================*/
+
+ProposalManager.prototype.hasData = function () {
+  return this.state.dataLoaded;
+};
+
+/*=========================================================
+ACCESO GLOBAL
+=========================================================*/
+
+window.loadProposalData = (data) => {
+  proposalManager.loadData(data);
+};
+/*=========================================================
+CARGAR PLANTILLA HTML
+=========================================================*/
+
+ProposalManager.prototype.loadTemplate = async function () {
+  /*--------------------------------------
+    Ya fue cargada
+    --------------------------------------*/
+
+  if (this.state.templateLoaded && this.state.templateElement) {
+    return this.state.templateElement;
+  }
+
+  try {
+    console.log("📥 Cargando propuesta.html...");
+
+    const response = await fetch("propuesta.html");
+
+    if (!response.ok) {
+      throw new Error("No fue posible cargar propuesta.html");
     }
 
-    proposalData.fecha = data.fecha || proposalData.fecha;
+    const html = await response.text();
 
-    proposalData.codigo = data.codigo || proposalData.codigo;
+    /*--------------------------------------
+        Crear contenedor oculto
+        --------------------------------------*/
 
-    proposalData.vivienda = {
-      ...data.vivienda,
-    };
+    const wrapper = document.createElement("div");
 
-    proposalData.sistema = {
-      ...data.sistema,
-    };
+    wrapper.id = "proposalWrapper";
 
-    proposalData.presupuesto = {
-      ...data.presupuesto,
-    };
+    wrapper.style.position = "absolute";
+    wrapper.style.left = "-99999px";
+    wrapper.style.top = "0";
+    wrapper.style.width = "210mm";
+    wrapper.style.background = "#ffffff";
+    wrapper.style.zIndex = "-1";
 
-    proposalData.beneficios = {
-      ...data.beneficios,
-    };
+    wrapper.innerHTML = html;
 
-    proposal.dataLoaded = true;
+    document.body.appendChild(wrapper);
 
-    console.log("📄 Información del diagnóstico recibida.");
+    /*--------------------------------------
+        Buscar plantilla
+        --------------------------------------*/
 
-    console.table(proposalData);
-  }
+    const proposal = wrapper.querySelector("#proposal");
 
-  /*=====================================================
-    DISPONIBLE PARA EL DIAGNÓSTICO
-    =====================================================*/
-
-  window.loadProposalData = loadProposalData;
-
-  /*=====================================================
-    VERIFICAR DATOS
-    =====================================================*/
-
-  function proposalReady() {
-    return proposal.dataLoaded;
-  }
-
-  /*=====================================================
-    MOSTRAR ERROR
-    =====================================================*/
-
-  function checkProposal() {
-    if (!proposalReady()) {
-      alert("Primero debes finalizar el diagnóstico.");
-
-      return false;
+    if (!proposal) {
+      throw new Error("La plantilla no contiene #proposal");
     }
 
-    return true;
-  }
+    this.state.templateLoaded = true;
 
-  /*=====================================================
-    FORMULARIO
-    =====================================================*/
-
-  if (form) {
-    form.addEventListener(
-      "submit",
-
-      async (e) => {
-        e.preventDefault();
-
-        if (!validateForm()) return;
-
-        if (!checkProposal()) return;
-
-        saveClient();
-
-        console.log("Cliente guardado.");
-
-        console.log(proposalData);
-
-        /*
-                    Capítulo 4
-
-                    fillProposal();
-
-                */
-      },
-    );
-  }
-
-  console.log("✅ Data Manager listo.");
-  /*=====================================================
-    CAPÍTULO 4
-    TEMPLATE ENGINE
-    =====================================================*/
-
-  /*=====================================================
-    ESCRIBIR TEXTO EN UN ELEMENTO
-    =====================================================*/
-
-  function setValue(id, value) {
-    const element = document.getElementById(id);
-
-    if (!element) return;
-
-    element.textContent = value;
-  }
-
-  /*=====================================================
-    FORMATO DE NÚMEROS
-    =====================================================*/
-
-  function number(value) {
-    return new Intl.NumberFormat("es-CO").format(value);
-  }
-
-  /*=====================================================
-    LLENAR PROPUESTA
-    =====================================================*/
-
-  function fillProposal() {
-    /*==========================
-        GENERALES
-        ==========================*/
-
-    setValue("pdfFecha", proposalData.fecha);
-
-    setValue("pdfCodigo", proposalData.codigo);
-
-    /*==========================
-        CLIENTE
-        ==========================*/
-
-    setValue("pdfCliente", proposalData.cliente.nombre);
-
-    setValue("pdfCorreo", proposalData.cliente.correo);
-
-    setValue("pdfTelefono", proposalData.cliente.telefono);
-
-    /*==========================
-        VIVIENDA
-        ==========================*/
-
-    setValue("pdfCiudad", proposalData.vivienda.ciudad);
-
-    setValue("pdfTipo", proposalData.vivienda.tipo);
-
-    setValue(
-      "pdfArea",
-
-      proposalData.vivienda.area + " m²",
-    );
-
-    setValue(
-      "pdfPisos",
-
-      proposalData.vivienda.pisos,
-    );
-
-    setValue(
-      "pdfHabitantes",
-
-      proposalData.vivienda.habitantes,
-    );
-
-    setValue(
-      "pdfFactura",
-
-      money(proposalData.vivienda.factura),
-    );
-
-    setValue(
-      "pdfConsumo",
-
-      number(proposalData.vivienda.consumo) + " kWh",
-    );
-
-    setValue(
-      "pdfObjetivo",
-
-      proposalData.vivienda.objetivo,
-    );
-
-    /*==========================
-        SISTEMA
-        ==========================*/
-
-    setValue(
-      "pdfCategoria",
-
-      proposalData.sistema.categoria,
-    );
-
-    setValue(
-      "pdfDescripcion",
-
-      proposalData.sistema.descripcion,
-    );
-
-    setValue(
-      "pdfPaneles",
-
-      proposalData.sistema.paneles,
-    );
-
-    setValue(
-      "pdfModeloPanel",
-
-      proposalData.sistema.panelModelo,
-    );
-
-    setValue(
-      "pdfPotencia",
-
-      proposalData.sistema.potencia,
-    );
-
-    setValue(
-      "pdfInversor",
-
-      proposalData.sistema.inversor,
-    );
-
-    setValue(
-      "pdfProduccionMensual",
-
-      number(proposalData.sistema.produccionMensual) + " kWh",
-    );
-
-    setValue(
-      "pdfProduccionAnual",
-
-      number(proposalData.sistema.produccionAnual) + " kWh",
-    );
-
-    /*==========================
-        PRESUPUESTO
-        ==========================*/
-
-    setValue(
-      "pdfPanelesValor",
-
-      money(proposalData.presupuesto.paneles),
-    );
-
-    setValue(
-      "pdfInversorValor",
-
-      money(proposalData.presupuesto.inversor),
-    );
-
-    setValue(
-      "pdfEstructuraValor",
-
-      money(proposalData.presupuesto.estructura),
-    );
-
-    setValue(
-      "pdfProteccionesValor",
-
-      money(proposalData.presupuesto.protecciones),
-    );
-
-    setValue(
-      "pdfCableadoValor",
-
-      money(proposalData.presupuesto.cableado),
-    );
-
-    setValue(
-      "pdfIngenieriaValor",
-
-      money(proposalData.presupuesto.ingenieria),
-    );
-
-    setValue(
-      "pdfInstalacionValor",
-
-      money(proposalData.presupuesto.instalacion),
-    );
-
-    setValue(
-      "pdfLegalizacionValor",
-
-      money(proposalData.presupuesto.legalizacion),
-    );
-
-    setValue(
-      "pdfTotal",
-
-      money(proposalData.presupuesto.total),
-    );
-
-    /*==========================
-        BENEFICIOS
-        ==========================*/
-
-    setValue(
-      "pdfAhorroMensual",
-
-      money(proposalData.beneficios.ahorroMensual),
-    );
-
-    setValue(
-      "pdfAhorroAnual",
-
-      money(proposalData.beneficios.ahorroAnual),
-    );
-
-    setValue(
-      "pdfRetorno",
-
-      proposalData.beneficios.retorno + " años",
-    );
-
-    setValue(
-      "pdfCO2",
-
-      number(proposalData.beneficios.co2) + " kg",
-    );
-
-    setValue(
-      "pdfArboles",
-
-      proposalData.beneficios.arboles + " árboles",
-    );
+    this.state.templateElement = proposal;
 
     console.log("✅ Plantilla cargada correctamente.");
+
+    return proposal;
+  } catch (error) {
+    console.error(error);
+
+    alert("No fue posible cargar la plantilla de la propuesta.");
+
+    return null;
+  }
+};
+
+/*=========================================================
+OBTENER PLANTILLA
+=========================================================*/
+
+ProposalManager.prototype.getTemplate = function () {
+  return this.state.templateElement;
+};
+/*=========================================================
+REEMPLAZAR TEXTO
+=========================================================*/
+
+ProposalManager.prototype.setText = function (selector, value) {
+  const proposal = this.getTemplate();
+
+  if (!proposal) return;
+
+  const element = proposal.querySelector(selector);
+
+  if (!element) {
+    console.warn(`No existe el selector: ${selector}`);
+
+    return;
   }
 
-  console.log("✅ Template Engine listo.");
+  element.textContent = value;
+};
+
+/*=========================================================
+REEMPLAZAR HTML
+=========================================================*/
+
+ProposalManager.prototype.setHTML = function (selector, value) {
+  const proposal = this.getTemplate();
+
+  if (!proposal) return;
+
+  const element = proposal.querySelector(selector);
+
+  if (!element) return;
+
+  element.innerHTML = value;
+};
+
+/*=========================================================
+FORMATEAR MONEDA
+=========================================================*/
+
+ProposalManager.prototype.money = function (value) {
+  return new Intl.NumberFormat("es-CO", {
+    style: "currency",
+    currency: "COP",
+    maximumFractionDigits: 0,
+  }).format(value);
+};
+
+/*=========================================================
+FORMATEAR NÚMERO
+=========================================================*/
+
+ProposalManager.prototype.number = function (value) {
+  return new Intl.NumberFormat("es-CO").format(value);
+};
+/*=========================================================
+LLENAR PLANTILLA
+=========================================================*/
+
+ProposalManager.prototype.fillTemplate = function (client) {
+  const data = this.state.proposalData;
+
+  if (!data) {
+    console.warn("⚠ No existen datos del diagnóstico.");
+
+    return;
+  }
+
   /*=====================================================
-    CAPÍTULO 5
-    GENERAR PDF
+    CLIENTE
     =====================================================*/
 
-  async function generatePDF() {
-    if (!proposalHTML) {
-      alert("No se encontró la plantilla de la propuesta.");
+  this.setText("#pdfNombre", client.nombre);
 
-      return;
-    }
+  this.setText("#pdfFecha", data.cliente.fecha);
 
-    try {
-      proposalHTML.style.display = "block";
+  this.setText("#pdfCodigo", data.cliente.codigo);
 
-      await new Promise((resolve) => setTimeout(resolve, 300));
+  /*=====================================================
+    PERFIL VIVIENDA
+    =====================================================*/
 
-      const canvas = await html2canvas(
-        proposalHTML,
+  this.setText("#pdfCiudad", data.vivienda.ciudad);
 
-        {
-          scale: 2,
+  this.setText("#pdfTipo", data.vivienda.tipo);
 
-          useCORS: true,
+  this.setText("#pdfArea", data.vivienda.area);
 
-          backgroundColor: "#ffffff",
+  this.setText("#pdfPisos", data.vivienda.pisos);
 
-          scrollY: 0,
-        },
-      );
+  this.setText("#pdfHabitantes", data.vivienda.habitantes);
 
-      const { jsPDF } = window.jspdf;
+  /*=====================================================
+    PERFIL ENERGÉTICO
+    =====================================================*/
 
-      const pdf = new jsPDF(
-        "p",
+  this.setText("#pdfFactura", this.money(data.vivienda.factura));
 
-        "mm",
+  this.setText(
+    "#pdfConsumo",
+    `${this.number(data.sistema.produccion)} kWh/mes`,
+  );
 
-        "a4",
-      );
+  this.setText("#pdfObjetivo", "Reducir el consumo de energía convencional.");
 
-      const pageWidth = 210;
+  /*=====================================================
+    SISTEMA
+    =====================================================*/
 
-      const pageHeight = 297;
+  this.setText("#pdfCategoria", data.sistema.categoria);
+
+  this.setText("#pdfDescripcion", data.sistema.descripcion);
+
+  this.setText("#pdfPaneles", data.sistema.paneles);
+
+  this.setText("#pdfPotencia", `${data.sistema.potencia} kWp`);
+
+  this.setText("#pdfInversor", `${data.sistema.inversor} kW`);
+
+  this.setText(
+    "#pdfProduccion",
+    `${this.number(data.sistema.produccion)} kWh/mes`,
+  );
+
+  /*=====================================================
+    DIAGRAMA
+    =====================================================*/
+
+  this.setText(
+    "#pdfFlowPaneles",
+    `${data.sistema.paneles} Paneles JA Solar 615W`,
+  );
+
+  this.setText("#pdfFlowInversor", `Inversor ${data.sistema.inversor} kW`);
+
+  /*=====================================================
+    RESUMEN TÉCNICO
+    =====================================================*/
+
+  this.setText("#pdfPotenciaTabla", `${data.sistema.potencia} kWp`);
+
+  this.setText(
+    "#pdfProduccionTabla",
+    `${this.number(data.sistema.produccion)} kWh / mes`,
+  );
+
+  /*=====================================================
+    PRESUPUESTO
+    =====================================================*/
+
+  this.setText("#pdfCantidadPaneles", data.sistema.paneles);
+
+  this.setText("#pdfValorPaneles", this.money(data.presupuesto.paneles));
+
+  this.setText("#pdfValorInversor", this.money(data.presupuesto.inversor));
+
+  this.setText("#pdfValorEstructura", this.money(data.presupuesto.estructura));
+
+  this.setText(
+    "#pdfValorProtecciones",
+    this.money(data.presupuesto.protecciones),
+  );
+
+  this.setText("#pdfValorCableado", this.money(data.presupuesto.cableado));
+
+  this.setText("#pdfValorIngenieria", this.money(data.presupuesto.ingenieria));
+
+  this.setText(
+    "#pdfValorInstalacion",
+    this.money(data.presupuesto.instalacion),
+  );
+
+  this.setText(
+    "#pdfValorLegalizacion",
+    this.money(data.presupuesto.legalizacion),
+  );
+
+  this.setText("#pdfTotal", this.money(data.presupuesto.total));
+
+  /*=====================================================
+    BENEFICIOS
+    =====================================================*/
+
+  this.setText("#pdfAhorroMensual", this.money(data.beneficios.ahorroMensual));
+
+  this.setText("#pdfAhorroAnual", this.money(data.beneficios.ahorroAnual));
+
+  this.setText("#pdfRetorno", `${data.beneficios.retorno} años`);
+
+  this.setText(
+    "#pdfProduccionAnual",
+    `${this.number(data.sistema.produccion * 12)} kWh`,
+  );
+
+  this.setText("#pdfCO2", `${this.number(data.beneficios.co2)} kg`);
+
+  this.setText("#pdfArboles", `${data.beneficios.arboles} árboles`);
+
+  console.log("✅ Propuesta rellenada correctamente.");
+};
+/*=========================================================
+GENERAR PDF
+=========================================================*/
+
+ProposalManager.prototype.generatePDF = async function (client) {
+  try {
+    /*==========================================
+        Cargar plantilla
+        ==========================================*/
+
+    const proposal = await this.loadTemplate();
+
+    if (!proposal) return;
+
+    /*==========================================
+        Llenar datos
+        ==========================================*/
+
+    this.fillTemplate(client);
+
+    console.log("🖨 Generando PDF...");
+
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    /*==========================================
+        Crear PDF
+        ==========================================*/
+
+    const pdf = new jspdf.jsPDF({
+      orientation: "portrait",
+
+      unit: "mm",
+
+      format: "a4",
+    });
+
+    const pageWidth = 210;
+
+    let firstPage = true;
+
+    /*==========================================
+        Capturar cada sección
+        ==========================================*/
+
+    const sections = proposal.querySelectorAll("section");
+
+    for (const section of sections) {
+      const canvas = await html2canvas(section, {
+        scale: 2,
+
+        useCORS: true,
+
+        backgroundColor: "#ffffff",
+
+        scrollX: 0,
+
+        scrollY: 0,
+      });
+
+      const imgData = canvas.toDataURL("image/png");
 
       const imgWidth = pageWidth;
 
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-      let heightLeft = imgHeight;
-
-      let position = 0;
-
-      const imgData = canvas.toDataURL("image/png");
+      if (!firstPage) {
+        pdf.addPage();
+      }
 
       pdf.addImage(
         imgData,
@@ -672,85 +620,144 @@ document.addEventListener("DOMContentLoaded", () => {
 
         0,
 
-        position,
+        0,
 
         imgWidth,
 
         imgHeight,
       );
 
-      heightLeft -= pageHeight;
-
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight;
-
-        pdf.addPage();
-
-        pdf.addImage(
-          imgData,
-
-          "PNG",
-
-          0,
-
-          position,
-
-          imgWidth,
-
-          imgHeight,
-        );
-
-        heightLeft -= pageHeight;
-      }
-
-      let fileName = "Propuesta_NovaEnergia.pdf";
-
-      if (proposalData.cliente.nombre) {
-        fileName =
-          "Propuesta_" +
-          proposalData.cliente.nombre.replace(/\s+/g, "_") +
-          ".pdf";
-      }
-
-      pdf.save(fileName);
-
-      proposal.generated = true;
-
-      console.log("✅ PDF generado correctamente.");
-    } catch (error) {
-      console.error(error);
-
-      alert("Ocurrió un error al generar el PDF.");
+      firstPage = false;
     }
+
+    /*==========================================
+        Guardar PDF
+        ==========================================*/
+
+    const safeName = client.nombre
+      .trim()
+      .replace(/\s+/g, "_")
+      .replace(/[^\w]/g, "");
+
+    pdf.save(`Propuesta_NovaEnergia_${safeName}.pdf`);
+
+    console.log("✅ PDF generado correctamente.");
+  } catch (error) {
+    console.error(error);
+
+    alert("No fue posible generar la propuesta.");
+  }
+};
+/*=========================================================
+FORMULARIO
+=========================================================*/
+
+ProposalManager.prototype.getClientData = function () {
+  return {
+    nombre: this.dom.inputName.value.trim(),
+
+    correo: this.dom.inputEmail.value.trim(),
+
+    telefono: this.dom.inputPhone.value.trim(),
+  };
+};
+
+/*=========================================================
+VALIDACIÓN
+=========================================================*/
+
+ProposalManager.prototype.validateClient = function (client) {
+  if (!client.nombre) {
+    alert("Ingresa el nombre del cliente.");
+
+    this.dom.inputName.focus();
+
+    return false;
   }
 
-  /*=====================================================
-    SUBMIT DEL FORMULARIO
-    =====================================================*/
+  if (!client.correo) {
+    alert("Ingresa un correo electrónico.");
 
-  if (form) {
-    form.addEventListener(
-      "submit",
+    this.dom.inputEmail.focus();
 
-      async (e) => {
-        e.preventDefault();
-
-        if (!validateForm()) return;
-
-        if (!checkProposal()) return;
-
-        saveClient();
-
-        fillProposal();
-
-        closeModal();
-
-        await generatePDF();
-
-        resetForm();
-      },
-    );
+    return false;
   }
 
-  console.log("🚀 Proposal.js 2.0 listo.");
-}); // ===== FIN DEL DOMContentLoaded =====
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(client.correo)) {
+    alert("El correo electrónico no es válido.");
+
+    this.dom.inputEmail.focus();
+
+    return false;
+  }
+
+  if (!client.telefono) {
+    alert("Ingresa un número de teléfono.");
+
+    this.dom.inputPhone.focus();
+
+    return false;
+  }
+
+  return true;
+};
+
+/*=========================================================
+LIMPIAR FORMULARIO
+=========================================================*/
+
+ProposalManager.prototype.resetForm = function () {
+  if (this.dom.form) {
+    this.dom.form.reset();
+  }
+};
+
+/*=========================================================
+EVENTO SUBMIT
+=========================================================*/
+
+ProposalManager.prototype.bindForm = function () {
+  if (!this.dom.form) return;
+
+  this.dom.form.addEventListener(
+    "submit",
+
+    async (e) => {
+      e.preventDefault();
+
+      if (!this.hasData()) {
+        alert("Primero debes finalizar el diagnóstico.");
+
+        return;
+      }
+
+      const client = this.getClientData();
+
+      if (!this.validateClient(client)) {
+        return;
+      }
+
+      await this.generatePDF(client);
+
+      this.closeModal();
+
+      this.resetForm();
+    },
+  );
+};
+
+/*=========================================================
+AMPLIAR INIT
+=========================================================*/
+
+const originalInit = ProposalManager.prototype.init;
+
+ProposalManager.prototype.init = function () {
+  originalInit.call(this);
+
+  this.bindForm();
+
+  console.log("✅ Proposal.js 3.0 listo.");
+};
