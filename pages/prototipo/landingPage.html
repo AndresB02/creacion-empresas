@@ -36,11 +36,9 @@
 
               <li><a href="#servicios">Servicios</a></li>
 
-              <li><a href="#tecnologia">Tecnología</a></li>
+              <li><a href="#ecosistema">Tecnología</a></li>
 
-              <li><a href="#beneficios">Beneficios</a></li>
-
-              <li><a href="#contacto">Contacto</a></li>
+              <li><a href="#diagnostico">Simula tu inversión</a></li>
             </ul>
 
             <a href="#contacto" class="btn-nav"> Solicitar asesoría </a>
@@ -396,6 +394,98 @@
           <button class="ecosistema-arrow" id="nextSlide">→</button>
         </div>
       </section>
+      <!-- =========================================================
+     MODAL ECOSISTEMA NOVAENERGIA
+========================================================= -->
+
+      <div class="ecosistema-modal" id="ecosistemaModal">
+        <!-- FONDO OSCURO -->
+        <div class="ecosistema-modal-overlay" id="ecosistemaModalOverlay"></div>
+
+        <!-- CONTENIDO DEL MODAL -->
+        <div
+          class="ecosistema-modal-content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="ecosistemaModalTitle"
+        >
+          <!-- BOTÓN CERRAR -->
+          <button
+            type="button"
+            class="ecosistema-modal-close"
+            id="ecosistemaModalClose"
+            aria-label="Cerrar"
+          >
+            &times;
+          </button>
+
+          <!-- CABECERA -->
+          <div class="ecosistema-modal-header">
+            <div class="ecosistema-modal-number" id="ecosistemaModalNumber">
+              01
+            </div>
+
+            <div class="ecosistema-modal-heading">
+              <span class="ecosistema-modal-label" id="ecosistemaModalLabel">
+                ETAPA DEL ECOSISTEMA
+              </span>
+
+              <h2 id="ecosistemaModalTitle">Diagnóstico Energético</h2>
+            </div>
+          </div>
+
+          <!-- DESCRIPCIÓN -->
+          <div class="ecosistema-modal-description">
+            <p id="ecosistemaModalDescription">
+              Analizamos el comportamiento energético de tu vivienda para
+              identificar oportunidades de ahorro y definir la mejor estrategia
+              para cada proyecto.
+            </p>
+          </div>
+
+          <!-- INFORMACIÓN -->
+          <div class="ecosistema-modal-grid">
+            <!-- COLUMNA ¿QUÉ HACEMOS? -->
+            <div class="ecosistema-modal-column">
+              <h3>¿Qué hacemos?</h3>
+
+              <ul id="ecosistemaModalActions">
+                <!-- El contenido lo pondrá JavaScript -->
+              </ul>
+            </div>
+
+            <!-- COLUMNA ¿QUÉ OBTIENES? -->
+            <div class="ecosistema-modal-column">
+              <h3>¿Qué obtienes?</h3>
+
+              <ul id="ecosistemaModalBenefits">
+                <!-- El contenido lo pondrá JavaScript -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- SEPARADOR -->
+          <div class="ecosistema-modal-divider"></div>
+
+          <!-- CTA -->
+          <div class="ecosistema-modal-footer">
+            <div class="ecosistema-modal-footer-text">
+              <strong> ¿Quieres conocer cómo podemos ayudarte? </strong>
+
+              <span> Nuestro equipo puede orientarte sobre esta etapa. </span>
+            </div>
+
+            <a
+              href="#contacto"
+              class="ecosistema-modal-btn"
+              id="ecosistemaModalCTA"
+            >
+              Solicitar información
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
       <!--==================================================
     SERVICIOS HOGAR
 ===================================================-->
@@ -690,7 +780,7 @@
 
             <!-- Botón -->
 
-            <a href="#contacto" class="hogar-modal-btn">
+            <a href="#contacto" class="hogar-modal-btn" id="hogarModalContacto">
               Solicitar asesoría
 
               <svg
@@ -713,9 +803,6 @@
 ==========================================================-->
 
       <section class="nova-diagnostico" id="diagnostico">
-        <button id="novaClose" class="nova-close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
         <div class="nova-container">
           <!-- Encabezado -->
 
@@ -1658,6 +1745,551 @@ MODAL PROPUESTA PERSONALIZADA
           </form>
         </div>
       </div>
+      <!-- =========================================================
+     CONTACTO NOVAENERGIA
+========================================================= -->
+
+      <section class="nova-contacto" id="contacto">
+        <div class="nova-contacto-container">
+          <!-- =====================================================
+         ENCABEZADO
+    ====================================================== -->
+
+          <div class="nova-contacto-header">
+            <span class="nova-contacto-badge"> Hablemos de tu proyecto </span>
+
+            <h2>
+              Diseñemos juntos la
+              <span>solución energética para tu hogar.</span>
+            </h2>
+
+            <p>
+              Cuéntanos qué necesitas y nuestro equipo te orientará sobre la
+              solución más adecuada para tu vivienda.
+            </p>
+          </div>
+
+          <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+          <div class="nova-contacto-grid">
+            <!-- ===================================================
+           COLUMNA INFORMACIÓN
+      ==================================================== -->
+
+            <div class="nova-contacto-info">
+              <div class="nova-contacto-intro">
+                <span class="nova-contacto-label"> NOVAENERGIA </span>
+
+                <h3>
+                  Tu vivienda puede
+                  <span>aprovechar mejor la energía.</span>
+                </h3>
+
+                <p>
+                  Analizamos tus necesidades para ayudarte a encontrar una
+                  solución que combine generación solar, almacenamiento,
+                  monitoreo y eficiencia energética.
+                </p>
+              </div>
+
+              <!-- ================================================
+             BENEFICIOS
+        ================================================= -->
+
+              <div class="nova-contacto-beneficios">
+                <div class="nova-contacto-beneficio">
+                  <div class="nova-contacto-beneficio-icon">☀️</div>
+
+                  <div>
+                    <strong>Generación solar</strong>
+
+                    <span> Produce energía para tu vivienda. </span>
+                  </div>
+                </div>
+
+                <div class="nova-contacto-beneficio">
+                  <div class="nova-contacto-beneficio-icon">🔋</div>
+
+                  <div>
+                    <strong>Almacenamiento</strong>
+
+                    <span> Aprovecha la energía cuando más la necesitas. </span>
+                  </div>
+                </div>
+
+                <div class="nova-contacto-beneficio">
+                  <div class="nova-contacto-beneficio-icon">📊</div>
+
+                  <div>
+                    <strong>Monitoreo inteligente</strong>
+
+                    <span>
+                      Conoce el comportamiento energético de tu hogar.
+                    </span>
+                  </div>
+                </div>
+
+                <div class="nova-contacto-beneficio">
+                  <div class="nova-contacto-beneficio-icon">⚡</div>
+
+                  <div>
+                    <strong>Mayor eficiencia</strong>
+
+                    <span>
+                      Identifica oportunidades para reducir tus costos.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================================================
+             MENSAJE FINAL
+        ================================================= -->
+
+              <div class="nova-contacto-asistencia">
+                <span>💬</span>
+
+                <p>
+                  <strong>¿No sabes exactamente qué necesitas?</strong>
+                  No te preocupes. Cuéntanos tu situación y te ayudaremos a
+                  identificar el camino adecuado.
+                </p>
+              </div>
+            </div>
+
+            <!-- ===================================================
+           FORMULARIO
+      ==================================================== -->
+
+            <div class="nova-contacto-form-wrapper">
+              <form
+                class="nova-contacto-form"
+                id="novaContactoForm"
+                autocomplete="off"
+              >
+                <!-- =================================================
+               DATOS PERSONALES
+          ================================================== -->
+
+                <div class="nova-contacto-form-heading">
+                  <span> 01 </span>
+
+                  <div>
+                    <h3>Tus datos</h3>
+
+                    <p>Necesitamos estos datos para poder contactarte.</p>
+                  </div>
+                </div>
+
+                <!-- NOMBRE -->
+
+                <div class="nova-contacto-field">
+                  <label for="contactoNombre"> Nombre completo </label>
+
+                  <input
+                    type="text"
+                    id="contactoNombre"
+                    name="nombre"
+                    placeholder="Ej. Juan Pérez"
+                    required
+                  />
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="nova-contacto-field">
+                  <label for="contactoEmail"> Correo electrónico </label>
+
+                  <input
+                    type="email"
+                    id="contactoEmail"
+                    name="email"
+                    placeholder="correo@ejemplo.com"
+                    required
+                  />
+                </div>
+
+                <!-- TELEFONO -->
+
+                <div class="nova-contacto-field">
+                  <label for="contactoTelefono"> Teléfono / WhatsApp </label>
+
+                  <input
+                    type="tel"
+                    id="contactoTelefono"
+                    name="telefono"
+                    placeholder="Ej. 300 123 4567"
+                    required
+                  />
+                </div>
+
+                <!-- =================================================
+               NECESIDAD
+          ================================================== -->
+
+                <div class="nova-contacto-form-heading">
+                  <span> 02 </span>
+
+                  <div>
+                    <h3>¿Qué necesitas?</h3>
+
+                    <p>
+                      Selecciona la opción que más se acerque a tu necesidad.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- SOLUCIÓN -->
+
+                <div class="nova-contacto-field">
+                  <label for="contactoNecesidad"> Solución de interés </label>
+
+                  <select id="contactoNecesidad" name="necesidad" required>
+                    <option value="">Selecciona una opción</option>
+
+                    <option value="solar">
+                      Generación solar para mi vivienda
+                    </option>
+
+                    <option value="almacenamiento">
+                      Almacenamiento de energía
+                    </option>
+
+                    <option value="independencia">
+                      Independencia energética
+                    </option>
+
+                    <option value="ahorro">
+                      Reducir mi factura de energía
+                    </option>
+
+                    <option value="eficiencia">
+                      Optimizar el consumo de mi vivienda
+                    </option>
+
+                    <option value="ampliacion">
+                      Ampliar o mejorar un sistema existente
+                    </option>
+
+                    <option value="orientacion">
+                      Quiero conocer qué solución necesito
+                    </option>
+
+                    <option value="otro">Otra consulta</option>
+                  </select>
+                </div>
+
+                <!-- =================================================
+               ETAPA DEL CLIENTE
+          ================================================== -->
+
+                <div class="nova-contacto-field">
+                  <label for="contactoEtapaCliente">
+                    ¿En qué etapa estás?
+                  </label>
+
+                  <select
+                    id="contactoEtapaCliente"
+                    name="etapaCliente"
+                    required
+                  >
+                    <option value="">Selecciona una opción</option>
+
+                    <option value="explorando">
+                      Apenas estoy explorando opciones
+                    </option>
+
+                    <option value="consumo">
+                      Quiero conocer mejor mi consumo energético
+                    </option>
+
+                    <option value="evaluando">
+                      Quiero evaluar una solución para mi vivienda
+                    </option>
+
+                    <option value="existente">
+                      Ya tengo un sistema y quiero mejorarlo
+                    </option>
+
+                    <option value="listo">
+                      Estoy listo para iniciar un proyecto
+                    </option>
+                  </select>
+                </div>
+
+                <!-- =================================================
+               INFORMACIÓN DEL ECOSISTEMA
+          ================================================== -->
+
+                <!--
+            Este campo será utilizado por JavaScript.
+
+            Si el usuario llega desde:
+
+            Ecosistema
+            → Diagnóstico Energético
+            → Solicitar información
+
+            aquí aparecerá automáticamente:
+
+            Diagnóstico Energético
+          -->
+
+                <input
+                  type="hidden"
+                  id="contactoEtapa"
+                  name="etapaEcosistema"
+                  value=""
+                />
+
+                <!-- =================================================
+               MENSAJE
+          ================================================== -->
+
+                <div class="nova-contacto-form-heading">
+                  <span> 03 </span>
+
+                  <div>
+                    <h3>Cuéntanos más</h3>
+
+                    <p>Explícanos brevemente qué necesitas.</p>
+                  </div>
+                </div>
+
+                <div class="nova-contacto-field">
+                  <label for="contactoMensaje"> Mensaje </label>
+
+                  <textarea
+                    id="contactoMensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Cuéntanos qué estás buscando para tu vivienda..."
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- =================================================
+               PREFERENCIA DE CONTACTO
+          ================================================== -->
+
+                <div class="nova-contacto-field">
+                  <label> ¿Cómo prefieres que te contactemos? </label>
+
+                  <div class="nova-contacto-preferencias">
+                    <label class="nova-contacto-preferencia">
+                      <input
+                        type="radio"
+                        name="preferenciaContacto"
+                        value="whatsapp"
+                        required
+                      />
+
+                      <span> WhatsApp </span>
+                    </label>
+
+                    <label class="nova-contacto-preferencia">
+                      <input
+                        type="radio"
+                        name="preferenciaContacto"
+                        value="llamada"
+                      />
+
+                      <span> Llamada </span>
+                    </label>
+
+                    <label class="nova-contacto-preferencia">
+                      <input
+                        type="radio"
+                        name="preferenciaContacto"
+                        value="email"
+                      />
+
+                      <span> Correo </span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- =================================================
+               AUTORIZACIÓN
+          ================================================== -->
+
+                <div class="nova-contacto-consentimiento">
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="contactoConsentimiento"
+                      name="consentimiento"
+                      required
+                    />
+
+                    <span>
+                      Autorizo el uso de mis datos para que NovaEnergia pueda
+                      contactarme en relación con mi solicitud.
+                    </span>
+                  </label>
+                </div>
+
+                <!-- =================================================
+               BOTÓN
+          ================================================== -->
+
+                <button
+                  type="submit"
+                  class="nova-contacto-submit"
+                  id="novaContactoSubmit"
+                >
+                  <span> Solicitar información </span>
+
+                  <span class="nova-contacto-submit-arrow"> → </span>
+                </button>
+
+                <!-- =================================================
+               MENSAJE DE ESTADO
+          ================================================== -->
+
+                <div
+                  class="nova-contacto-message"
+                  id="novaContactoMessage"
+                  aria-live="polite"
+                ></div>
+              </form>
+              <!-- =====================================================
+     MENSAJE DE AGRADECIMIENTO
+====================================================== -->
+
+              <div
+                class="nova-contacto-gracias"
+                id="novaContactoGracias"
+                aria-live="polite"
+                aria-hidden="true"
+              >
+                <div class="nova-contacto-gracias-icon">✓</div>
+
+                <span class="nova-contacto-gracias-badge">
+                  SOLICITUD RECIBIDA
+                </span>
+
+                <h3>¡Gracias por contactarnos!</h3>
+
+                <p>
+                  Hemos recibido tu información correctamente. Nuestro equipo
+                  revisará tu solicitud y se pondrá en contacto contigo para
+                  orientarte sobre la solución energética más adecuada para tu
+                  vivienda.
+                </p>
+
+                <div class="nova-contacto-gracias-loader">
+                  <span></span>
+                  <small>Volviendo al formulario...</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- =========================================================
+     FOOTER NOVAENERGIA
+========================================================= -->
+
+      <footer class="nova-footer">
+        <div class="nova-footer-container">
+          <!-- =====================================================
+         COLUMNA MARCA
+    ====================================================== -->
+
+          <div class="nova-footer-brand">
+            <a href="#inicio" class="nova-footer-logo">
+              Nova<span>Energia</span>
+            </a>
+
+            <p>
+              Soluciones energéticas inteligentes para viviendas que buscan
+              aprovechar mejor la energía.
+            </p>
+
+            <a href="#contacto" class="nova-footer-cta">
+              Hablemos de tu proyecto
+              <span>→</span>
+            </a>
+          </div>
+
+          <!-- =====================================================
+         NAVEGACIÓN
+    ====================================================== -->
+
+          <div class="nova-footer-column">
+            <h3>Navegación</h3>
+
+            <ul>
+              <li>
+                <a href="#nosotros"> Nosotros </a>
+              </li>
+
+              <li>
+                <a href="#servicios"> Servicios </a>
+              </li>
+
+              <li>
+                <a href="#ecosistema"> Ecosistema </a>
+              </li>
+
+              <li>
+                <a href="#simulador"> Simulador </a>
+              </li>
+
+              <li>
+                <a href="#contacto"> Contacto </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- =====================================================
+         SOLUCIONES
+    ====================================================== -->
+
+          <div class="nova-footer-column">
+            <h3>Soluciones</h3>
+
+            <ul>
+              <li>
+                <a href="#servicios"> Sistema Solar </a>
+              </li>
+
+              <li>
+                <a href="#servicios"> Almacenamiento BESS </a>
+              </li>
+
+              <li>
+                <a href="#servicios"> Monitoreo Inteligente </a>
+              </li>
+
+              <li>
+                <a href="#servicios"> Mantenimiento </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
+        </div>
+
+        <!-- =====================================================
+       SEPARADOR
+  ====================================================== -->
+
+        <div class="nova-footer-divider"></div>
+
+        <!-- =====================================================
+       PARTE INFERIOR
+  ====================================================== -->
+
+        <div class="nova-footer-bottom">
+          <p>© 2026 NovaEnergia. Todos los derechos reservados.</p>
+        </div>
+      </footer>
     </main>
     <script src="../../js/menu.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -1668,5 +2300,6 @@ MODAL PROPUESTA PERSONALIZADA
     <script src="../../js/whyNova.js"></script>
     <script src="../../js/servicios.js"></script>
     <script src="../../js/diagnostico.js"></script>
+    <script src="../../js/contactForm.js"></script>
   </body>
 </html>

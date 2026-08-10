@@ -1273,3 +1273,713 @@ IMPRESIÓN
     box-shadow: none;
   }
 }
+/*======================================================*
+* RESPONSIVE · TABLET / PORTÁTIL
+* 769px - 1200px
+*======================================================*/
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  /*======================================================
+  DOCUMENTO
+  ======================================================*/
+
+  .proposal-container {
+    width: 100%;
+    max-width: 210mm;
+  }
+
+  .proposal-page {
+    width: 100%;
+    min-height: 297mm;
+  }
+
+  .proposal-page-content {
+    padding: 16mm 14mm 5mm 14mm;
+  }
+
+  /*======================================================
+  TIPOGRAFÍA
+  ======================================================*/
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  p {
+    font-size: 12.5px;
+  }
+
+  /*======================================================
+  PORTADA
+  ======================================================*/
+
+  .cover-center h1 {
+    font-size: 32px;
+  }
+
+  .cover-center h2 {
+    font-size: 17px;
+  }
+
+  .cover-center p {
+    width: 90%;
+  }
+
+  .cover-image img {
+    width: 68%;
+  }
+
+  /*======================================================
+  PERFIL DEL PROYECTO
+  ======================================================*/
+
+  .proposal-grid {
+    gap: 16px;
+  }
+
+  .proposal-card {
+    padding: 18px;
+  }
+
+  /*======================================================
+  ESPECIFICACIONES
+  ======================================================*/
+
+  .proposal-specs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /*======================================================
+  SISTEMA RECOMENDADO
+  ======================================================*/
+
+  .proposal-system {
+    gap: 24px;
+  }
+
+  .proposal-system-card {
+    padding: 24px;
+  }
+
+  .proposal-system-card h2 {
+    font-size: 25px;
+  }
+
+  .proposal-system-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .proposal-mini-card {
+    padding: 16px 10px;
+  }
+
+  .proposal-mini-card strong {
+    font-size: 15px;
+  }
+
+  /*======================================================
+  DIAGRAMA
+  ======================================================*/
+
+  .proposal-flow {
+    gap: 7px;
+  }
+
+  .flow-item {
+    padding: 13px 10px;
+  }
+
+  .flow-item h4 {
+    font-size: 13px;
+  }
+
+  .flow-item p {
+    font-size: 10px;
+  }
+
+  /*======================================================
+  PRESUPUESTO
+  ======================================================*/
+
+  .proposal-budget-table th {
+    padding: 11px 12px;
+  }
+
+  .proposal-budget-table td {
+    padding: 10px 12px;
+    font-size: 11.5px;
+  }
+
+  .proposal-total div {
+    padding: 16px 22px;
+  }
+
+  .proposal-total strong {
+    font-size: 25px;
+  }
+
+  /*======================================================
+  LISTA INCLUYE
+  ======================================================*/
+
+  .proposal-list {
+    gap: 10px 16px;
+  }
+
+  /*======================================================
+  BENEFICIOS
+  ======================================================*/
+
+  .proposal-benefits-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .proposal-benefit {
+    padding: 14px;
+  }
+
+  .proposal-benefit strong {
+    font-size: 21px;
+  }
+
+  /*======================================================
+  GARANTÍAS
+  ======================================================*/
+
+  .proposal-guarantee {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .proposal-guarantee-card {
+    padding: 15px;
+  }
+
+  /*======================================================
+  CONTACTO
+  ======================================================*/
+
+  .proposal-contact {
+    padding: 18px 25px 0;
+  }
+
+  .proposal-contact h2 {
+    font-size: 25px;
+  }
+
+  .proposal-contact p {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .proposal-contact-grid {
+    gap: 10px;
+  }
+
+  .proposal-contact-grid div {
+    padding: 9px;
+  }
+
+  .proposal-contact-grid span {
+    font-size: 12px;
+  }
+
+  /*======================================================
+  QR
+  ======================================================*/
+
+  .proposal-qr img {
+    width: 110px;
+    height: 110px;
+  }
+
+  /*======================================================
+  FOOTER
+  ======================================================*/
+
+  .proposal-footer {
+    margin-top: 20px;
+  }
+}
+
+/*======================================================*
+* RESPONSIVE · MÓVIL
+* 768px o menos
+*======================================================*/
+
+@media screen and (max-width: 768px) {
+  /*======================================================
+  DOCUMENTO
+  ======================================================*/
+
+  body {
+    background: var(--background);
+  }
+
+  .proposal-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .proposal-page {
+    width: 100%;
+    min-height: auto;
+    padding: 25px 18px;
+    overflow: visible;
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .proposal-page-content {
+    padding: 0;
+  }
+
+  .proposal-page-two {
+    padding: 25px 18px;
+  }
+
+  /*======================================================
+  TIPOGRAFÍA
+  ======================================================*/
+
+  h1 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /*======================================================
+  HEADER
+  ======================================================*/
+
+  .proposal-header {
+    margin-bottom: 18px;
+  }
+
+  .proposal-divider {
+    margin: 18px 0;
+  }
+
+  /*======================================================
+  CARDS
+  ======================================================*/
+
+  .proposal-card {
+    padding: 17px;
+    margin-top: 18px;
+  }
+
+  .proposal-card-two {
+    margin: 0;
+  }
+
+  /*======================================================
+  PORTADA
+  ======================================================*/
+
+  .cover {
+    min-height: 100vh;
+    padding: 30px 20px;
+  }
+
+  .cover-top {
+    margin-bottom: 10px;
+  }
+
+  .proposal-logo {
+    width: 120px;
+  }
+
+  .proposal-badge {
+    padding: 7px 15px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .cover-center h1 {
+    font-size: 27px;
+  }
+
+  .cover-center h2 {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .cover-center p {
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .cover-image {
+    margin: 18px 0;
+  }
+
+  .cover-image img {
+    width: 88%;
+  }
+
+  /*======================================================
+  FOOTER PORTADA
+  ======================================================*/
+
+  .cover-footer {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .cover-footer strong {
+    font-size: 10px;
+  }
+
+  .cover-footer span {
+    font-size: 13px;
+  }
+
+  /*======================================================
+  GRID
+  ======================================================*/
+
+  .proposal-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  /*======================================================
+  TABLAS
+  ======================================================*/
+
+  .proposal-table td {
+    padding: 8px 3px;
+    font-size: 11px;
+  }
+
+  .proposal-table td:first-child {
+    width: 55%;
+  }
+
+  /*======================================================
+  NOTAS
+  ======================================================*/
+
+  .proposal-note {
+    gap: 10px;
+    margin-top: 18px;
+    padding: 13px;
+  }
+
+  .proposal-note p {
+    font-size: 11px;
+  }
+
+  .proposal-note-two {
+    padding: 9px !important;
+  }
+
+  .proposal-note-two p {
+    line-height: 1.4;
+  }
+
+  .proposal-note-budget svg {
+    width: 42px;
+    height: 42px;
+  }
+
+  /*======================================================
+  ESPECIFICACIONES
+  ======================================================*/
+
+  .proposal-specs {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .proposal-spec {
+    padding: 12px;
+  }
+
+  .proposal-spec strong {
+    font-size: 13px;
+  }
+
+  /*======================================================
+  SISTEMA
+  ======================================================*/
+
+  .proposal-system {
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .proposal-system-card {
+    padding: 20px;
+  }
+
+  .proposal-system-card h2 {
+    font-size: 23px;
+  }
+
+  .proposal-system-card p {
+    font-size: 12px;
+  }
+
+  /*======================================================
+  MINI CARDS
+  ======================================================*/
+
+  .proposal-system-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .proposal-mini-card {
+    padding: 14px 10px;
+  }
+
+  .proposal-mini-card svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .proposal-mini-card span {
+    font-size: 10px;
+  }
+
+  .proposal-mini-card strong {
+    font-size: 14px;
+  }
+
+  /*======================================================
+  DIAGRAMA
+  ======================================================*/
+
+  .proposal-flow {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flow-item {
+    width: 100%;
+    padding: 13px;
+  }
+
+  .flow-item h4 {
+    font-size: 13px;
+  }
+
+  .flow-item p {
+    font-size: 10.5px;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  /*======================================================
+  PRESUPUESTO
+  ======================================================*/
+
+  .proposal-budget {
+    overflow-x: auto;
+  }
+
+  .proposal-budget-table {
+    min-width: 500px;
+  }
+
+  .proposal-budget-table th,
+  .proposal-budget-table td {
+    padding: 9px 10px;
+    font-size: 10.5px;
+  }
+
+  /*======================================================
+  TOTAL
+  ======================================================*/
+
+  .proposal-total {
+    margin-top: 15px;
+  }
+
+  .proposal-total div {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .proposal-total strong {
+    font-size: 23px;
+  }
+
+  /*======================================================
+  LISTA
+  ======================================================*/
+
+  .proposal-list {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 0;
+  }
+
+  .proposal-list li {
+    font-size: 11px;
+  }
+
+  /*======================================================
+  BENEFICIOS
+  ======================================================*/
+
+  .proposal-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .proposal-benefit {
+    padding: 14px;
+  }
+
+  .proposal-benefit strong {
+    font-size: 20px;
+  }
+
+  /*======================================================
+  GARANTÍAS
+  ======================================================*/
+
+  .proposal-guarantee {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .proposal-guarantee-card {
+    padding: 14px;
+  }
+
+  .proposal-guarantee-card h4 {
+    font-size: 13px;
+  }
+
+  .proposal-guarantee-card p {
+    font-size: 11px;
+  }
+
+  /*======================================================
+  DESTACADO
+  ======================================================*/
+
+  .proposal-highlight {
+    margin-top: 18px;
+    padding: 16px;
+  }
+
+  .proposal-highlight h3 {
+    font-size: 16px;
+  }
+
+  .proposal-highlight p {
+    font-size: 11px;
+  }
+
+  /*======================================================
+  CONTACTO
+  ======================================================*/
+
+  .proposal-contact {
+    margin-top: 20px;
+    padding: 20px 16px 0;
+    border-radius: 18px;
+  }
+
+  .proposal-contact h2 {
+    font-size: 22px;
+  }
+
+  .proposal-contact p {
+    width: 100%;
+    font-size: 11px;
+  }
+
+  /*======================================================
+  GRID CONTACTO
+  ======================================================*/
+
+  .proposal-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 20px 0;
+  }
+
+  .proposal-contact-grid div {
+    padding: 9px;
+  }
+
+  .proposal-contact-grid span {
+    font-size: 11px;
+  }
+
+  /*======================================================
+  QR
+  ======================================================*/
+
+  .proposal-qr {
+    margin-top: 15px;
+  }
+
+  .proposal-qr img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .proposal-qr p {
+    font-size: 10.5px;
+  }
+
+  /*======================================================
+  FOOTER
+  ======================================================*/
+
+  .proposal-footer {
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+
+  .proposal-footer p {
+    font-size: 10px;
+  }
+
+  .proposal-footer strong {
+    font-size: 11px;
+  }
+}

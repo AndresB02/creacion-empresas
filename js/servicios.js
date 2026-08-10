@@ -199,3 +199,29 @@ document.addEventListener("keydown", (e) => {
     cerrarModal();
   }
 });
+/*==================================================*
+ * IR AL FORMULARIO DE CONTACTO
+ *==================================================*/
+
+const hogarModalContacto = document.getElementById("hogarModalContacto");
+
+if (hogarModalContacto) {
+  hogarModalContacto.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Primero cerramos el modal
+    cerrarModal();
+
+    // Después vamos al formulario
+    setTimeout(() => {
+      const contacto = document.getElementById("contacto");
+
+      if (contacto) {
+        contacto.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }, 150);
+  });
+}

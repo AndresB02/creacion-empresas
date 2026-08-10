@@ -7,7 +7,7 @@
 
   padding: 120px 0;
 
-  background: #f7f9fc;
+  background: var(--bg);
 
   overflow: hidden;
 }
@@ -474,21 +474,7 @@
 .hogar-modal-btn:hover {
   background: var(--primary);
 }
-@media (max-width: 850px) {
-  .hogar-modal-body {
-    padding: 40px;
-  }
 
-  .hogar-modal-grid {
-    grid-template-columns: 1fr;
-
-    gap: 35px;
-  }
-
-  #modalTitle {
-    font-size: 2.3rem;
-  }
-}
 @keyframes modalUp {
   from {
     opacity: 0;
@@ -500,5 +486,347 @@
     opacity: 1;
 
     transform: translateY(0) scale(1);
+  }
+}
+/*====================================================*
+* RESPONSIVE SERVICIOS HOGAR
+* TABLETS GRANDES / PORTÁTILES PEQUEÑOS
+* 769px - 1200px
+*====================================================*/
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  /*==================================================*
+  * SECCIÓN
+  *==================================================*/
+
+  .hogar {
+    padding: 100px 0;
+  }
+
+  .hogar-container {
+    width: min(1100px, 90%);
+  }
+
+  /*==================================================*
+  * HEADER
+  *==================================================*/
+
+  .hogar-header {
+    width: min(820px, 100%);
+    margin-bottom: 70px;
+  }
+
+  .hogar-header h2 {
+    font-size: 2.6rem;
+  }
+
+  .hogar-header p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /*==================================================*
+  * GRID
+  *==================================================*/
+
+  .hogar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  /*==================================================*
+  * CARD
+  *==================================================*/
+
+  .hogar-card {
+    padding: 34px;
+    min-height: 340px;
+    border-radius: 26px;
+  }
+
+  .hogar-icon {
+    width: 74px;
+    height: 74px;
+    border-radius: 21px;
+    margin-bottom: 28px;
+  }
+
+  .hogar-icon svg {
+    width: 31px;
+    height: 31px;
+  }
+
+  .hogar-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .hogar-info p {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .hogar-btn {
+    margin-top: 30px;
+  }
+
+  /*==================================================*
+  * MODAL
+  *==================================================*/
+
+  .hogar-modal-content {
+    width: min(900px, 90%);
+    border-radius: 26px;
+  }
+
+  .hogar-modal-body {
+    padding: 50px;
+  }
+
+  #modalTitle {
+    font-size: 2.5rem;
+  }
+
+  #modalDescription {
+    font-size: 1rem;
+    margin-bottom: 38px;
+  }
+
+  .hogar-modal-grid {
+    gap: 40px;
+  }
+
+  .hogar-modal-column h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  #modalIncludes,
+  #modalBenefits {
+    gap: 15px;
+  }
+
+  #modalIncludes li,
+  #modalBenefits li {
+    font-size: 0.95rem;
+    padding-left: 28px;
+  }
+
+  .hogar-modal-divider {
+    margin: 38px 0;
+  }
+
+  .hogar-modal-btn {
+    margin-top: 40px;
+  }
+
+  .hogar-close {
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+}
+/*====================================================*
+* RESPONSIVE SERVICIOS HOGAR
+* MÓVILES / TABLETS PEQUEÑAS
+* MAX 768px
+*====================================================*/
+
+@media (max-width: 768px) {
+  /*==================================================*
+  * SECCIÓN
+  *==================================================*/
+
+  .hogar {
+    padding: 80px 0;
+  }
+
+  .hogar-container {
+    width: 90%;
+  }
+
+  /*==================================================*
+  * HEADER
+  *==================================================*/
+
+  .hogar-header {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .hogar-badge {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .hogar-header h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .hogar-header p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /*==================================================*
+  * GRID
+  *==================================================*/
+
+  .hogar-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /*==================================================*
+  * CARD
+  *==================================================*/
+
+  .hogar-card {
+    padding: 28px;
+    min-height: auto;
+    border-radius: 24px;
+  }
+
+  .hogar-card:hover {
+    transform: none;
+  }
+
+  .hogar-icon {
+    width: 68px;
+    height: 68px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+  }
+
+  .hogar-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hogar-info h3 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .hogar-info p {
+    max-width: 100%;
+    font-size: 0.92rem;
+    line-height: 1.75;
+  }
+
+  .hogar-btn {
+    margin-top: 26px;
+    font-size: 0.95rem;
+  }
+
+  .hogar-btn svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  /*==================================================*
+  * MODAL
+  *==================================================*/
+
+  .hogar-modal {
+    padding: 15px;
+  }
+
+  .hogar-modal-content {
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 24px;
+  }
+
+  .hogar-modal-body {
+    padding: 70px 26px 30px;
+  }
+
+  /*==================================================*
+  * BOTÓN CERRAR
+  *==================================================*/
+
+  .hogar-close {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  /*==================================================*
+  * MODAL HEADER
+  *==================================================*/
+
+  #modalBadge {
+    padding: 9px 18px;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  #modalTitle {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    padding-right: 15px;
+  }
+
+  #modalDescription {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 32px;
+  }
+
+  /*==================================================*
+  * MODAL GRID
+  *==================================================*/
+
+  .hogar-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hogar-modal-column h4 {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+  }
+
+  #modalIncludes,
+  #modalBenefits {
+    gap: 13px;
+  }
+
+  #modalIncludes li,
+  #modalBenefits li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding-left: 27px;
+  }
+
+  /*==================================================*
+  * SEPARADOR
+  *==================================================*/
+
+  .hogar-modal-divider {
+    margin: 32px 0;
+  }
+
+  /*==================================================*
+  * BOTÓN MODAL
+  *==================================================*/
+
+  .hogar-modal-btn {
+    width: 100%;
+    max-width: 280px;
+    height: 56px;
+    margin: 30px auto 0;
+    font-size: 0.9rem;
   }
 }

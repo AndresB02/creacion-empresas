@@ -250,3 +250,231 @@ BOTONES
 
   box-shadow: 0 12px 24px rgba(79, 125, 245, 0.25);
 }
+/*======================================================*
+* RESPONSIVE MODAL PROPUESTA
+* 769px - 1200px
+*======================================================*/
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  /*==================================================*
+  * MODAL
+  *==================================================*/
+
+  .proposal-modal {
+    padding: 1.5rem;
+  }
+
+  /*==================================================*
+  * CONTENEDOR
+  *==================================================*/
+
+  .proposal-modal-content {
+    width: min(100%, 540px);
+    padding: 1.8rem;
+    border-radius: 22px;
+  }
+
+  /*==================================================*
+  * HEADER
+  *==================================================*/
+
+  .proposal-header {
+    margin-bottom: 1.7rem;
+  }
+
+  .proposal-header h2 {
+    font-size: 1.7rem;
+  }
+
+  .proposal-header p {
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /*==================================================*
+  * CERRAR
+  *==================================================*/
+
+  .proposal-close {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+  }
+
+  /*==================================================*
+  * CAMPOS
+  *==================================================*/
+
+  .proposal-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .proposal-group label {
+    font-size: 0.95rem;
+  }
+
+  .proposal-group input {
+    padding: 0.85rem 0.95rem;
+  }
+
+  /*==================================================*
+  * INFORMACIÓN
+  *==================================================*/
+
+  .proposal-info {
+    padding: 0.9rem;
+    margin: 1.3rem 0;
+  }
+
+  .proposal-info p {
+    font-size: 0.88rem;
+  }
+
+  /*==================================================*
+  * BOTONES
+  *==================================================*/
+
+  .proposal-actions {
+    margin-top: 1.7rem;
+    gap: 0.8rem;
+  }
+
+  .proposal-btn-secondary,
+  .proposal-btn-primary {
+    padding: 0.8rem 1.25rem;
+  }
+}
+/*======================================================*
+* RESPONSIVE MODAL PROPUESTA
+* MÓVILES / TABLETS PEQUEÑAS
+* MAX 768px
+*======================================================*/
+
+@media (max-width: 768px) {
+  /*==================================================*
+  * MODAL
+  *==================================================*/
+
+  .proposal-modal {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  /*==================================================*
+  * CONTENEDOR
+  *==================================================*/
+
+  .proposal-modal-content {
+    width: 100%;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+
+    padding: 1.5rem;
+
+    border-radius: 20px;
+  }
+
+  /*==================================================*
+  * HEADER
+  *==================================================*/
+
+  .proposal-header {
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .proposal-header h2 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .proposal-header p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  /*==================================================*
+  * BOTÓN CERRAR
+  *==================================================*/
+
+  .proposal-close {
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    font-size: 1.3rem;
+  }
+
+  /*==================================================*
+  * FORMULARIO
+  *==================================================*/
+
+  .proposal-group {
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .proposal-group label {
+    font-size: 0.9rem;
+  }
+
+  .proposal-group input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 0.85rem 0.9rem;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
+  }
+
+  /*==================================================*
+  * INFORMACIÓN
+  *==================================================*/
+
+  .proposal-info {
+    gap: 0.6rem;
+
+    padding: 0.85rem;
+
+    margin: 1.2rem 0;
+
+    border-radius: 14px;
+  }
+
+  .proposal-info span {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .proposal-info p {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  /*==================================================*
+  * BOTONES
+  *==================================================*/
+
+  .proposal-actions {
+    flex-direction: column-reverse;
+
+    gap: 0.7rem;
+
+    margin-top: 1.5rem;
+  }
+
+  .proposal-btn-secondary,
+  .proposal-btn-primary {
+    width: 100%;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: 12px;
+
+    font-size: 0.9rem;
+  }
+}
