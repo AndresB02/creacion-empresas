@@ -1,0 +1,1089 @@
+/*====================================================*
+* FOCUS GROUP NOVAENERGIA
+*====================================================*/
+
+:root {
+  --primary: #182240;
+  --secondary: #24356f;
+  --accent: #4f7df5;
+  --success: #6abf69;
+
+  --bg: #f6f8fc;
+  --surface: #ffffff;
+
+  --text: #182240;
+  --text-light: #64748b;
+
+  --border: #e6ebf5;
+
+  --radius: 24px;
+
+  --shadow: 0 12px 35px rgba(24, 34, 64, 0.08);
+  --shadow-hover: 0 22px 50px rgba(24, 34, 64, 0.15);
+
+  --transition: 0.35s ease;
+}
+
+.focus-group {
+  position: relative;
+  padding: 0;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/*====================================================*
+* DECORACIÓN DE FONDO
+*====================================================*/
+
+.focus-group::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  top: -220px;
+  right: -180px;
+  border-radius: 50%;
+  background: rgba(79, 125, 245, 0.08);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.focus-group::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  bottom: -220px;
+  left: -180px;
+  border-radius: 50%;
+  background: rgba(79, 125, 245, 0.06);
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+/*====================================================*
+* CONTENEDOR
+*====================================================*/
+
+.focus-group-container {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/*====================================================*
+* HEADER
+*====================================================*/
+
+.focus-group-header {
+  width: min(850px, 100%);
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.focus-group-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(79, 125, 245, 0.12);
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.focus-group-header h2 {
+  margin-bottom: 24px;
+  color: var(--primary);
+  font-size: 3rem;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.focus-group-header h2 span {
+  color: var(--accent);
+}
+
+.focus-group-header p {
+  max-width: 760px;
+  margin: auto;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+/*====================================================*
+* VIDEO CARD
+*====================================================*/
+
+.focus-group-video-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 70px;
+}
+
+.focus-group-video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.focus-group-video-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.focus-group-video-header h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.7rem;
+  line-height: 1.3;
+}
+
+.focus-group-video-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/*====================================================*
+* VIDEO
+*====================================================*/
+
+.focus-group-video-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 22px;
+  background: var(--primary);
+}
+
+.focus-group-video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*====================================================*
+* CONTEXTO
+*====================================================*/
+
+.focus-group-context {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+  align-items: start;
+  padding: 38px;
+  margin-bottom: 80px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+.focus-group-context-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.focus-group-context-content > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.focus-group-context-content h3 {
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.focus-group-context-content p {
+  max-width: 850px;
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/*====================================================*
+* SECCIONES
+*====================================================*/
+
+.focus-group-section {
+  margin-bottom: 80px;
+}
+
+.focus-group-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  margin-bottom: 32px;
+}
+
+.focus-group-section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  background: rgba(79, 125, 245, 0.12);
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.focus-group-section-label {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.focus-group-section-heading h3 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+/*====================================================*
+* PARTICIPANTES
+*====================================================*/
+
+.focus-group-participants {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.focus-group-participant {
+  padding: 25px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.focus-group-participant:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.focus-group-participant strong {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--primary);
+  font-size: 1rem;
+}
+
+.focus-group-participant span {
+  color: var(--text-light);
+  font-size: 0.85rem;
+}
+
+/*====================================================*
+* INSIGHTS
+*====================================================*/
+
+.focus-group-insights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.focus-group-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.focus-group-insight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: rgba(79, 125, 245, 0.12);
+  color: var(--accent);
+  font-size: 1.35rem;
+}
+
+.focus-group-insight strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.focus-group-insight p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/*====================================================*
+* RESULTADO DE LANDING
+*====================================================*/
+
+.focus-group-result {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 0;
+  overflow: hidden;
+  border-radius: 26px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: var(--shadow-hover);
+}
+
+.focus-group-result-main {
+  padding: 42px;
+}
+
+.focus-group-result-badge {
+  display: inline-flex;
+  padding: 7px 14px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.focus-group-result-main h3 {
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.focus-group-result-main p {
+  max-width: 700px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+}
+
+.focus-group-result-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 38px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.focus-group-result-side div {
+  padding: 20px;
+  border-radius: 17px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.focus-group-result-side strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.focus-group-result-side span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/*====================================================*
+* DOS COLUMNAS
+*====================================================*/
+
+.focus-group-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.focus-group-text-card {
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.focus-group-text-card h4 {
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-size: 1.15rem;
+}
+
+.focus-group-text-card p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/*====================================================*
+* HIGHLIGHT
+*====================================================*/
+
+.focus-group-highlight {
+  position: relative;
+  padding: 50px;
+  margin-bottom: 70px;
+  overflow: hidden;
+  border-radius: 28px;
+  background: rgba(79, 125, 245, 0.08);
+  border: 1px solid rgba(79, 125, 245, 0.2);
+}
+
+.focus-group-highlight::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -110px;
+  bottom: -130px;
+  border-radius: 50%;
+  background: rgba(79, 125, 245, 0.12);
+  pointer-events: none;
+}
+
+.focus-group-highlight-label {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.focus-group-highlight h3 {
+  max-width: 850px;
+  margin-bottom: 16px;
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.focus-group-highlight p {
+  max-width: 850px;
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/*====================================================*
+* PROPIEDAD HORIZONTAL
+*====================================================*/
+
+.focus-group-horizontal {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 25px;
+  align-items: center;
+  padding: 38px;
+  margin-bottom: 80px;
+  border-radius: 25px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.focus-group-horizontal-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 18px;
+  background: rgba(79, 125, 245, 0.12);
+  color: var(--accent);
+  font-size: 1.5rem;
+}
+
+.focus-group-horizontal > div:last-child > span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.focus-group-horizontal h3 {
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.focus-group-horizontal p {
+  max-width: 850px;
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/*====================================================*
+* INTERÉS
+*====================================================*/
+
+.focus-group-interest {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  padding: 38px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+}
+
+.focus-group-interest-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: rgba(79, 125, 245, 0.12);
+  color: var(--accent);
+  font-size: 1.7rem;
+}
+
+.focus-group-interest h3 {
+  margin-bottom: 15px;
+  color: var(--primary);
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+
+.focus-group-interest p {
+  margin: 0 0 12px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.focus-group-interest p:last-child {
+  margin-bottom: 0;
+}
+
+/*====================================================*
+* CONCLUSIONES
+*====================================================*/
+
+.focus-group-conclusions {
+  margin-bottom: 70px;
+}
+
+.focus-group-conclusion-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.focus-group-conclusion {
+  padding: 27px 23px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  box-shadow: var(--shadow);
+}
+
+.focus-group-conclusion > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 18px;
+  border-radius: 13px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.focus-group-conclusion strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.focus-group-conclusion p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/*====================================================*
+* CIERRE
+*====================================================*/
+
+.focus-group-closing {
+  position: relative;
+  padding: 55px 45px;
+  overflow: hidden;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: var(--shadow-hover);
+}
+
+.focus-group-closing::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -150px;
+  right: -100px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.focus-group-closing > span {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.focus-group-closing h3 {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 15px;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.35;
+}
+
+.focus-group-closing p {
+  position: relative;
+  max-width: 750px;
+  margin: auto;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+}
+
+/*====================================================*
+* RESPONSIVE
+* 769px - 1200px
+*====================================================*/
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .focus-group {
+    padding: 100px 0;
+  }
+
+  .focus-group-container {
+    width: 90%;
+  }
+
+  .focus-group-header {
+    margin-bottom: 55px;
+  }
+
+  .focus-group-header h2 {
+    font-size: 2.6rem;
+  }
+
+  .focus-group-video-card {
+    padding: 25px;
+    margin-bottom: 60px;
+  }
+
+  .focus-group-participants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-group-insights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-group-conclusion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .focus-group-result-main {
+    padding: 35px;
+  }
+
+  .focus-group-result-side {
+    padding: 30px;
+  }
+
+  .focus-group-highlight {
+    padding: 40px;
+  }
+}
+
+/*====================================================*
+* RESPONSIVE
+* MAX 768px
+*====================================================*/
+
+@media (max-width: 768px) {
+  .focus-group {
+    padding: 80px 0;
+  }
+
+  .focus-group-container {
+    width: 92%;
+  }
+
+  .focus-group-header {
+    margin-bottom: 45px;
+  }
+
+  .focus-group-badge {
+    padding: 8px 17px;
+    font-size: 0.78rem;
+  }
+
+  .focus-group-header h2 {
+    font-size: 2.15rem;
+    line-height: 1.2;
+  }
+
+  .focus-group-header p {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /* VIDEO */
+  .focus-group-video-card {
+    padding: 18px;
+    border-radius: 22px;
+    margin-bottom: 55px;
+  }
+
+  .focus-group-video-header {
+    margin-bottom: 18px;
+  }
+
+  .focus-group-video-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .focus-group-video-number {
+    width: 43px;
+    height: 43px;
+    border-radius: 13px;
+    font-size: 0.85rem;
+  }
+
+  .focus-group-video-wrapper {
+    border-radius: 16px;
+  }
+
+  /* CONTEXTO */
+  .focus-group-context {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 27px;
+    margin-bottom: 60px;
+    border-radius: 21px;
+  }
+
+  .focus-group-context-number {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+  }
+
+  .focus-group-context-content h3 {
+    font-size: 1.45rem;
+  }
+
+  /* HEADINGS */
+  .focus-group-section {
+    margin-bottom: 60px;
+  }
+
+  .focus-group-section-heading {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .focus-group-section-heading > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 13px;
+    font-size: 0.8rem;
+  }
+
+  .focus-group-section-heading h3 {
+    font-size: 1.45rem;
+  }
+
+  /* PARTICIPANTES */
+  .focus-group-participants {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .focus-group-participant {
+    padding: 20px 16px;
+    border-radius: 17px;
+  }
+
+  /* INSIGHTS */
+  .focus-group-insights {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .focus-group-insight {
+    padding: 22px;
+    border-radius: 19px;
+  }
+
+  /* RESULTADO */
+  .focus-group-result {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .focus-group-result-main {
+    padding: 28px;
+  }
+
+  .focus-group-result-main h3 {
+    font-size: 1.45rem;
+  }
+
+  .focus-group-result-side {
+    padding: 20px 28px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* DOS COLUMNAS */
+  .focus-group-two-column {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .focus-group-text-card {
+    padding: 23px;
+    border-radius: 19px;
+  }
+
+  /* HIGHLIGHT */
+  .focus-group-highlight {
+    padding: 30px 24px;
+    margin-bottom: 60px;
+    border-radius: 22px;
+  }
+
+  .focus-group-highlight h3 {
+    font-size: 1.5rem;
+  }
+
+  /* PROPIEDAD HORIZONTAL */
+  .focus-group-horizontal {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 28px;
+    margin-bottom: 60px;
+    border-radius: 21px;
+  }
+
+  .focus-group-horizontal-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+  }
+
+  .focus-group-horizontal h3 {
+    font-size: 1.3rem;
+  }
+
+  /* INTERÉS */
+  .focus-group-interest {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 28px;
+    border-radius: 21px;
+  }
+
+  .focus-group-interest-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
+  }
+
+  .focus-group-interest h3 {
+    font-size: 1.3rem;
+  }
+
+  /* CONCLUSIONES */
+  .focus-group-conclusions {
+    margin-bottom: 60px;
+  }
+
+  .focus-group-conclusion-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .focus-group-conclusion {
+    padding: 21px 17px;
+    border-radius: 17px;
+  }
+
+  .focus-group-conclusion > span {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 13px;
+    border-radius: 11px;
+  }
+
+  /* CIERRE */
+  .focus-group-closing {
+    padding: 40px 25px;
+    border-radius: 23px;
+  }
+
+  .focus-group-closing h3 {
+    font-size: 1.55rem;
+  }
+
+  .focus-group-closing p {
+    font-size: 0.9rem;
+  }
+}
+
+/*====================================================*
+* RESPONSIVE
+* MAX 480px
+*====================================================*/
+
+@media (max-width: 480px) {
+  .focus-group {
+    padding: 65px 0;
+  }
+
+  .focus-group-container {
+    width: 90%;
+  }
+
+  .focus-group-header h2 {
+    font-size: 1.85rem;
+  }
+
+  .focus-group-header p {
+    font-size: 0.9rem;
+  }
+
+  .focus-group-video-card {
+    padding: 14px;
+  }
+
+  .focus-group-video-header {
+    align-items: center;
+  }
+
+  .focus-group-video-label {
+    font-size: 0.65rem;
+  }
+
+  .focus-group-video-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .focus-group-video-number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.75rem;
+  }
+
+  .focus-group-participants {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-group-conclusion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-group-highlight {
+    padding: 25px 20px;
+  }
+
+  .focus-group-highlight h3 {
+    font-size: 1.3rem;
+  }
+
+  .focus-group-context,
+  .focus-group-horizontal,
+  .focus-group-interest {
+    padding: 23px;
+  }
+
+  .focus-group-closing {
+    padding: 35px 20px;
+  }
+
+  .focus-group-closing h3 {
+    font-size: 1.35rem;
+  }
+}
