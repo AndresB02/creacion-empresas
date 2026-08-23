@@ -1,0 +1,1160 @@
+/* =========================================================
+   ACTIVIDAD 13 · PRESENTA TU PITCH
+   NOVA ENERGÍA
+   ========================================================= */
+
+.aca13-pitch {
+  --aca13-primary: #182240;
+  --aca13-secondary: #24356f;
+  --aca13-accent: #4f7df5;
+  --aca13-success: #6abf69;
+  --aca13-bg: #f6f8fc;
+  --aca13-surface: #ffffff;
+  --aca13-text: #182240;
+  --aca13-text-light: #64748b;
+  --aca13-border: #e6ebf5;
+  --aca13-radius: 24px;
+  --aca13-shadow: 0 12px 35px rgba(24, 34, 64, 0.08);
+  --aca13-shadow-hover: 0 22px 50px rgba(24, 34, 64, 0.15);
+  --aca13-transition: 0.35s ease;
+
+  width: 100%;
+  background: var(--aca13-bg);
+  color: var(--aca13-text);
+  font-family: "Poppins", sans-serif;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.aca13-pitch *,
+.aca13-pitch *::before,
+.aca13-pitch *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.aca13-pitch-container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.aca13-pitch-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 55px;
+}
+
+.aca13-pitch-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+  margin-bottom: 18px;
+
+  border-radius: 100px;
+
+  background: rgba(79, 125, 245, 0.1);
+  border: 1px solid rgba(79, 125, 245, 0.2);
+
+  color: var(--aca13-accent);
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.aca13-pitch-header h2 {
+  margin: 0 0 18px;
+
+  color: var(--aca13-primary);
+
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.aca13-pitch-header h2 span {
+  color: var(--aca13-accent);
+}
+
+.aca13-pitch-header p {
+  max-width: 820px;
+  margin: 0 auto;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   VIDEO DEL PITCH
+   ========================================================= */
+
+.aca13-pitch-video {
+  margin-bottom: 65px;
+
+  background: var(--aca13-surface);
+
+  border: 1px solid var(--aca13-border);
+  border-radius: var(--aca13-radius);
+
+  padding: 26px;
+
+  box-shadow: var(--aca13-shadow);
+}
+
+.aca13-pitch-video-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 22px;
+}
+
+.aca13-pitch-video-header h3 {
+  margin: 0 0 4px;
+
+  color: var(--aca13-primary);
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.aca13-pitch-video-header p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+}
+
+.aca13-pitch-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    var(--aca13-primary),
+    var(--aca13-secondary)
+  );
+
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.aca13-pitch-video-frame {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #0d172d;
+}
+
+.aca13-pitch-video-frame iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.aca13-pitch-section {
+  margin-bottom: 65px;
+}
+
+.aca13-pitch-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  margin-bottom: 25px;
+}
+
+.aca13-pitch-section-heading > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 14px;
+
+  background: #edf3ff;
+
+  color: var(--aca13-accent);
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.aca13-pitch-section-heading h3 {
+  margin: 0 0 5px;
+
+  color: var(--aca13-primary);
+
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.aca13-pitch-section-heading p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   PROBLEMA / OPORTUNIDAD
+   ========================================================= */
+
+.aca13-pitch-problem {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+
+  padding: 28px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+  border-left: 5px solid var(--aca13-accent);
+
+  border-radius: 20px;
+
+  box-shadow: var(--aca13-shadow);
+}
+
+.aca13-pitch-problem-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  border-radius: 16px;
+
+  background: #edf3ff;
+
+  font-size: 27px;
+}
+
+.aca13-pitch-problem h3 {
+  margin: 0 0 10px;
+
+  color: var(--aca13-primary);
+
+  font-size: 20px;
+}
+
+.aca13-pitch-problem p {
+  margin: 0 0 10px;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.aca13-pitch-problem p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================================================
+   SOLUCIONES
+   ========================================================= */
+
+.aca13-pitch-solutions {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+.aca13-pitch-solution {
+  padding: 24px 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+  border-radius: 20px;
+
+  text-align: center;
+
+  box-shadow: var(--aca13-shadow);
+
+  transition:
+    transform var(--aca13-transition),
+    box-shadow var(--aca13-transition);
+}
+
+.aca13-pitch-solution:hover {
+  transform: translateY(-6px);
+
+  box-shadow: var(--aca13-shadow-hover);
+}
+
+.aca13-pitch-solution-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 17px;
+
+  background: #edf3ff;
+
+  font-size: 27px;
+}
+
+.aca13-pitch-solution h3 {
+  margin: 0 0 9px;
+
+  color: var(--aca13-primary);
+
+  font-size: 16px;
+}
+
+.aca13-pitch-solution p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   PROPUESTA DE VALOR
+   ========================================================= */
+
+.aca13-pitch-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  margin-bottom: 65px;
+
+  padding: 38px;
+
+  border-radius: 25px;
+
+  background: linear-gradient(
+    135deg,
+    var(--aca13-primary),
+    var(--aca13-secondary)
+  );
+
+  color: #fff;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.aca13-pitch-value::after {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  right: -80px;
+  top: -90px;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.aca13-pitch-value-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 700px;
+}
+
+.aca13-pitch-value-label {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  color: #bcd0ff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.aca13-pitch-value h2 {
+  margin: 0 0 14px;
+
+  color: #fff;
+
+  font-size: clamp(25px, 3vw, 36px);
+
+  line-height: 1.2;
+}
+
+.aca13-pitch-value h2 span {
+  color: #9bb7ff;
+}
+
+.aca13-pitch-value p {
+  margin: 0;
+
+  color: #dce7ff;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.aca13-pitch-value-highlight {
+  position: relative;
+  z-index: 1;
+
+  min-width: 260px;
+
+  padding: 20px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.aca13-pitch-value-highlight strong {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #fff;
+
+  font-size: 16px;
+}
+
+.aca13-pitch-value-highlight span {
+  display: block;
+
+  color: #cbd9ff;
+
+  font-size: 13px;
+
+  line-height: 1.55;
+}
+
+/* =========================================================
+   CLIENTE
+   ========================================================= */
+
+.aca13-pitch-client {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 28px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+
+  border-radius: 20px;
+
+  box-shadow: var(--aca13-shadow);
+}
+
+.aca13-pitch-client-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+
+  flex-shrink: 0;
+
+  border-radius: 18px;
+
+  background: #edf3ff;
+
+  font-size: 30px;
+}
+
+.aca13-pitch-client h3 {
+  margin: 0 0 8px;
+
+  color: var(--aca13-primary);
+
+  font-size: 20px;
+}
+
+.aca13-pitch-client p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* =========================================================
+   COMPARACIÓN
+   ========================================================= */
+
+.aca13-pitch-comparison {
+  display: grid;
+
+  grid-template-columns: 1fr 70px 1fr;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.aca13-pitch-comparison-card {
+  padding: 26px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+
+  border-radius: 20px;
+
+  box-shadow: var(--aca13-shadow);
+}
+
+.aca13-pitch-comparison-card.featured {
+  background: linear-gradient(145deg, #f5f8ff, #edf3ff);
+
+  border-color: rgba(79, 125, 245, 0.35);
+}
+
+.aca13-pitch-comparison-card > span {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: var(--aca13-primary);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.aca13-pitch-comparison-card.featured > span {
+  color: var(--aca13-accent);
+}
+
+.aca13-pitch-comparison-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.aca13-pitch-comparison-card li {
+  position: relative;
+
+  padding-left: 22px;
+
+  margin-bottom: 10px;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.aca13-pitch-comparison-card li:last-child {
+  margin-bottom: 0;
+}
+
+.aca13-pitch-comparison-card li::before {
+  content: "✓";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  color: var(--aca13-success);
+
+  font-weight: 700;
+}
+
+.aca13-pitch-comparison-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: var(--aca13-accent);
+
+  color: #fff;
+
+  font-size: 23px;
+  font-weight: 600;
+
+  box-shadow: 0 8px 22px rgba(79, 125, 245, 0.25);
+}
+
+/* =========================================================
+   VALIDACIÓN
+   ========================================================= */
+
+.aca13-pitch-validation {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+
+  margin-bottom: 20px;
+}
+
+.aca13-pitch-validation-stat {
+  padding: 24px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+
+  border-radius: 18px;
+
+  box-shadow: var(--aca13-shadow);
+
+  text-align: center;
+}
+
+.aca13-pitch-validation-stat strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--aca13-primary);
+
+  font-size: 18px;
+}
+
+.aca13-pitch-validation-stat span {
+  display: block;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+}
+
+.aca13-pitch-validation-message {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 22px;
+
+  background: #f0f5ff;
+
+  border-left: 4px solid var(--aca13-accent);
+
+  border-radius: 14px;
+}
+
+.aca13-pitch-validation-message > span {
+  font-size: 23px;
+}
+
+.aca13-pitch-validation-message p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   AIDA
+   ========================================================= */
+
+.aca13-pitch-aida {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.aca13-pitch-aida-card {
+  position: relative;
+
+  padding: 25px 20px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+
+  border-radius: 20px;
+
+  box-shadow: var(--aca13-shadow);
+
+  overflow: hidden;
+}
+
+.aca13-pitch-aida-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  margin-bottom: 15px;
+
+  border-radius: 13px;
+
+  background: #edf3ff;
+
+  color: var(--aca13-accent);
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.aca13-pitch-aida-card h3 {
+  margin: 0 0 8px;
+
+  color: var(--aca13-primary);
+
+  font-size: 20px;
+}
+
+.aca13-pitch-aida-card p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+
+  line-height: 1.65;
+}
+
+/* =========================================================
+   LO CONSTRUIDO
+   ========================================================= */
+
+.aca13-pitch-built {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+}
+
+.aca13-pitch-built-item {
+  padding: 22px;
+
+  background: #fff;
+
+  border: 1px solid var(--aca13-border);
+
+  border-radius: 18px;
+
+  box-shadow: var(--aca13-shadow);
+
+  transition:
+    transform var(--aca13-transition),
+    box-shadow var(--aca13-transition);
+}
+
+.aca13-pitch-built-item:hover {
+  transform: translateY(-5px);
+
+  box-shadow: var(--aca13-shadow-hover);
+}
+
+.aca13-pitch-built-item > span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--aca13-accent);
+
+  font-size: 16px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.aca13-pitch-built-item strong {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--aca13-primary);
+
+  font-size: 20px;
+}
+
+.aca13-pitch-built-item p {
+  margin: 0;
+
+  color: var(--aca13-text-light);
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CIERRE
+   ========================================================= */
+
+.aca13-pitch-final {
+  position: relative;
+
+  margin-top: 15px;
+
+  padding: 55px 35px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(79, 125, 245, 0.3),
+      transparent 30%
+    ),
+    linear-gradient(135deg, var(--aca13-primary), var(--aca13-secondary));
+
+  color: #fff;
+
+  text-align: center;
+
+  box-shadow: 0 18px 45px rgba(24, 34, 64, 0.18);
+}
+
+.aca13-pitch-final::before {
+  content: "";
+
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  left: -90px;
+  bottom: -100px;
+}
+
+.aca13-pitch-final > * {
+  position: relative;
+  z-index: 1;
+}
+
+.aca13-pitch-final-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 18px;
+
+  margin-bottom: 18px;
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #dce7ff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.aca13-pitch-final h2 {
+  max-width: 750px;
+
+  margin: 0 auto 15px;
+
+  color: #fff;
+
+  font-size: clamp(28px, 4vw, 42px);
+
+  line-height: 1.15;
+}
+
+.aca13-pitch-final h2 span {
+  color: #9bb7ff;
+}
+
+.aca13-pitch-final p {
+  max-width: 760px;
+
+  margin: 0 auto 20px;
+
+  color: #dce7ff;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.aca13-pitch-final > strong {
+  display: block;
+
+  color: #fff;
+
+  font-size: 16px;
+
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   RESPONSIVE · TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+  .aca13-pitch {
+    padding: 55px 18px;
+  }
+
+  .aca13-pitch-solutions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aca13-pitch-aida {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aca13-pitch-built {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aca13-pitch-value {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .aca13-pitch-value-highlight {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE · MÓVIL
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .aca13-pitch {
+    padding: 45px 14px;
+  }
+
+  .aca13-pitch-header {
+    margin-bottom: 40px;
+  }
+
+  .aca13-pitch-header h2 {
+    font-size: 30px;
+  }
+
+  .aca13-pitch-header p {
+    font-size: 13px;
+  }
+
+  .aca13-pitch-video {
+    padding: 15px;
+
+    border-radius: 18px;
+  }
+
+  .aca13-pitch-video-header {
+    align-items: flex-start;
+  }
+
+  .aca13-pitch-number {
+    width: 42px;
+    height: 42px;
+  }
+
+  .aca13-pitch-video-header h3 {
+    font-size: 17px;
+  }
+
+  .aca13-pitch-video-header p {
+    font-size: 11px;
+  }
+
+  .aca13-pitch-section {
+    margin-bottom: 48px;
+  }
+
+  .aca13-pitch-section-heading {
+    gap: 12px;
+  }
+
+  .aca13-pitch-section-heading > span {
+    width: 42px;
+    height: 42px;
+  }
+
+  .aca13-pitch-section-heading h3 {
+    font-size: 21px;
+  }
+
+  .aca13-pitch-problem {
+    flex-direction: column;
+
+    padding: 22px;
+  }
+
+  .aca13-pitch-solutions {
+    grid-template-columns: 1fr;
+  }
+
+  .aca13-pitch-value {
+    padding: 28px 22px;
+
+    border-radius: 21px;
+  }
+
+  .aca13-pitch-value h2 {
+    font-size: 27px;
+  }
+
+  .aca13-pitch-client {
+    align-items: flex-start;
+    flex-direction: column;
+
+    padding: 22px;
+  }
+
+  .aca13-pitch-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .aca13-pitch-comparison-arrow {
+    transform: rotate(90deg);
+  }
+
+  .aca13-pitch-validation {
+    grid-template-columns: 1fr;
+  }
+
+  .aca13-pitch-aida {
+    grid-template-columns: 1fr;
+  }
+
+  .aca13-pitch-built {
+    grid-template-columns: 1fr;
+  }
+
+  .aca13-pitch-final {
+    padding: 40px 22px;
+  }
+
+  .aca13-pitch-final h2 {
+    font-size: 29px;
+  }
+}
+
+/* =========================================================
+   MÓVIL PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 430px) {
+  .aca13-pitch-header h2 {
+    font-size: 27px;
+  }
+
+  .aca13-pitch-badge {
+    font-size: 10px;
+  }
+
+  .aca13-pitch-video {
+    padding: 10px;
+  }
+
+  .aca13-pitch-video-frame {
+    border-radius: 12px;
+  }
+
+  .aca13-pitch-section-heading h3 {
+    font-size: 19px;
+  }
+
+  .aca13-pitch-problem,
+  .aca13-pitch-client {
+    padding: 18px;
+  }
+
+  .aca13-pitch-final {
+    border-radius: 20px;
+  }
+}

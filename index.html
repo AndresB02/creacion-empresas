@@ -452,12 +452,37 @@
                 <li class="menu-item">
                   <div
                     class="menu-header"
-                    onclick="toggleMenu('actividad12', this)"
+                    onclick="toggleMenu('actividad11', this)"
                   >
                     <span>📂 Actividad Semana 12</span>
                     <span>▼</span>
                   </div>
-                  <ul id="actividad12" class="submenu"></ul>
+                  <ul id="actividad11" class="submenu"></ul>
+                </li>
+                <li class="menu-item">
+                  <div
+                    class="menu-header"
+                    onclick="toggleMenu('actividad12', this)"
+                  >
+                    <span>📂 Actividad Semana 13</span>
+                    <span>▼</span>
+                  </div>
+                  <ul id="actividad12" class="submenu">
+                    <li>
+                      <a
+                        class="menu-link"
+                        onclick="
+                          cargarPagina(
+                            'pages/acaDos/actividad12/presentacionPitch.html',
+                            'css/acaDos/actividad12/presentacionPitch.css',
+                            this,
+                          )
+                        "
+                      >
+                        📄 Presentación Pitch
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
