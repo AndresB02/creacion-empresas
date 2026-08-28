@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/acaDos/actividad11/aida.css" />
+    <title>Aida</title>
+  </head>
+  <body>
+    <main>
+      <!-- ==========================================
+SECCIÓN ESTRATEGIA AIDA - NOVAENERGIA
+========================================== -->
+      <section class="nova-aida" id="estrategia-aida">
+        <div class="aida-header">
+          <span class="aida-badge">⚡ Tu energía, tus reglas</span>
+          <h2>
+            4 pasos para independizarte<br />
+            <span>de la red de energía tradicional</span>
+          </h2>
+          <p>
+            Olvídate de las tarifas altas y de la inestabilidad de la luz
+            convencional. Te enseñamos cómo blindar tu hogar, ahorrar hasta un
+            88% y recibir el acompañamiento experto que mereces.
+          </p>
+        </div>
+
+        <!-- GRID DE FLYERS (2x2) -->
+        <div class="aida-grid">
+          <!-- ATENCIÓN -->
+          <article class="aida-card">
+            <div class="aida-card-image">
+              <img
+                src="/assets/atencion-nova.jpg"
+                alt="Flyer de Atención - NovaEnergia"
+              />
+            </div>
+            <div class="aida-card-info">
+              <h3>A — Atención</h3>
+              <p>
+                Capturando miradas en medio de la crisis de la red eléctrica
+                nacional.
+              </p>
+              <button class="btn-aida" data-aida="atencion">Ver más →</button>
+            </div>
+          </article>
+
+          <!-- INTERÉS -->
+          <article class="aida-card">
+            <div class="aida-card-image">
+              <img
+                src="/assets/interes-nova.jpg"
+                alt="Flyer de Interés - NovaEnergia"
+              />
+            </div>
+            <div class="aida-card-info">
+              <h3>I — Interés</h3>
+              <p>
+                Educación digital interactiva mediante nuestro algoritmo de 10
+                pasos.
+              </p>
+              <button class="btn-aida" data-aida="interes">Ver más →</button>
+            </div>
+          </article>
+
+          <!-- DESEO -->
+          <article class="aida-card">
+            <div class="aida-card-image">
+              <!-- Espacio reservado para el tercer flyer -->
+              <img
+                src="/assets/deseo-nova.jpg"
+                alt="Flyer de Interés - NovaEnergia"
+              />
+            </div>
+            <div class="aida-card-info">
+              <h3>D — Deseo</h3>
+              <p>
+                Demostrando viabilidad financiera y un ahorro del 88% en la
+                factura.
+              </p>
+              <button class="btn-aida" data-aida="deseo">Ver más →</button>
+            </div>
+          </article>
+
+          <!-- ACCIÓN -->
+          <article class="aida-card">
+            <div class="aida-card-image">
+              <!-- Espacio reservado para el cuarto flyer -->
+              <img
+                src="/assets/accion-nova.jpg"
+                alt="Flyer de Interés - NovaEnergia"
+              />
+            </div>
+            <div class="aida-card-info">
+              <h3>A — Acción</h3>
+              <p>
+                El puente de datos y automatización hacia la asesoría técnica
+                especializada.
+              </p>
+              <button class="btn-aida" data-aida="accion">Ver más →</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- MODAL INTERACTIVO SPLIT-SCREEN -->
+        <div class="aida-modal" id="aidaModal">
+          <div class="aida-modal-overlay"></div>
+          <div class="aida-modal-container">
+            <button class="aida-modal-close" id="closeAidaModal">
+              &times;
+            </button>
+
+            <div class="aida-modal-body">
+              <!-- Columna Izquierda: Flyer -->
+              <div class="modal-col-left">
+                <img id="modalFlyerImg" src="" alt="Flyer Dinámico" />
+                <div
+                  id="modalFlyerPlaceholder"
+                  class="flyer-placeholder"
+                  style="display: none"
+                ></div>
+              </div>
+
+              <!-- Columna Derecha: Explicación Detallada -->
+              <div class="modal-col-right">
+                <span class="modal-badge-step" id="modalStep">Paso</span>
+                <h2 id="modalTitle">Título de la Sección</h2>
+                <div class="modal-description" id="modalText">
+                  <!-- El contenido se inyecta con JavaScript -->
+                </div>
+                <a
+                  href="#diagnostico"
+                  class="modal-action-btn"
+                  id="modalActionBtn"
+                  target="_blank"
+                  >Interactuar con la Plataforma</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

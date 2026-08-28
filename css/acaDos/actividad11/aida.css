@@ -1,0 +1,644 @@
+/* =========================================================
+   ESTILOS SECCIÓN AIDA
+   Responsive: Desktop / Tablet / Mobile
+========================================================= */
+
+.nova-aida {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.aida-header {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.aida-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  margin-bottom: 20px;
+  border-radius: 999px;
+  background: #edf3ff;
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.aida-header h2 {
+  margin: 15px 0;
+  color: #0f172a;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+}
+
+.aida-header h2 span {
+  color: #2563eb;
+}
+
+.aida-header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   GRID DE TARJETAS
+   Desktop: 2 columnas
+   Tablet: 2 columnas
+   Mobile: 1 columna
+========================================================= */
+
+.aida-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.aida-card {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  background-color: #0f172a;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.aida-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================================
+   IMAGEN DE TARJETA
+========================================================= */
+
+.aida-card-image {
+  position: relative;
+  width: 45%;
+  min-width: 45%;
+  overflow: hidden;
+  background: #0b132b;
+}
+
+.aida-card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.flyer-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* =========================================================
+   INFORMACIÓN TARJETA
+========================================================= */
+
+.aida-card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  min-width: 0;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+.aida-card-info h3 {
+  margin: 0 0 10px;
+  color: #2563eb;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.25;
+}
+
+.aida-card-info p {
+  margin: 0 0 20px;
+  color: #cbd5e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-aida {
+  align-self: flex-start;
+  padding: 8px 18px;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-aida:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.aida-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100dvh;
+  padding: 20px;
+
+  overflow-y: auto;
+}
+
+.aida-modal.active {
+  display: flex;
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.aida-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(11, 19, 43, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+/* =========================================================
+   CONTENEDOR MODAL
+========================================================= */
+
+.aida-modal-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1300px;
+  max-height: calc(100dvh - 40px);
+
+  overflow: hidden;
+
+  background-color: #1c2541;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+
+  animation: modalIn 0.4s ease;
+}
+
+@keyframes modalIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.aida-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.25);
+
+  color: #a0aec0;
+  border-radius: 50%;
+
+  font-size: 1.8rem;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.aida-modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* =========================================================
+   CUERPO MODAL
+   Desktop: 2 columnas
+========================================================= */
+
+.aida-modal-body {
+  display: flex;
+  width: 100%;
+  min-height: 480px;
+}
+
+/* =========================================================
+   COLUMNA IZQUIERDA
+========================================================= */
+
+.modal-col-left {
+  position: relative;
+  width: 50%;
+  min-width: 0;
+  background-color: #0b132b;
+}
+
+.modal-col-left img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+}
+
+/* =========================================================
+   COLUMNA DERECHA
+========================================================= */
+
+.modal-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 50%;
+  min-width: 0;
+
+  padding: clamp(30px, 5vw, 60px);
+}
+
+.modal-badge-step {
+  color: #2563eb;
+  font-size: 0.85rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.modal-col-right h2 {
+  margin: 10px 0 20px;
+  color: #ffffff;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+.modal-description p {
+  margin: 0 0 15px;
+  color: #cbd5e0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modal-description ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.modal-description li {
+  margin-bottom: 8px;
+  color: #cbd5e0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   BOTÓN MODAL
+========================================================= */
+
+.modal-action-btn {
+  align-self: flex-start;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 25px;
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  background-color: #2563eb;
+  color: #ffffff;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.modal-action-btn:hover {
+  background-color: #e09110;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   TABLET
+   769px - 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+  .aida-grid {
+    gap: 20px;
+  }
+
+  .aida-card-info {
+    padding: 22px;
+  }
+
+  .aida-modal-container {
+    max-width: 900px;
+  }
+
+  .modal-col-right {
+    padding: 35px;
+  }
+}
+
+/* =========================================================
+   TABLET PEQUEÑA / MÓVIL GRANDE
+   <= 768px
+========================================================= */
+
+@media (max-width: 768px) {
+  .aida-header {
+    margin-bottom: 35px;
+    padding: 0 16px;
+  }
+
+  .aida-badge {
+    padding: 8px 16px;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+  }
+
+  .aida-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  /* Tarjeta vertical */
+  .aida-card {
+    flex-direction: column;
+  }
+
+  .aida-card-image {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .aida-card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .flyer-placeholder {
+    min-height: 0;
+  }
+
+  .aida-card-info {
+    width: 100%;
+    padding: 22px;
+  }
+
+  /* Modal */
+  .aida-modal {
+    align-items: flex-start;
+    padding: 12px;
+    overflow-y: auto;
+  }
+
+  .aida-modal-container {
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    border-radius: 12px;
+  }
+
+  .aida-modal-body {
+    flex-direction: column;
+    max-height: calc(100dvh - 24px);
+    overflow-y: auto;
+  }
+
+  /*
+     Imagen del modal:
+     conserva proporción y NO se corta.
+  */
+  .modal-col-left {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+
+  .modal-col-left img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  /*
+     Texto debajo de la imagen
+  */
+  .modal-col-right {
+    width: 100%;
+    padding: 30px 22px 25px;
+  }
+
+  .modal-col-right h2 {
+    margin-bottom: 15px;
+  }
+
+  .modal-action-btn {
+    width: 100%;
+    align-self: stretch;
+  }
+}
+
+/* =========================================================
+   MÓVIL
+   <= 480px
+========================================================= */
+
+@media (max-width: 480px) {
+  .aida-header {
+    margin-bottom: 30px;
+  }
+
+  .aida-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .aida-header p {
+    font-size: 0.9rem;
+  }
+
+  .aida-grid {
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .aida-card {
+    border-radius: 10px;
+  }
+  .aida-card-image {
+    height: auto;
+    min-height: 0;
+  }
+
+  .aida-card-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .flyer-placeholder {
+    min-height: 0;
+  }
+
+  .aida-card-info {
+    padding: 20px;
+  }
+
+  .aida-card-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .aida-card-info p {
+    font-size: 0.9rem;
+  }
+
+  .btn-aida {
+    width: 100%;
+    padding: 10px 16px;
+  }
+
+  /* Modal móvil */
+  .aida-modal {
+    padding: 8px;
+  }
+
+  .aida-modal-container {
+    max-height: calc(100dvh - 16px);
+    border-radius: 10px;
+  }
+
+  .modal-col-left {
+    height: auto;
+    min-height: 0;
+  }
+
+  .modal-col-left img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+  }
+
+  .modal-col-right {
+    padding: 25px 18px 20px;
+  }
+
+  .modal-col-right h2 {
+    font-size: 1.5rem;
+    margin: 8px 0 15px;
+  }
+
+  .modal-description p {
+    font-size: 0.9rem;
+  }
+
+  .modal-description li {
+    font-size: 0.88rem;
+  }
+
+  .modal-action-btn {
+    margin-top: 20px;
+    padding: 11px 18px;
+    font-size: 0.9rem;
+  }
+
+  .aida-modal-close {
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+  }
+}
+
+/* =========================================================
+   REDUCIR ANIMACIONES PARA USUARIOS QUE LO PREFIEREN
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .aida-card,
+  .btn-aida,
+  .modal-action-btn,
+  .aida-modal-close {
+    transition: none;
+  }
+
+  .aida-modal-container {
+    animation: none;
+  }
+}
